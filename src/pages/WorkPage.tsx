@@ -1,11 +1,29 @@
-import { SelectedWork } from '@/components/SelectedWork';
-import { VisualStorytelling } from '@/components/VisualStorytelling';
+import CollaborateCTA from '../components/sections/CollaborateCTA';
+import ProcessSection from '../components/sections/ProcessSection';
+import ProductionsSection from '../components/sections/ProductionsSection';
+import ServicesSection from '../components/sections/ServicesSection';
+import VenturesSection from '../components/sections/VenturesSection';
+import WorkSection from '../components/sections/WorkSection';
 
-export function WorkPage() {
+type WorkPageProps = {
+  onGoContact: () => void;
+};
+
+function WorkPage({ onGoContact }: WorkPageProps) {
   return (
-    <div className="pt-20">
-      <SelectedWork />
-      <VisualStorytelling />
-    </div>
+    <>
+      <VenturesSection />
+      <ProductionsSection onGoContact={onGoContact} />
+      <WorkSection onGoContact={onGoContact} />
+      <ServicesSection onGoContact={onGoContact} />
+      <ProcessSection />
+      <CollaborateCTA
+        onGoContact={onGoContact}
+        title="Have a production or campaign to build?"
+        subtitle="From documentary films to high-stakes live broadcasts and digital storytelling across Africa, let's talk about your vision."
+      />
+    </>
   );
 }
+
+export default WorkPage;

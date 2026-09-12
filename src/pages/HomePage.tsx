@@ -1,23 +1,27 @@
-import { Hero } from '@/components/Hero';
-import { Introduction } from '@/components/Introduction';
-import { SelectedWork } from '@/components/SelectedWork';
-import { Gallery } from '@/components/Gallery';
-import { VisualStorytelling } from '@/components/VisualStorytelling';
-import { Services } from '@/components/Services';
-import { Companies } from '@/components/Companies';
-import { Contact } from '@/components/Contact';
+import ContactPreviewSection from '../components/sections/ContactPreviewSection';
+import HeroSection from '../components/sections/HeroSection';
+import StatementSection from '../components/sections/StatementSection';
+import StatsBar from '../components/sections/StatsBar';
+import StoryPreviewSection from '../components/sections/StoryPreviewSection';
+import WorkPreviewSection from '../components/sections/WorkPreviewSection';
+import type { PageKey } from '../types/navigation';
 
-export function HomePage() {
+type HomePageProps = {
+  onNavigate: (page: PageKey) => void;
+  onOpenShowreel: () => void;
+};
+
+function HomePage({ onNavigate, onOpenShowreel }: HomePageProps) {
   return (
     <>
-      <Hero />
-      <Introduction />
-      <SelectedWork />
-      <Gallery />
-      <VisualStorytelling />
-      <Services />
-      <Companies />
-      <Contact />
+      <HeroSection onOpenShowreel={onOpenShowreel} onGoWork={() => onNavigate('work')} />
+      <StatsBar />
+      <StatementSection onGoStory={() => onNavigate('story')} />
+      <StoryPreviewSection onGoStory={() => onNavigate('story')} />
+      <WorkPreviewSection onGoWork={() => onNavigate('work')} />
+      <ContactPreviewSection onGoContact={() => onNavigate('contact')} />
     </>
   );
 }
+
+export default HomePage;

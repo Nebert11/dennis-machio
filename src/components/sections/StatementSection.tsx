@@ -1,0 +1,36 @@
+import { ArrowUpRight } from 'lucide-react';
+import type { PageKey } from '../../types/navigation';
+
+type StatementSectionProps = {
+  onGoStory?: () => void;
+};
+
+function StatementSection({ onGoStory }: StatementSectionProps) {
+  return (
+    <section className="statement section-pad">
+      <div className="section-kicker">
+        Core Philosophy <span>01</span>
+      </div>
+      <div className="statement-grid">
+        <h2>
+          We don&apos;t just make <span>content.</span>
+          <br />
+          We create legacy.
+        </h2>
+        <div>
+          <p>
+            The most powerful stories do not simply document what happened — they help people understand why
+            it matters. My work sits at the intersection of storytelling, strategy, production, and impact.
+          </p>
+          {onGoStory && (
+            <button className="text-link" onClick={onGoStory}>
+              Read My Story <ArrowUpRight size={16} />
+            </button>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default StatementSection;

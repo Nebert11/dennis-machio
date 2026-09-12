@@ -1,9 +1,13 @@
-import { Contact } from '@/components/Contact';
+import ContactSection from '../components/sections/ContactSection';
+import VenturesSection from '../components/sections/VenturesSection';
 
-export function ContactPage() {
+function ContactPage() {
   return (
-    <div className="pt-20">
-      <Contact />
-    </div>
+    <>
+      <ContactSection />
+      <VenturesSection />
+    </>
   );
 }
+
+export default ContactPage;
