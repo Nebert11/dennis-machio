@@ -4,9 +4,10 @@ import { projects } from '../../data/siteContent';
 
 type WorkSectionProps = {
   onGoContact: () => void;
+  onViewProject: (slug: string) => void;
 };
 
-function WorkSection({ onGoContact }: WorkSectionProps) {
+function WorkSection({ onGoContact, onViewProject }: WorkSectionProps) {
   const total = projects.length;
   const wrapperRef = useRef<HTMLDivElement>(null);
   const [progress, setProgress] = useState(0);
@@ -75,9 +76,13 @@ function WorkSection({ onGoContact }: WorkSectionProps) {
               <div className="project-image">
                 <img src={project.image} alt={project.title} />
                 <span className="project-number">{project.number}</span>
-                <span className="project-arrow">
+                <button
+                  className="project-arrow"
+                  onClick={() => onViewProject(project.slug)}
+                  aria-label={`View ${project.title}`}
+                >
                   <ArrowUpRight size={21} />
-                </span>
+                </button>
               </div>
               <div className="project-info">
                 <div>
@@ -162,7 +167,7 @@ function WorkSection({ onGoContact }: WorkSectionProps) {
                         ))}
                       </div>
                     )}
-                    <button className="work-reel-link" onClick={onGoContact}>
+                    <button className="work-reel-link" onClick={() => onViewProject(project.slug)}>
                       View Project <ArrowUpRight size={16} />
                     </button>
                   </div>

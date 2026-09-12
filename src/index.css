@@ -187,6 +187,40 @@ h2 { font-size: clamp(36px, 5vw, 72px); letter-spacing: -.07em; line-height: 1.0
 .tag-pill { background: #16202c; border: 1px solid #273444; color: #8e9bb0; font-family: 'DM Mono', monospace; font-size: 8px; padding: 3px 8px; }
 .project-detail { color: #8993a2; font-size: 12px; line-height: 1.6; margin: 0; }
 
+/* Project detail page */
+.project-detail-page { background: #101722; display: grid; gap: clamp(32px, 5vw, 64px); grid-template-columns: minmax(0, 1.15fr) minmax(300px, .85fr); padding-bottom: 130px; padding-top: 150px; position: relative; }
+.project-detail-back {
+  align-items: center;
+  color: #a7adb7;
+  display: inline-flex;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  gap: 10px;
+  grid-column: 1 / -1;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  transition: color .25s;
+  width: fit-content;
+}
+.project-detail-back:hover { color: #e21b3d; }
+.project-detail-media { aspect-ratio: 1.05; background: #0b0f15; overflow: hidden; position: relative; }
+.project-detail-media:after { background: linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.5)); content: ''; inset: 0; position: absolute; }
+.project-detail-media img { filter: saturate(.85); height: 100%; object-fit: cover; width: 100%; }
+.project-detail-number { color: #fff; font-family: 'DM Mono', monospace; font-size: 12px; left: 20px; position: absolute; top: 20px; z-index: 1; }
+.project-detail-body { align-self: center; display: flex; flex-direction: column; gap: 18px; }
+.project-detail-type { color: #748093; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .1em; margin: 0; text-transform: uppercase; }
+.project-detail-body h1 { font-size: clamp(34px, 4vw, 54px); letter-spacing: -.03em; line-height: 1.02; margin: 0; }
+.project-detail-copy { color: #9ba4af; font-size: 15px; line-height: 1.8; margin: 0; max-width: 52ch; }
+.project-detail-meta { display: flex; gap: 32px; }
+.project-detail-meta > div { display: flex; flex-direction: column; gap: 6px; }
+.project-detail-meta-label { color: #657080; font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: .1em; text-transform: uppercase; }
+.project-detail-tags { margin-bottom: 0; }
+.project-detail-notfound { display: flex; flex-direction: column; gap: 12px; grid-column: 1 / -1; }
+.project-detail-notfound p { color: #9ba4af; }
+@media (max-width: 800px) {
+  .project-detail-page { grid-template-columns: 1fr; padding-top: 120px; }
+}
+
 /* Selected Work — sticky scroll-driven showcase */
 .work-reel {
   margin-left: calc(50% - 50vw);

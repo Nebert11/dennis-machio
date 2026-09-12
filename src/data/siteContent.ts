@@ -107,6 +107,7 @@ export const productionEvents: ProductionEvent[] = [
 export const projects: Project[] = [
   {
     number: '01',
+    slug: 'eu-kenya-business-forum',
     title: 'EU–Kenya Business Forum',
     type: 'International Summit · Broadcast',
     image: images.euKenya,
@@ -117,6 +118,7 @@ export const projects: Project[] = [
   },
   {
     number: '02',
+    slug: 'the-amakovewala-show',
     title: 'The Amakovewala Show',
     type: 'Talk Show · Studio Production',
     image: images.amakove,
@@ -127,6 +129,7 @@ export const projects: Project[] = [
   },
   {
     number: '03',
+    slug: 'corporate-agm-conference-broadcast',
     title: 'Corporate AGM & Conference Broadcast',
     type: 'Corporate Broadcast · AGM',
     image: images.sasiniConference,
@@ -137,6 +140,7 @@ export const projects: Project[] = [
   },
   {
     number: '04',
+    slug: 'emerging-leaders-foundation',
     title: 'Emerging Leaders Foundation',
     type: 'Identity · Impact',
     image: images.elf,
@@ -147,6 +151,7 @@ export const projects: Project[] = [
   },
   {
     number: '05',
+    slug: 'lewa-safari-marathon',
     title: 'Lewa Safari Marathon',
     type: 'Documentary · Conservation',
     image: images.portraitThree,
@@ -157,6 +162,7 @@ export const projects: Project[] = [
   },
   {
     number: '06',
+    slug: 'java-house-consistency',
     title: 'Java House Consistency',
     type: 'Brand film · Hospitality',
     image: images.portraitTwo,

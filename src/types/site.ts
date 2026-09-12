@@ -2,6 +2,7 @@ import type { LucideIcon } from 'lucide-react';
 
 export type Project = {
   number: string;
+  slug: string;
   title: string;
   type: string;
   image: string;

@@ -27,15 +27,15 @@ function Header({ currentPage, onNavigate }: HeaderProps) {
     <header className="site-header">
       <Brand onClick={() => navigate('home')} />
       <nav className={menuOpen ? 'main-nav is-open' : 'main-nav'}>
-        {navLinks.map((link) => (
-          <button
-            key={link.key}
-            className={currentPage === link.key ? 'is-active' : ''}
-            onClick={() => navigate(link.key)}
-          >
-            {link.label}
-          </button>
-        ))}
+        {navLinks.map((link) => {
+          const isActive =
+            currentPage === link.key || (link.key === 'work' && currentPage === 'project');
+          return (
+            <button key={link.key} className={isActive ? 'is-active' : ''} onClick={() => navigate(link.key)}>
+              {link.label}
+            </button>
+          );
+        })}
       </nav>
       <button className="header-cta" onClick={() => navigate('contact')}>
         Let&apos;s Talk <ArrowUpRight size={16} />

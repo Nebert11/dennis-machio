@@ -7,14 +7,15 @@ import WorkSection from '../components/sections/WorkSection';
 
 type WorkPageProps = {
   onGoContact: () => void;
+  onViewProject: (slug: string) => void;
 };
 
-function WorkPage({ onGoContact }: WorkPageProps) {
+function WorkPage({ onGoContact, onViewProject }: WorkPageProps) {
   return (
     <>
       <VenturesSection />
       <ProductionsSection onGoContact={onGoContact} />
-      <WorkSection onGoContact={onGoContact} />
+      <WorkSection onGoContact={onGoContact} onViewProject={onViewProject} />
       <ServicesSection onGoContact={onGoContact} />
       <ProcessSection />
       <CollaborateCTA
