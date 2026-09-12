@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import ShowreelModal from '../sections/ShowreelModal';
@@ -6,11 +6,28 @@ import HomePage from '../../pages/HomePage';
 import StoryPage from '../../pages/StoryPage';
 import WorkPage from '../../pages/WorkPage';
 import ContactPage from '../../pages/ContactPage';
-import type { PageKey } from '../../types/navigation';
+import { pageToPath, pathToPage, type PageKey } from '../../types/navigation';
 
 export default function Layout() {
-  const [currentPage, setCurrentPage] = useState<PageKey>('home');
+  const [currentPage, setCurrentPageState] = useState<PageKey>(() =>
+    pathToPage(window.location.pathname),
+  );
   const [showreelOpen, setShowreelOpen] = useState(false);
+
+  const setCurrentPage = useCallback((page: PageKey) => {
+    setCurrentPageState((previous) => {
+      if (previous !== page) {
+        window.history.pushState({ page }, '', pageToPath(page));
+      }
+      return page;
+    });
+  }, []);
+
+  useEffect(() => {
+    const onPopState = () => setCurrentPageState(pathToPage(window.location.pathname));
+    window.addEventListener('popstate', onPopState);
+    return () => window.removeEventListener('popstate', onPopState);
+  }, []);
 
   const activePage = useMemo(() => {
     switch (currentPage) {
@@ -28,7 +45,7 @@ export default function Layout() {
           />
         );
     }
-  }, [currentPage]);
+  }, [currentPage, setCurrentPage]);
 
   return (
     <div className="site-shell">
