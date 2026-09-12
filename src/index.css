@@ -36,6 +36,16 @@ button { color: inherit; }
 .header-cta { align-items: center; border-bottom: 1px solid #56606f; color: #f2f1ed; display: inline-flex; gap: 13px; padding-bottom: 8px; }
 .header-cta:hover, .text-link:hover { color: #e21b3d; }
 .menu-toggle { background: none; border: 0; color: #f2f1ed; display: none; }
+
+/* Page hero — shared banner used at the top of secondary pages */
+.page-hero { background: #0c1119; padding-bottom: 56px; padding-top: clamp(140px, 18vw, 176px); }
+.page-hero h1 { font-size: clamp(38px, 5vw, 64px); letter-spacing: -.04em; line-height: 1.02; margin: 22px 0 0; max-width: 760px; }
+.page-hero p { color: #9ba4af; font-size: 15px; line-height: 1.75; margin: 20px 0 0; max-width: 560px; }
+/* the section right after the hero doesn't need to clear the header again */
+.page-hero + .story,
+.page-hero + .ventures,
+.page-hero + .contact { padding-top: 64px; }
+
 .hero { background: #0c1119; display: grid; grid-template-columns: minmax(0, 1fr) minmax(370px, .83fr); min-height: 720px; padding-bottom: 70px; padding-top: 160px; position: relative; }
 .hero:before { background: linear-gradient(115deg, transparent 30%, rgba(211,13,48,.16) 30.1%, rgba(211,13,48,.16) 45%, transparent 45.1%); content: ''; inset: 0; pointer-events: none; position: absolute; }
 .hero-copy { align-self: center; max-width: 720px; padding-bottom: 28px; position: relative; z-index: 1; }

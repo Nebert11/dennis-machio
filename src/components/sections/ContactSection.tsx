@@ -18,14 +18,6 @@ function ContactSection() {
   return (
     <section className="contact section-pad">
       <div className="contact-copy">
-        <div className="section-kicker">
-          Have a story worth telling? <span>Get in touch</span>
-        </div>
-        <h2>
-          Let&apos;s shape
-          <br />
-          <em>your story.</em>
-        </h2>
         <p>
           Whether it&apos;s a documentary, a live broadcast, a brand campaign, or something that doesn&apos;t fit
           neatly into a category yet — I&apos;d love to hear about it.

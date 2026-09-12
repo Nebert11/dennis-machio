@@ -1,4 +1,5 @@
 import CollaborateCTA from '../components/sections/CollaborateCTA';
+import PageHero from '../components/sections/PageHero';
 import ProcessSection from '../components/sections/ProcessSection';
 import ProductionsSection from '../components/sections/ProductionsSection';
 import ServicesSection from '../components/sections/ServicesSection';
@@ -13,6 +14,16 @@ type WorkPageProps = {
 function WorkPage({ onGoContact, onViewProject }: WorkPageProps) {
   return (
     <>
+      <PageHero
+        kicker="Featured Films & Projects"
+        kickerTag="Portfolio"
+        title={
+          <>
+            Selected work, <em>made to matter.</em>
+          </>
+        }
+        description="Documentaries, live broadcasts, brand films and institutional stories produced across Africa."
+      />
       <VenturesSection />
       <ProductionsSection onGoContact={onGoContact} />
       <WorkSection onGoContact={onGoContact} onViewProject={onViewProject} />
