@@ -7,6 +7,7 @@ import StoryPage from '../../pages/StoryPage';
 import WorkPage from '../../pages/WorkPage';
 import ProjectPage from '../../pages/ProjectPage';
 import ContactPage from '../../pages/ContactPage';
+import JournalPage from '../../pages/JournalPage';
 import { routeToPath, pathToRoute, type PageKey, type Route } from '../../types/navigation';
 import { projects } from '../../data/siteContent';
 
@@ -45,6 +46,8 @@ export default function Layout() {
         return <StoryPage onGoContact={() => setCurrentPage('contact')} />;
       case 'work':
         return <WorkPage onGoContact={() => setCurrentPage('contact')} onViewProject={goToProject} />;
+      case 'journal':
+        return <JournalPage onGoContact={() => setCurrentPage('contact')} />;
       case 'project': {
         const project = projects.find((item) => item.slug === route.projectSlug);
         return (

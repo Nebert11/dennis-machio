@@ -15,25 +15,24 @@ function WorkPage({ onGoContact, onViewProject }: WorkPageProps) {
   return (
     <>
       <PageHero
-        kicker="Featured Films & Projects"
+        kicker="Selected Work"
         kickerTag="Portfolio"
+        variant="work-hero"
         title={
           <>
-            Selected work, <em>made to matter.</em>
+            Films, campaigns
+            <br />
+            &amp; <em>broadcasts.</em>
           </>
         }
-        description="Documentaries, live broadcasts, brand films and institutional stories produced across Africa."
+        description="A selection of productions, brand films and live experiences created across Africa."
       />
       <VenturesSection />
       <ProductionsSection onGoContact={onGoContact} />
       <WorkSection onGoContact={onGoContact} onViewProject={onViewProject} />
       <ServicesSection onGoContact={onGoContact} />
       <ProcessSection />
-      <CollaborateCTA
-        onGoContact={onGoContact}
-        title="Have a production or campaign to build?"
-        subtitle="From documentary films to high-stakes live broadcasts and digital storytelling across Africa, let's talk about your vision."
-      />
+      <CollaborateCTA onGoContact={onGoContact} />
     </>
   );
 }

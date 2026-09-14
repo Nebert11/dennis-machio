@@ -2,14 +2,14 @@ import { ArrowUpRight, Award, Film, Globe } from 'lucide-react';
 import { bioSummary, images } from '../../data/siteContent';
 
 type StoryPreviewSectionProps = {
-  onGoStory: () => void;
+  onGoStory?: () => void;
 };
 
 function StoryPreviewSection({ onGoStory }: StoryPreviewSectionProps) {
   return (
     <section className="story-preview-section section-pad">
       <div className="section-kicker">
-        Page Preview <span>01 / My Story</span>
+        About Me
       </div>
 
       <div className="story-preview-grid">
@@ -45,16 +45,24 @@ function StoryPreviewSection({ onGoStory }: StoryPreviewSectionProps) {
           </p>
 
           <p>
-            For more than a decade, I have worked across Africa to create documentaries, corporate films,
-            live multi-camera productions, and strategic visual content that connects deeply with audiences.
+            For more than 15 years, I have worked across Africa creating documentaries, corporate films, live
+            multi-camera productions and strategic visual content that connects people, strengthens brands and
+            brings ideas to life.
           </p>
 
-          <div className="preview-action-row">
-            <button className="button button-primary" onClick={onGoStory}>
-              Read My Full Story &amp; Journey <ArrowUpRight size={16} />
-            </button>
-            <span className="preview-hint">Includes 10-year career timeline &amp; endorsements</span>
-          </div>
+          <p>
+            My approach goes beyond production. I combine storytelling, creativity and strategy to create work
+            that is authentic, purposeful and built to endure.
+          </p>
+
+          {onGoStory && (
+            <div className="preview-action-row">
+              <button className="button button-primary" onClick={onGoStory}>
+                Read My Full Story &amp; Journey <ArrowUpRight size={16} />
+              </button>
+              <span className="preview-hint">Includes career timeline &amp; endorsements</span>
+            </div>
+          )}
         </div>
       </div>
     </section>

@@ -4,6 +4,7 @@ export type Project = {
   number: string;
   slug: string;
   title: string;
+  category: string;
   type: string;
   image: string;
   detail: string;
@@ -24,10 +25,9 @@ export type Service = {
 export type Venture = {
   id: string;
   title: string;
-  role: string;
-  url: string;
+  role?: string;
+  url?: string;
   description: string;
-  stats: string;
   badge: string;
 };
 
@@ -54,6 +54,14 @@ export type StatItem = {
   subtext: string;
 };
 
+export type JournalArticle = {
+  id: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  image: string;
+};
+
 export type ImageSet = {
   hero: string;
   portrait: string;
@@ -63,5 +71,7 @@ export type ImageSet = {
   amakove: string;
   sasiniConference: string;
   elf: string;
+  storiesInsights: string;
+  projDencast: string;
 };
 

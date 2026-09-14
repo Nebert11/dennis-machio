@@ -19,8 +19,8 @@ function StatementSection({ onGoStory }: StatementSectionProps) {
         </h2>
         <div>
           <p>
-            The most powerful stories do not simply document what happened — they help people understand why
-            it matters. My work sits at the intersection of storytelling, strategy, production, and impact.
+            The most powerful stories do more than document what happened — they reveal why it matters, connect
+            people to purpose, and leave something lasting behind.
           </p>
           {onGoStory && (
             <button className="text-link" onClick={onGoStory}>

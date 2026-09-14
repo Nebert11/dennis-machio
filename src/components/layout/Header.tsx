@@ -1,5 +1,5 @@
 import { ArrowUpRight, Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { PageKey } from '../../types/navigation';
 import Brand from './Brand';
 
@@ -10,13 +10,22 @@ type HeaderProps = {
 
 const navLinks: Array<{ key: PageKey; label: string }> = [
   { key: 'home', label: 'Home' },
-  { key: 'story', label: 'My Story' },
-  { key: 'work', label: 'Selected Work' },
+  { key: 'story', label: 'About' },
+  { key: 'work', label: 'Work' },
+  { key: 'journal', label: 'My Insights' },
   { key: 'contact', label: 'Contact' },
 ];
 
 function Header({ currentPage, onNavigate }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const updateScrollState = () => setIsScrolled(window.scrollY > 24);
+    updateScrollState();
+    window.addEventListener('scroll', updateScrollState, { passive: true });
+    return () => window.removeEventListener('scroll', updateScrollState);
+  }, []);
 
   const navigate = (page: PageKey) => {
     onNavigate(page);
@@ -24,7 +33,7 @@ function Header({ currentPage, onNavigate }: HeaderProps) {
   };
 
   return (
-    <header className="site-header">
+    <header className={`site-header${isScrolled ? ' is-scrolled' : ''}`}>
       <Brand onClick={() => navigate('home')} />
       <nav className={menuOpen ? 'main-nav is-open' : 'main-nav'}>
         {navLinks.map((link) => {

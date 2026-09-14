@@ -1,8 +1,10 @@
 import CollaborateCTA from '../components/sections/CollaborateCTA';
+import CareerTimeline from '../components/sections/CareerTimeline';
 import JourneySection from '../components/sections/JourneySection';
 import PageHero from '../components/sections/PageHero';
 import QuoteSection from '../components/sections/QuoteSection';
 import StorySection from '../components/sections/StorySection';
+import StoryPreviewSection from '../components/sections/StoryPreviewSection';
 
 type StoryPageProps = {
   onGoContact: () => void;
@@ -14,21 +16,20 @@ function StoryPage({ onGoContact }: StoryPageProps) {
       <PageHero
         kicker="The Storyteller"
         kickerTag="My Story"
+        variant="story-hero"
         title={
           <>
-            A decade of craft, <em>told honestly.</em>
+            Explore <em>My Story.</em>
           </>
         }
-        description="From first camera jobs to founding Dencast Global — the people, projects and principles behind the work."
+        description="From behind the camera to supporting brands and building stories that matter."
       />
+      <StoryPreviewSection />
       <StorySection onGoContact={onGoContact} />
       <JourneySection />
+      <CareerTimeline />
       <QuoteSection />
-      <CollaborateCTA
-        onGoContact={onGoContact}
-        title="Let's build something unforgettable."
-        subtitle="Bring us the ambition, the challenge, or just the first idea. We'll bring the craft that makes it matter."
-      />
+      <CollaborateCTA onGoContact={onGoContact} />
     </>
   );
 }

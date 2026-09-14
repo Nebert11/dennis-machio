@@ -1,13 +1,14 @@
-export type PageKey = 'home' | 'story' | 'work' | 'project' | 'contact';
+export type PageKey = 'home' | 'story' | 'work' | 'journal' | 'project' | 'contact';
 
 export type Route =
-  | { page: 'home' | 'story' | 'work' | 'contact' }
+  | { page: 'home' | 'story' | 'work' | 'journal' | 'contact' }
   | { page: 'project'; projectSlug: string };
 
-const pathByPage: Record<'home' | 'story' | 'work' | 'contact', string> = {
+const pathByPage: Record<'home' | 'story' | 'work' | 'journal' | 'contact', string> = {
   home: '/',
   story: '/story',
   work: '/work',
+  journal: '/insights',
   contact: '/contact',
 };
 
@@ -25,6 +26,8 @@ export function pathToRoute(pathname: string): Route {
       return { page: 'story' };
     case '/work':
       return { page: 'work' };
+    case '/insights':
+      return { page: 'journal' };
     case '/contact':
       return { page: 'contact' };
     default:

@@ -3,27 +3,30 @@ import { services } from '../../data/siteContent';
 
 type ServicesSectionProps = {
   onGoContact: () => void;
+  preview?: boolean;
 };
 
-function ServicesSection({ onGoContact }: ServicesSectionProps) {
+function ServicesSection({ onGoContact, preview = false }: ServicesSectionProps) {
+  const visibleServices = preview ? services.slice(0, 2) : services;
+
   return (
     <section className="services section-pad">
       <div className="section-kicker">
-        Capabilities <span>05 Disciplines</span>
+        What I Do <span>{preview ? 'Two Featured Disciplines' : 'Capabilities'}</span>
       </div>
       <div className="services-intro">
         <h2>
-          Five disciplines.
+          Creative work.
           <br />
-          <em>One standard.</em>
+          <em>Built to matter.</em>
         </h2>
         <p>
-          Turning complex ideas into visual experiences that people remember and act on. From concept to
-          delivery, we ensure strategic alignment and cinematic execution.
+          Storytelling, creativity and strategy brought together to connect people, strengthen brands and bring
+          ideas to life.
         </p>
       </div>
       <div className="services-list">
-        {services.map((service, index) => {
+        {visibleServices.map((service, index) => {
           const Icon = service.icon;
           return (
             <article className="service-detail-card" key={service.id}>

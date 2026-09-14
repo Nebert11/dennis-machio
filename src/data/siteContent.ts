@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import type {
   ImageSet,
+  JournalArticle,
   ProductionEvent,
   Project,
   Service,
@@ -24,21 +25,23 @@ export const images: ImageSet = {
   amakove: '/images/portfolio/amakove6.jpg',
   sasiniConference: '/images/portfolio/sasini_conference.jpg',
   elf: '/images/portfolio/elf.png',
+  storiesInsights: '/images/portfolio/stories&insights.jpg',
+  projDencast: '/images/portfolio/proj-dencast.jpg',
 };
 
 export const bioSummary = {
   name: 'Dennis Machio',
-  title: 'Film Producer, Creative Director & Media Strategist',
+  title: 'Creative Producer | Storyteller | Media & Content Strategist',
   subtitle: 'Founder of Dencast Global Limited · Lead Editor at Michezo Afrika',
   location: 'Nairobi, Kenya — working across Africa',
   email: 'hello@dennismachio.com',
   secondaryEmail: 'hello@dencastglobal.com',
   phone: '+254 721 710 397',
-  heroTagline: "Stories that move audiences and build trust",
+  heroTagline: 'Capturing Moments. Telling Stories. Building Brands.',
   heroDescription:
-    "I'm Dennis Machio — Film Producer, Creative Director, and Media Strategist. For more than a decade I've helped organizations across Africa turn complex ideas into visual stories that connect.",
+    "I'm Dennis Machio — Creative Producer, Director, Storyteller and Media Strategist. For 15+ years, I've helped brands, organisations and communities across Africa turn ideas, experiences and impact into powerful visual stories.",
   philosophy:
-    'The most powerful stories do not simply document what happened — they help people understand why it matters. That is the standard I bring to every production, every organization and every story I am part of.',
+    'The most powerful stories do more than document what happened — they reveal why it matters, connect people to purpose, and leave something lasting behind.',
 };
 
 export const stats: StatItem[] = [
@@ -51,23 +54,29 @@ export const stats: StatItem[] = [
 export const ventures: Venture[] = [
   {
     id: 'dencast-global',
-    title: 'Dencast Global Limited',
-    role: 'Founder / Director / Lead Producer',
+    title: 'Dencast Global',
     url: 'https://www.dencastglobal.co.ke/',
-    badge: 'Flagship Studio',
-    stats: '190+ Satisfied Clients · 5.0 Rating',
-    description:
-      'A creative production and communications company built to help organizations tell better stories — documentaries, live event productions, brand films, corporate communications and digital campaigns across Africa, guided by strategy, craft and a deep respect for the story being told.',
+    badge: 'Creative Production & Communications',
+    description: 'Your creative production and communications company.',
   },
   {
     id: 'michezo-afrika',
     title: 'Michezo Afrika',
-    role: 'Founder / Lead Editor',
     url: 'https://www.michezoafrika.com/',
-    badge: 'Sports Media & Journalism',
-    stats: 'Africa-Wide Sports Media Network',
-    description:
-      'Telling the story of African sport. Beyond corporate and development work, producing sports journalism and multimedia content that connects athletes, teams and communities through stories that go beyond scores and results.',
+    badge: 'Sports Media Platform',
+    description: 'Your sports media platform focused on telling authentic African sports stories.',
+  },
+  {
+    id: 'magharibi-michezo-awards',
+    title: 'Magharibi Michezo Awards',
+    badge: 'Sports Recognition',
+    description: 'Celebrating the people and stories shaping African sport.',
+  },
+  {
+    id: 'magharibi-festival',
+    title: 'Magharibi Festival',
+    badge: 'Mentorship & Creative Development',
+    description: 'Mentorship and creative development through culture, media and storytelling.',
   },
 ];
 
@@ -109,6 +118,7 @@ export const projects: Project[] = [
     number: '01',
     slug: 'eu-kenya-business-forum',
     title: 'EU–Kenya Business Forum',
+    category: 'Live Events & Broadcasts',
     type: 'International Summit · Broadcast',
     image: images.euKenya,
     detail: 'On-the-ground media coverage and broadcast facilitation for the EU–Kenya Business Forum on digitalising trade.',
@@ -120,6 +130,7 @@ export const projects: Project[] = [
     number: '02',
     slug: 'the-amakovewala-show',
     title: 'The Amakovewala Show',
+    category: 'Creative Productions',
     type: 'Talk Show · Studio Production',
     image: images.amakove,
     detail: 'Studio lighting, multi-camera direction, red-carpet coverage, and full post-production packaging.',
@@ -131,6 +142,7 @@ export const projects: Project[] = [
     number: '03',
     slug: 'corporate-agm-conference-broadcast',
     title: 'Corporate AGM & Conference Broadcast',
+    category: 'Corporate & Institutional Films',
     type: 'Corporate Broadcast · AGM',
     image: images.sasiniConference,
     detail: 'Live multi-camera streaming and production infrastructure for shareholder AGMs and executive conferences.',
@@ -142,6 +154,7 @@ export const projects: Project[] = [
     number: '04',
     slug: 'emerging-leaders-foundation',
     title: 'Emerging Leaders Foundation',
+    category: 'Corporate & Institutional Films',
     type: 'Identity · Impact',
     image: images.elf,
     detail: 'Building a platform for tomorrow\'s voices through human-centered institutional storytelling.',
@@ -153,6 +166,7 @@ export const projects: Project[] = [
     number: '05',
     slug: 'lewa-safari-marathon',
     title: 'Lewa Safari Marathon',
+    category: 'Documentary & Impact Films',
     type: 'Documentary · Conservation',
     image: images.portraitThree,
     detail: 'Scale, emotion, and a reason to run. Documenting wildlife conservation impact in northern Kenya.',
@@ -164,6 +178,7 @@ export const projects: Project[] = [
     number: '06',
     slug: 'java-house-consistency',
     title: 'Java House Consistency',
+    category: 'Brand Campaigns',
     type: 'Brand film · Hospitality',
     image: images.portraitTwo,
     detail: 'The story behind a taste people trust. Visual narrative capturing everyday brand excellence.',
@@ -173,13 +188,53 @@ export const projects: Project[] = [
   },
 ];
 
+export const workCategories = [
+  'Documentary & Impact Films',
+  'Corporate & Institutional Films',
+  'Live Events & Broadcasts',
+  'Brand Campaigns',
+  'Sports & Media',
+  'Creative Productions',
+];
+
+export const journalArticles: JournalArticle[] = [
+  {
+    id: 'story-before-the-camera',
+    title: 'The Story Before the Camera',
+    excerpt: 'Why the strongest visual work begins with listening, context and a clear human truth.',
+    date: 'September 2026',
+    image: images.storiesInsights,
+  },
+  {
+    id: 'purposeful-brand-storytelling',
+    title: 'Purposeful Brand Storytelling',
+    excerpt: 'Moving beyond polished images to create stories that help people understand why a brand matters.',
+    date: 'August 2026',
+    image: images.projDencast,
+  },
+  {
+    id: 'production-across-africa',
+    title: 'Production Across Africa',
+    excerpt: 'The craft, collaboration and care behind meaningful work across different places and communities.',
+    date: 'July 2026',
+    image: images.euKenya,
+  },
+  {
+    id: 'what-makes-a-story-last',
+    title: 'What Makes a Story Last',
+    excerpt: 'A reflection on resilience, creative discipline and building work with a life beyond delivery.',
+    date: 'June 2026',
+    image: images.portraitTwo,
+  },
+];
+
 export const services: Service[] = [
   {
     id: 'film-documentary',
     icon: Clapperboard,
     title: 'Film & Documentary Production',
     subtitle: 'Human-interest & impact narratives',
-    text: 'Documentaries, impact films, institutional videos and human-interest stories that capture real people, real work and real transformation — strong visual storytelling paired with clear messaging, from first concept through final delivery.',
+    text: 'Documentaries, impact films, institutional videos and human-interest stories.',
     deliverables: [
       'Documentary Features & Shorts',
       'Impact & Donor Case Studies',
@@ -192,7 +247,7 @@ export const services: Service[] = [
     icon: Compass,
     title: 'Creative Direction',
     subtitle: 'Shaping tone, vision & visual identity',
-    text: 'Shaping the look, feel, tone and message of a production. From concept development to final delivery, I guide the creative process so every project is purposeful, polished and on-brand.',
+    text: 'Shaping the visual language, tone and creative direction from concept to final delivery.',
     deliverables: [
       'Creative Treatment & Storyboarding',
       'Visual Identity for Video',
@@ -205,7 +260,7 @@ export const services: Service[] = [
     icon: Share2,
     title: 'Strategic Communications',
     subtitle: 'Making complex messages land with clarity',
-    text: 'Simplifying complex ideas into clear communication assets for stakeholders, donors, partners, employees and the public — so the message lands the way it was meant to.',
+    text: 'Turning complex ideas into clear, purposeful communication that connects with stakeholders and audiences.',
     deliverables: [
       'Stakeholder Communication Assets',
       'Policy & Advocacy Briefs in Video',
@@ -216,9 +271,9 @@ export const services: Service[] = [
   {
     id: 'live-event-production',
     icon: Radio,
-    title: 'Live Event Production',
+    title: 'Live Event Production and Management',
     subtitle: 'Broadcast setups for high-stakes stages',
-    text: 'Multi-camera coverage, livestreaming, screen content, interviews and post-event packaging for conferences, AGMs, launches, forums and hybrid events.',
+    text: 'Multi-camera productions, livestreaming, screen content and complete event media coverage.',
     deliverables: [
       'Multi-Camera Live Broadcasts',
       'AGM & Corporate Livestreams',
@@ -231,7 +286,7 @@ export const services: Service[] = [
     icon: Sparkles,
     title: 'Brand Storytelling',
     subtitle: 'Films that connect and convert',
-    text: 'Helping brands communicate who they are, what they do and why it matters through films, campaigns, testimonials and visual identity-driven content.',
+    text: 'Helping brands communicate who they are, what they do and why it matters.',
     deliverables: [
       'Brand Origin & Philosophy Films',
       'Multi-Channel Digital Campaigns',

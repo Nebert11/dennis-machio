@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
-import { projects } from '../../data/siteContent';
+import { projects, workCategories } from '../../data/siteContent';
 
 type WorkSectionProps = {
   onGoContact: () => void;
@@ -51,22 +51,25 @@ function WorkSection({ onGoContact, onViewProject }: WorkSectionProps) {
     };
   }, [reducedMotion, total]);
 
-  const activeIndex = Math.min(total - 1, Math.round(progress));
-
   return (
     <section className="work section-pad">
       <div className="section-heading">
         <div>
           <div className="section-kicker">
-            Featured Films &amp; Projects <span>Portfolio</span>
+            Visual Identity <span>Explore My Work</span>
           </div>
           <h2>
-            Made to be <em>remembered.</em>
+            Selected <em>work.</em>
           </h2>
         </div>
         <button className="text-link" onClick={onGoContact}>
           Start a project <ArrowUpRight size={16} />
         </button>
+      </div>
+      <div className="work-categories" aria-label="Work categories">
+        {workCategories.map((category) => (
+          <span className="work-category" key={category}>{category}</span>
+        ))}
       </div>
 
       {reducedMotion ? (
@@ -75,7 +78,6 @@ function WorkSection({ onGoContact, onViewProject }: WorkSectionProps) {
             <article className="project-card" key={project.number}>
               <div className="project-image">
                 <img src={project.image} alt={project.title} />
-                <span className="project-number">{project.number}</span>
                 <button
                   className="project-arrow"
                   onClick={() => onViewProject(project.slug)}
@@ -86,7 +88,7 @@ function WorkSection({ onGoContact, onViewProject }: WorkSectionProps) {
               </div>
               <div className="project-info">
                 <div>
-                  <p className="project-type">{project.type}</p>
+                  <p className="project-type">{project.category}</p>
                   <h3>{project.title}</h3>
                   {project.role && <p className="project-role">Role: {project.role}</p>}
                   {project.tags && (
@@ -99,7 +101,6 @@ function WorkSection({ onGoContact, onViewProject }: WorkSectionProps) {
                     </div>
                   )}
                 </div>
-                <p className="project-detail">{project.detail}</p>
               </div>
             </article>
           ))}
@@ -107,17 +108,6 @@ function WorkSection({ onGoContact, onViewProject }: WorkSectionProps) {
       ) : (
         <div className="work-reel" ref={wrapperRef} style={{ height: `${total * 100}vh` }}>
           <div className="work-reel-sticky">
-            <div className="work-reel-progress">
-              <span className="work-reel-progress-current">{String(activeIndex + 1).padStart(2, '0')}</span>
-              <span className="work-reel-progress-track">
-                <span
-                  className="work-reel-progress-fill"
-                  style={{ width: `${total > 1 ? (progress / (total - 1)) * 100 : 100}%` }}
-                />
-              </span>
-              <span className="work-reel-progress-total">{String(total).padStart(2, '0')}</span>
-            </div>
-
             {projects.map((project, index) => {
               const distance = index - progress;
               const clamped = Math.min(Math.max(distance, -1), 1);
@@ -150,8 +140,7 @@ function WorkSection({ onGoContact, onViewProject }: WorkSectionProps) {
                     />
                   </div>
                   <div className="work-reel-info">
-                    <span className="work-reel-number">{project.number}</span>
-                    <p className="work-reel-type">{project.type}</p>
+                    <p className="work-reel-type">{project.category}</p>
                     <h3>{project.title}</h3>
                     <p className="work-reel-detail">{project.detail}</p>
                     <div className="work-reel-meta">

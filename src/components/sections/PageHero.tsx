@@ -5,11 +5,12 @@ type PageHeroProps = {
   kickerTag: string;
   title: ReactNode;
   description?: string;
+  variant?: string;
 };
 
-function PageHero({ kicker, kickerTag, title, description }: PageHeroProps) {
+function PageHero({ kicker, kickerTag, title, description, variant }: PageHeroProps) {
   return (
-    <section className="page-hero section-pad">
+    <section className={`page-hero section-pad${variant ? ` ${variant}` : ''}`}>
       <div className="section-kicker">
         {kicker} <span>{kickerTag}</span>
       </div>

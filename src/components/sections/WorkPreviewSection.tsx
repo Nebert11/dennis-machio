@@ -1,12 +1,11 @@
 import { ArrowUpRight } from 'lucide-react';
-import { projects, ventures } from '../../data/siteContent';
+import { projects } from '../../data/siteContent';
 
 type WorkPreviewSectionProps = {
   onGoWork: () => void;
 };
 
 function WorkPreviewSection({ onGoWork }: WorkPreviewSectionProps) {
-  // Take 2 top preview items for concise teaser
   const previewProjects = projects.slice(0, 2);
 
   return (
@@ -14,7 +13,7 @@ function WorkPreviewSection({ onGoWork }: WorkPreviewSectionProps) {
       <div className="section-heading">
         <div>
           <div className="section-kicker">
-            Page Preview <span>02 / Selected Work</span>
+            My Selected Work <span>Two Featured Productions</span>
           </div>
           <h2>
             Where the <em>stories live.</em>
@@ -30,7 +29,6 @@ function WorkPreviewSection({ onGoWork }: WorkPreviewSectionProps) {
           <article className="project-card" key={project.number}>
             <div className="project-image">
               <img src={project.image} alt={project.title} />
-              <span className="project-number">{project.number}</span>
               <button
                 className="project-arrow"
                 onClick={onGoWork}
@@ -41,7 +39,7 @@ function WorkPreviewSection({ onGoWork }: WorkPreviewSectionProps) {
             </div>
             <div className="project-info">
               <div>
-                <p className="project-type">{project.type}</p>
+                <p className="project-type">{project.category}</p>
                 <h3>{project.title}</h3>
                 {project.tags && (
                   <div className="project-tags">
@@ -53,30 +51,14 @@ function WorkPreviewSection({ onGoWork }: WorkPreviewSectionProps) {
                   </div>
                 )}
               </div>
-              <p className="project-detail">{project.detail}</p>
             </div>
           </article>
         ))}
       </div>
 
-      <div className="work-preview-ventures-bar">
-        <div className="ventures-bar-content">
-          <span className="ventures-bar-label">Ventures &amp; Broadcast:</span>
-          <div className="ventures-bar-pills">
-            {ventures.map((v) => (
-              <span key={v.id} className="ventures-bar-pill">
-                <strong>{v.title}</strong> · {v.badge}
-              </span>
-            ))}
-            <span className="ventures-bar-pill">
-              <strong>TV &amp; Broadcast</strong> · The Amakovewala Show · EU-Kenya Forum
-            </span>
-          </div>
-        </div>
-        <button className="button button-light" onClick={onGoWork}>
-          Explore All Work &amp; Disciplines <ArrowUpRight size={16} />
-        </button>
-      </div>
+      <button className="text-link work-preview-more" onClick={onGoWork}>
+        Explore all selected work <ArrowUpRight size={16} />
+      </button>
     </section>
   );
 }

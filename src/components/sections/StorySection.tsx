@@ -1,5 +1,5 @@
 import { ArrowUpRight, Award, Film, Globe } from 'lucide-react';
-import { bioSummary, images } from '../../data/siteContent';
+import { images } from '../../data/siteContent';
 
 type StorySectionProps = {
   onGoContact: () => void;
@@ -14,12 +14,12 @@ function StorySection({ onGoContact }: StorySectionProps) {
       </div>
       <div className="story-copy">
         <div className="section-kicker">
-          The Storyteller <span>Biography</span>
+          My Story <span>Biography</span>
         </div>
         <h2>
-          Meet Dennis
+          From behind the camera
           <br />
-          <em>Machio.</em>
+          <em>to building stories.</em>
         </h2>
 
         <div className="story-pillars">
@@ -35,21 +35,20 @@ function StorySection({ onGoContact }: StorySectionProps) {
         </div>
 
         <p className="lead">
-          &ldquo;The most powerful stories do not simply document what happened — they help people understand
-          why it matters.&rdquo;
+           &ldquo;The most powerful stories do more than document what happened — they reveal why it matters, connect
+           people to purpose, and leave something lasting behind.&rdquo;
         </p>
 
         <p>
-          I am a Nairobi-based Film Producer, Creative Director, Media Strategist, and Founder of Dencast
-          Global Limited. For more than a decade I have worked with organizations across Africa to create
-          documentaries, corporate films, live productions, digital campaigns, and strategic visual content
-          that communicates clearly and connects deeply.
+          What began with a camera and a passion for storytelling has grown into years of creative work,
+          meaningful partnerships and Dencast Global: shaped by the people, places and stories encountered
+          along the way.
         </p>
 
         <p>
-          My work sits at the intersection of storytelling, strategy, production, and impact — from
-          international conferences and boardroom communications to wildlife conservancies, community
-          projects, sports platforms, and development programs.
+          For more than 15 years, I have worked across Africa creating documentaries, corporate films, live
+          multi-camera productions and strategic visual content that connects people, strengthens brands and
+          brings ideas to life.
         </p>
 
         <p>

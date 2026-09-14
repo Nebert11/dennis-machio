@@ -1,5 +1,5 @@
 import { ArrowUpRight } from 'lucide-react';
-import type { PageKey } from '../../types/navigation';
+import { bioSummary } from '../../data/siteContent';
 
 type CollaborateCTAProps = {
   onGoContact: () => void;
@@ -9,14 +9,14 @@ type CollaborateCTAProps = {
 
 function CollaborateCTA({
   onGoContact,
-  title = "Ready to shape your story?",
-  subtitle = "Whether you're launching a campaign, documenting impact, producing a conference, or building a brand — let's turn your message into a powerful visual experience.",
+  title = 'Let’s Create Something That Matters',
+  subtitle = 'Whether you are launching a campaign, documenting impact, producing an event, building a brand or telling an important story, I can help transform your vision into a powerful visual experience.',
 }: CollaborateCTAProps) {
   return (
     <section className="collaborate-cta section-pad">
       <div className="collaborate-inner">
         <div className="section-kicker">
-          Have a project in mind? <span>Collaboration</span>
+          Talk to Me <span>Contact</span>
         </div>
         <h2>
           {title}
@@ -26,9 +26,15 @@ function CollaborateCTA({
           <button className="button button-primary" onClick={onGoContact}>
             Let&apos;s Talk <ArrowUpRight size={17} />
           </button>
-          <a className="contact-email-badge" href="mailto:hello@dennismachio.com">
-            hello@dennismachio.com
-          </a>
+        </div>
+        <div className="contact-signature">
+          <strong>Dennis Machio</strong>
+          <span>Film Producer &bull; Creative Director &bull; Media Strategist</span>
+          <span>Nairobi, Kenya | Working Across Africa</span>
+          <div className="contact-signature-links">
+            <a href={`mailto:${bioSummary.email}`}>{bioSummary.email}</a>
+            <a href={`tel:${bioSummary.phone.replace(/\s+/g, '')}`}>{bioSummary.phone}</a>
+          </div>
         </div>
       </div>
     </section>
