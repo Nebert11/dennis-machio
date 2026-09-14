@@ -139,6 +139,7 @@ h2 { font-size: clamp(36px, 5vw, 72px); letter-spacing: -.07em; line-height: 1.0
 .journal-card:hover { border-color: #d70c2f; transform: translateY(-4px); }
 .journal-card-image { aspect-ratio: 1.22; background: #071525; overflow: hidden; }
 .journal-card-image img { height: 100%; object-fit: cover; transition: transform .6s; width: 100%; }
+.journal-card-story-before-the-camera .journal-card-image img { object-position: center 30%; }
 .journal-card:hover .journal-card-image img { transform: scale(1.04); }
 .journal-card-body { display: flex; flex: 1; flex-direction: column; padding: 22px; }
 .journal-card-body time { color: #778699; font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }

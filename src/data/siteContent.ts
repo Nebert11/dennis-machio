@@ -25,7 +25,7 @@ export const images: ImageSet = {
   amakove: '/images/portfolio/amakove6.jpg',
   sasiniConference: '/images/portfolio/sasini_conference.jpg',
   elf: '/images/portfolio/elf.png',
-  storiesInsights: '/images/portfolio/stories&insights.jpg',
+  storiesInsights: '/images/portfolio/9.jpg',
   projDencast: '/images/portfolio/proj-dencast.jpg',
 };
 
@@ -203,7 +203,7 @@ export const journalArticles: JournalArticle[] = [
     title: 'The Story Before the Camera',
     excerpt: 'Why the strongest visual work begins with listening, context and a clear human truth.',
     date: 'September 2026',
-    image: images.storiesInsights,
+    image: images.portraitThree,
   },
   {
     id: 'purposeful-brand-storytelling',

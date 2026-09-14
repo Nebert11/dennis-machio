@@ -29,7 +29,7 @@ function JournalSection({ onGoJournal, page = false }: JournalSectionProps) {
 
       <div className="journal-grid">
         {visibleArticles.map((article) => (
-          <article className="journal-card" key={article.id}>
+          <article className={`journal-card journal-card-${article.id}`} key={article.id}>
             <div className="journal-card-image">
               <img src={article.image} alt="" loading="lazy" />
             </div>
