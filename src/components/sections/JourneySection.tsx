@@ -10,10 +10,10 @@ function JourneySection() {
           </div>
           <div className="journey-heading">
             <h2>
-              How it came <em>together.</em>
+              How It Came <em>Together.</em>
             </h2>
             <p>
-              A decade of craft, enterprise, and deep commitment to telling Africa&apos;s most vital stories.
+              A journey shaped by craft, curiosity, enterprise and a deep commitment to telling Africa&apos;s most compelling stories.
             </p>
           </div>
 

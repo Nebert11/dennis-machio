@@ -20,15 +20,21 @@ function ProductionsSection({ onGoContact }: ProductionsSectionProps) {
   return (
     <section className="productions section-pad">
       <div className="section-kicker">
-        Live &amp; Broadcast <span>Broadcast</span>
+        Productions &amp; Events <span>Selected Work</span>
       </div>
       <div className="productions-intro">
         <h2>
           Productions &amp; <em>events.</em>
         </h2>
         <p>
-          From high-profile talk shows to multinational economic forums and live shareholder broadcasts, we
-          deliver uncompromising technical precision and broadcast-grade presentation.
+          The most powerful stories do not simply document what happened — they help people understand why it
+          matters. That is the standard I bring to every production, every organization and every story I&apos;m part of.
+          <br /><br />
+          My work sits at the intersection of storytelling, strategy, production and impact — from international
+          conferences and boardroom communications to wildlife conservancies, community projects, sports platforms
+          and development programs. Whether behind the camera on a conservancy shoot, directing a live multi-camera
+          broadcast for an international forum, or producing a documentary for a development program, my approach
+          stays the same: strategy first, craft always, story at the center.
         </p>
       </div>
 

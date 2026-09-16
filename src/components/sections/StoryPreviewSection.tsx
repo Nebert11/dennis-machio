@@ -45,14 +45,14 @@ function StoryPreviewSection({ onGoStory }: StoryPreviewSectionProps) {
           </p>
 
           <p>
-            For more than 15 years, I have worked across Africa creating documentaries, corporate films, live
-            multi-camera productions and strategic visual content that connects people, strengthens brands and
-            brings ideas to life.
+            The story of how a decade in film, broadcast and communications led to building Dencast Global, 
+            and why I believe storytelling can influence decisions and leave a legacy.
           </p>
 
           <p>
-            My approach goes beyond production. I combine storytelling, creativity and strategy to create work
-            that is authentic, purposeful and built to endure.
+            I am a Nairobi-based Film Producer, Creative Director, Media Strategist and Founder of Dencast Global Limited. 
+            For more than a decade I have worked with organizations across Africa to create documentaries, corporate films, 
+            live productions, digital campaigns and strategic visual content that communicates clearly and connects deeply.
           </p>
 
           {onGoStory && (

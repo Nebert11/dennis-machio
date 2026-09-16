@@ -5,6 +5,7 @@ import ProductionsSection from '../components/sections/ProductionsSection';
 import ServicesSection from '../components/sections/ServicesSection';
 import VenturesSection from '../components/sections/VenturesSection';
 import WorkSection from '../components/sections/WorkSection';
+import WorkIntroSection from '../components/sections/WorkIntroSection';
 
 type WorkPageProps = {
   onGoContact: () => void;
@@ -27,6 +28,7 @@ function WorkPage({ onGoContact, onViewProject }: WorkPageProps) {
         }
         description="A selection of productions, brand films and live experiences created across Africa."
       />
+      <WorkIntroSection />
       <VenturesSection />
       <ProductionsSection onGoContact={onGoContact} />
       <WorkSection onGoContact={onGoContact} onViewProject={onViewProject} />

@@ -1,12 +1,11 @@
 import { ArrowUpRight } from 'lucide-react';
 
 type HeroSectionProps = {
-//   onOpenShowreel: () => void;
-  onGoWork: () => void;
+  onGoWhatIDo: () => void;
   onGoContact?: () => void;
 };
 
-function HeroSection({ onGoWork }: HeroSectionProps) {
+function HeroSection({ onGoWhatIDo }: HeroSectionProps) {
   return (
     <section className="hero">
       <div className="hero-copy">
@@ -24,7 +23,7 @@ function HeroSection({ onGoWork }: HeroSectionProps) {
         <p className="hero-intro">{bioSummary.heroDescription}</p>
         */}
         <div className="hero-actions">
-          <button className="button button-primary" onClick={onGoWork}>
+          <button className="button button-primary" onClick={onGoWhatIDo}>
             Explore my work <ArrowUpRight size={17} />
           </button>
           {/*

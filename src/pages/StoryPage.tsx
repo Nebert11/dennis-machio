@@ -1,5 +1,4 @@
 import CollaborateCTA from '../components/sections/CollaborateCTA';
-import CareerTimeline from '../components/sections/CareerTimeline';
 import JourneySection from '../components/sections/JourneySection';
 import PageHero from '../components/sections/PageHero';
 import QuoteSection from '../components/sections/QuoteSection';
@@ -27,7 +26,6 @@ function StoryPage({ onGoContact }: StoryPageProps) {
       <StoryPreviewSection />
       <StorySection onGoContact={onGoContact} />
       <JourneySection />
-      <CareerTimeline />
       <QuoteSection />
       <CollaborateCTA onGoContact={onGoContact} />
     </>

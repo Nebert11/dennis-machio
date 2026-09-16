@@ -3,10 +3,11 @@ import { journalArticles } from '../../data/siteContent';
 
 type JournalSectionProps = {
   onGoJournal?: () => void;
+  onGoArticle?: (articleId: string) => void;
   page?: boolean;
 };
 
-function JournalSection({ onGoJournal, page = false }: JournalSectionProps) {
+function JournalSection({ onGoJournal, onGoArticle, page = false }: JournalSectionProps) {
   const visibleArticles = page ? journalArticles : journalArticles.slice(0, 3);
 
   return (
@@ -34,12 +35,15 @@ function JournalSection({ onGoJournal, page = false }: JournalSectionProps) {
               <img src={article.image} alt="" loading="lazy" />
             </div>
             <div className="journal-card-body">
-              <time>{article.date}</time>
+              <span className="journal-byline">{article.byline}</span>
               <h3>{article.title}</h3>
-              <p>{article.excerpt}</p>
-              <span className="journal-read-link">
-                Read insight <ArrowUpRight size={14} />
-              </span>
+              {article.subtitle && <p className="journal-subtitle">{article.subtitle}</p>}
+              <p>{article.content[0]}</p>
+              {onGoArticle && (
+                <button className="journal-read-link" onClick={() => onGoArticle(article.id)}>
+                  Read More <ArrowUpRight size={14} />
+                </button>
+              )}
             </div>
           </article>
         ))}

@@ -13,6 +13,7 @@ const navLinks: Array<{ key: PageKey; label: string }> = [
   { key: 'story', label: 'About' },
   { key: 'work', label: 'Work' },
   { key: 'journal', label: 'My Insights' },
+  { key: 'gallery', label: 'Gallery' },
   { key: 'contact', label: 'Contact' },
 ];
 

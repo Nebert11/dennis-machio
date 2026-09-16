@@ -8,6 +8,8 @@ import {
 import type {
   ImageSet,
   JournalArticle,
+  GalleryPhoto,
+  GalleryVideo,
   ProductionEvent,
   Project,
   Service,
@@ -27,6 +29,8 @@ export const images: ImageSet = {
   elf: '/images/portfolio/elf.png',
   storiesInsights: '/images/portfolio/9.jpg',
   projDencast: '/images/portfolio/proj-dencast.jpg',
+  storyDetail: '/images/portfolio/9.jpg',
+  creative: '/images/portfolio/creative.png',
 };
 
 export const bioSummary = {
@@ -78,38 +82,77 @@ export const ventures: Venture[] = [
     badge: 'Mentorship & Creative Development',
     description: 'Mentorship and creative development through culture, media and storytelling.',
   },
+  {
+    id: 'music-talent-development',
+    title: 'Music & Talent Development',
+    badge: 'Creative Development',
+    description:
+      'I support emerging creatives and artists in discovering their voice, developing their talent and turning creativity into meaningful opportunities. Through music, creative direction and practical industry guidance, I help nurture talent from potential to purpose.',
+  },
+  {
+    id: 'mentorship',
+    title: 'Mentorship',
+    badge: 'Creative Mentorship',
+    description:
+      'I mentor young creatives and aspiring professionals through practical knowledge, experience and honest guidance. My focus is on helping people build confidence, develop their craft, understand the creative industry and turn their ideas into purposeful careers.',
+  },
 ];
 
 export const productionEvents: ProductionEvent[] = [
   {
-    id: 'amakovewala',
-    title: 'The Amakovewala Show',
-    role: 'Producer / DOP',
-    type: 'TV Show & Studio Production',
+    id: 'sasini-corporate-storytelling',
+    title: 'Sasini',
+    role: 'Corporate Storytelling',
+    type: 'Corporate Storytelling',
     description:
-      'Studio and red-carpet production for one of the region\'s prominent talk formats — lighting, multi-camera coverage and full post-production packaging from set to screen.',
-    year: '2024 - Present',
-    image: images.amakove,
+      'Helping Sasini translate its legacy, people, operations and sustainability work into compelling visual stories that strengthen its corporate identity and connect its impact with wider audiences.',
+    image: images.sasiniConference,
+  },
+  {
+    id: 'elf-africa-impact-storytelling',
+    title: 'ELF- Africa',
+    role: 'Impact Storytelling',
+    type: 'Impact Storytelling',
+    description:
+      'Helping ELF- Africa document and communicate its programmes, people and impact through authentic visual stories that bring its work closer to communities, partners and audiences.',
+    image: images.elf,
+  },
+  {
+    id: 'rhnk-conference-production',
+    title: 'RHNK',
+    role: 'Conference Production & Management',
+    type: 'Conference Production & Management',
+    description:
+      'Providing end-to-end production and conference management support, from planning and technical coordination to multi-camera coverage, livestreaming, photography and post-production—ensuring the conference runs smoothly and its key moments and conversations are captured professionally.',
+    image: images.euKenya,
   },
   {
     id: 'eu-kenya-forum',
     title: 'EU–Kenya Business Forum',
-    role: 'Media Coverage & Live Production',
+    role: 'Media Coverage',
     type: 'International Conference',
     description:
-      'On-the-ground media coverage and broadcast facilitation for the EU–Kenya Business Forum 2025, a two-day international conference on digitalising trade.',
+      'On-the-ground media coverage for the EU–Kenya Business Forum 2025, a two-day international conference on digitalising trade',
     year: '2025',
     image: images.euKenya,
   },
   {
-    id: 'agm-broadcast',
-    title: 'Corporate AGM & Conference Broadcast',
+    id: 'corporate-live-broadcasts',
+    title: 'Corporate LIVE Broadcasts',
     role: 'Live Broadcast & On-Screen Hosting',
-    type: 'Live Stream & Corporate Conference',
-    description:
-      'Full live broadcast setup, multi-camera coverage, and on-screen hosting for major listed company AGMs and corporate conferences, streamed in real time.',
-    year: '2024',
+    type: 'Corporate Live Broadcasts',
+    description: 'Full live broadcast setup and on-screen hosting for a variety of different clients drawn from across Africa.',
     image: images.sasiniConference,
+  },
+  {
+    id: 'amakovewala',
+    title: 'The Amakove Wala Show',
+    role: 'Producer / DOP',
+    type: 'Studio & Red-Carpet Production',
+    description:
+      'Studio and red-carpet production for one of the region\'s prominent talk formats — lighting, multi-camera coverage and full post-production packaging from set to screen.',
+    year: '2024 - Present',
+    image: images.amakove,
   },
 ];
 
@@ -199,32 +242,72 @@ export const workCategories = [
 
 export const journalArticles: JournalArticle[] = [
   {
-    id: 'story-before-the-camera',
-    title: 'The Story Before the Camera',
-    excerpt: 'Why the strongest visual work begins with listening, context and a clear human truth.',
-    date: 'September 2026',
+    id: 'why-strong-visual-stories-begin-with-listening',
+    title: 'Why Strong Visual Stories Begin With Listening',
+    byline: 'By Dennis Machio',
     image: images.portraitThree,
+    content: [
+      'The strongest visual work does not begin when the camera starts rolling. It begins with listening, understanding context and finding the human truth behind the story.',
+      'A brief may ask for a corporate film, documentary or campaign video. But beneath that request is often something deeper,  a story of resilience, ambition, transformation, struggle or hope.',
+      'Listening helps us discover that story.',
+      'Context gives the images meaning. A beautiful shot can capture attention, but understanding the people, place and circumstances behind it is what makes an audience care.',
+      'And at the centre of every powerful story is a human truth.',
+      'It may be found in a farmer describing what a harvest means to their family and community , an athlete reflecting on years of sacrifice, or an employee looking back on decades of building something bigger than themselves.',
+      'These moments cannot always be scripted. They have to be observed, respected and captured honestly.',
+      'Technology will continue to evolve, but great storytelling will always require curiosity, empathy and judgment.',
+      'For me, the question is not simply “What should we shoot?”',
+      'It is:',
+      '“What are we trying to make people understand, feel and remember?”',
+      'When we listen first, understand the context and find the human truth, the camera becomes more than a recording tool.',
+      'It becomes a way of seeing, understanding and telling stories that matter.',
+    ],
   },
   {
-    id: 'purposeful-brand-storytelling',
-    title: 'Purposeful Brand Storytelling',
-    excerpt: 'Moving beyond polished images to create stories that help people understand why a brand matters.',
-    date: 'August 2026',
+    id: 'great-video-begins-with-great-sound',
+    title: 'Great Video Begins With Great Sound',
+    byline: 'By Dennis Machio',
     image: images.projDencast,
-  },
-  {
-    id: 'production-across-africa',
-    title: 'Production Across Africa',
-    excerpt: 'The craft, collaboration and care behind meaningful work across different places and communities.',
-    date: 'July 2026',
-    image: images.euKenya,
+    content: [
+      'When we talk about video production, we often focus on cameras, lenses, lighting, colour grading and beautiful images. But there is one element that is frequently underestimated: Sound.',
+      'I often tell clients that great pictures alone do not necessarily make a great video. Sound is what gives pictures meaning, emotion and clarity.',
+      'Poor audio can undermine otherwise excellent visuals, while clear, well-recorded sound can make even simple footage feel professional. Research and production guidance consistently emphasise the importance of good audio in video.',
+      "When investing in a video production and hiring a crew to tell your story, therefore, don't only ask about the cameras they will use.",
+      'Ask how they will capture your sound.',
+      'Will they use proper microphones?',
+      'How will they handle background noise?',
+      'Will interviews be recorded separately?',
+      'How will they capture the natural sounds of the environment?',
+      'These questions matter.',
+      'A beautiful interview with poor, muffled or noisy audio can quickly lose its impact. But a strong voice, authentic ambience and carefully designed sound can draw an audience deeper into a story.',
+      'Think about radio.',
+      "You don't need to see the presenter to connect with what they are saying. The voice itself carries the story.",
+      "And radio remains one of Kenya's most important media platforms. The Communications Authority of Kenya says sound broadcasting reaches about 98% of Kenyan homes, demonstrating the extraordinary reach of audio in our everyday lives.",
+      'That should remind us of something important:',
+      "We don't only watch stories. We listen to them.",
+      'So the next time you commission a documentary, corporate film, interview or campaign video, look beyond the camera specifications.',
+      'Ask about the sound.',
+      'Because great visuals may make people stop scrolling — but great sound can make them stay, listen and feel.',
+      'Now you know.',
+    ],
   },
   {
     id: 'what-makes-a-story-last',
     title: 'What Makes a Story Last',
-    excerpt: 'A reflection on resilience, creative discipline and building work with a life beyond delivery.',
-    date: 'June 2026',
-    image: images.portraitTwo,
+    subtitle: 'A reflection on resilience, creative discipline and building work with a life beyond delivery.',
+    byline: 'By Dennis Machio',
+    image: images.euKenya,
+    content: [
+      'A story should be more than something completed, delivered and forgotten.',
+      'For me, the real measure of creative work is what remains after the production is over. Does it still communicate? Does it still move people? Does it still have meaning years later?',
+      'Creating work that lasts requires more than technical ability. It requires resilience, discipline and patience.',
+      'Every production comes with challenges, changing briefs, tight deadlines, limited resources and unexpected moments. The discipline is learning to keep creating, solving problems and protecting the quality of the story despite those pressures.',
+      'Resilience keeps you moving. Creative discipline keeps you focused. But purpose is what gives the work longevity.',
+      'I have learned that the strongest stories are often built around something human: a struggle, a dream, a journey, a lesson or a moment of transformation.',
+      'When that truth is captured honestly, the work can outlive the campaign, the event or the original brief.',
+      'That is what I continue to pursue in every production, not simply content that is delivered, but stories that have a life beyond delivery.',
+      'Because ultimately, the work we create becomes part of our legacy.',
+      'And the best stories are the ones people continue to remember.',
+    ],
   },
 ];
 
@@ -326,39 +409,124 @@ export const processStages = [
 
 export const journeyTimeline: TimelineItem[] = [
   {
-    year: '2021',
-    title: 'Early Production Work',
-    tag: 'Foundation',
-    description:
-      'Built a solid foundation in camera operation, non-linear editing, and live multi-camera broadcast across corporate, sports, and media assignments.',
+    year: '2001–2006',
+    title: 'Moi University',
+    tag: 'Bachelor of Arts in Creative Arts & Film Studies',
+    description: 'Built the academic foundation in creative arts, film, storytelling and visual communication.',
   },
   {
-    year: '2022',
-    title: 'Founded Dencast Global Limited',
-    tag: 'Studio Launch',
-    description:
-      'Built a creative production and communications company serving organizations across Kenya and the wider region — documentaries, brand films, live event coverage and campaigns.',
+    year: '2008–2009',
+    title: 'Mohammed Amin Foundation, Nairobi',
+    tag: 'Postgraduate Diploma in Television & Film Production',
+    description: 'Moved from theory into hands-on television and film production, developing practical skills in production, camera work and editing.',
   },
   {
-    year: '2022+',
-    title: 'International & Institutional Productions',
-    tag: 'Global Reach',
-    description:
-      'Led production and live coverage for high-level summits including the EU–Kenya Business Forum, corporate AGMs, and multi-day conferences requiring full broadcast setups.',
+    year: '2009',
+    title: 'Al Jazeera Africa Bureau',
+    tag: 'Internship — Nairobi',
+    description: 'Gained newsroom and broadcast experience within an international media environment, strengthening my understanding of journalism, production and African storytelling.',
   },
   {
-    year: '2023+',
-    title: 'Entertainment & Talk Formats',
-    tag: 'Broadcast',
-    description:
-      'Produced and directed studio and red-carpet coverage for regional talk show formats, including The Amakovewala Show, setting new benchmarks in lighting and post-production packaging.',
+    year: '2010 – Present',
+    title: 'Michezo Afrika',
+    tag: 'The Beginning of a Digital Sports Storytelling Journey',
+    description: 'Helped build Michezo Afrika into an award-winning sports media platform, combining journalism, photography, video and digital storytelling to connect African sport with its audiences.',
   },
   {
-    year: '2024+',
-    title: 'Lead Editor, Michezo Afrika',
-    tag: 'Sports Journalism',
-    description:
-      'Expanded sports journalism and multimedia storytelling, connecting athletes, teams, and communities across Africa through narratives that go beyond final scores.',
+    year: '2015–2020',
+    title: 'Bungoma Pictures',
+    tag: 'Building a Production Identity',
+    description: 'Founded Bungoma Pictures with a vision to tell stories from Africa and share them with the world. This period expanded my experience across documentary production, corporate storytelling, events and creative content.',
   },
+  {
+    year: '2020–Present',
+    title: 'Dencast Global',
+    tag: 'From Production to Creative Enterprise',
+    description: 'Founded Dencast Global Limited, a production and creative media agency working with organisations, brands and institutions across Kenya and the region. The work spans documentaries, brand films, corporate storytelling, live events, livestreaming and digital campaigns.',
+  },
+  {
+    year: '2020–Present',
+    title: 'Expanding the Production Footprint',
+    tag: 'Studio, Entertainment & Red-Carpet Production',
+    description: 'Produced and directed studio, entertainment and red-carpet content for regional formats, including The Amakove Wala Show, with a strong focus on visual production, lighting, editing and broadcast-quality presentation.',
+  },
+  {
+    year: 'Today',
+    title: 'More than a decade of storytelling.',
+    tag: 'A Continuing Storytelling Journey',
+    description: 'From the university classroom to newsrooms, sports media, independent production and building a creative agency, the journey has always been about one thing: using visual storytelling to make ideas matter.',
+  },
+];
+
+export const galleryVideos: GalleryVideo[] = [
+  {
+    id: 'gallery-video-1',
+    title: 'Sasini PLC 2025 Sustainability Report Launch',
+    poster: images.sasiniConference,
+    url: 'https://www.youtube.com/watch?v=QnnVSv48PIM&t=120s',
+  },
+  {
+    id: 'gallery-video-2',
+    title: 'HARRY RICHIE OFFICIAL - CONFIRM OFFICIAL VIDEO',
+    poster: images.portrait,
+    url: 'https://www.youtube.com/watch?v=Rloz0hZFd-o&list=RDRloz0hZFd-o&start_radio=1',
+  },
+  {
+    id: 'gallery-video-3',
+    title: 'Vanissy Uwase - Gharama Ya Wokovu (Official Music Video)',
+    poster: images.portraitTwo,
+    url: 'https://www.youtube.com/watch?v=LOL6DHHFLmE&list=RDLOL6DHHFLmE&start_radio=1',
+  },
+  {
+    id: 'gallery-video-4',
+    title: 'STEVE KAY - Mbe Omukhasi (Official Video)',
+    poster: images.portraitThree,
+    url: 'https://www.youtube.com/watch?v=PJ4HC7318h4&list=RDPJ4HC7318h4&start_radio=1',
+  },
+  {
+    id: 'gallery-video-5',
+    title: 'Sasini PLC Sustainability Documentary 2023',
+    poster: images.sasiniConference,
+    url: 'https://www.youtube.com/watch?v=WDHIUaR6i-c&t=12s',
+  },
+  {
+    id: 'gallery-video-6',
+    title: 'ELF-Africa in 60 Seconds',
+    poster: images.elf,
+    url: 'https://www.youtube.com/watch?v=A9BIICFfEL4',
+  },
+  {
+    id: 'gallery-video-7',
+    title: 'What Leadership Looked Like in 2025 | ELF-Africa Annual Report',
+    poster: images.elf,
+    url: 'https://www.youtube.com/watch?v=EgTs8_Bm_RQ&t=23s',
+  },
+  {
+    id: 'gallery-video-8',
+    title: 'EU Business Forum Promo Video',
+    poster: images.euKenya,
+    url: 'https://www.youtube.com/watch?v=WIWK8EugC1c&t=4s',
+  },
+  {
+    id: 'gallery-video-9',
+    title: 'RHNK Pan-African Conference 2025 Highlights',
+    poster: images.euKenya,
+    url: 'https://www.youtube.com/watch?v=_0hFwZtRoqU',
+  },
+  {
+    id: 'gallery-video-10',
+    title: 'THE AMAKOVE WALA SHOW 1 - Divorce and Separation',
+    poster: images.amakove,
+    url: 'https://www.youtube.com/watch?v=D1QvoiMpK-Q',
+  },
+];
+
+export const galleryPhotos: GalleryPhoto[] = [
+  { id: 'gallery-photo-1', title: 'Production portrait', image: images.portrait },
+  { id: 'gallery-photo-2', title: 'Creative direction', image: images.creative },
+  { id: 'gallery-photo-3', title: 'Studio production', image: images.amakove },
+  { id: 'gallery-photo-4', title: 'Conference production', image: images.euKenya },
+  { id: 'gallery-photo-5', title: 'Corporate storytelling', image: images.sasiniConference },
+  { id: 'gallery-photo-6', title: 'Impact storytelling', image: images.elf },
 ];
 

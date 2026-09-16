@@ -57,8 +57,22 @@ export type StatItem = {
 export type JournalArticle = {
   id: string;
   title: string;
-  excerpt: string;
-  date: string;
+  subtitle?: string;
+  byline: string;
+  image: string;
+  content: string[];
+};
+
+export type GalleryVideo = {
+  id: string;
+  title: string;
+  poster: string;
+  url?: string;
+};
+
+export type GalleryPhoto = {
+  id: string;
+  title: string;
   image: string;
 };
 
@@ -73,5 +87,7 @@ export type ImageSet = {
   elf: string;
   storiesInsights: string;
   projDencast: string;
+  storyDetail: string;
+  creative: string;
 };
 

@@ -10,19 +10,19 @@ import type { PageKey } from '../types/navigation';
 
 type HomePageProps = {
   onNavigate: (page: PageKey) => void;
-  onOpenShowreel: () => void;
+  onGoArticle: (articleId: string) => void;
 };
 
-function HomePage({ onNavigate, onOpenShowreel }: HomePageProps) {
+function HomePage({ onNavigate, onGoArticle }: HomePageProps) {
   return (
     <>
-      <HeroSection onOpenShowreel={onOpenShowreel} onGoWork={() => onNavigate('work')} />
+      <HeroSection onGoWhatIDo={() => onNavigate('services')} />
       <StoryPreviewSection onGoStory={() => onNavigate('story')} />
       <CareerTimeline />
       <ServicesSection onGoContact={() => onNavigate('contact')} preview />
       <WorkPreviewSection onGoWork={() => onNavigate('work')} />
       <VenturesSection />
-      <JournalSection onGoJournal={() => onNavigate('journal')} />
+      <JournalSection onGoJournal={() => onNavigate('journal')} onGoArticle={onGoArticle} />
       <CollaborateCTA onGoContact={() => onNavigate('contact')} />
     </>
   );

@@ -1,6 +1,6 @@
 const careerStages = [
   { name: 'Michezo Afrika', years: '2010 - 2015' },
-  { name: 'Bungoma Pictures', years: '2015 - 2020' },
+  { name: 'Building a Production Identity', years: '2015 - 2020' },
   { name: 'Dencast Global', years: '2021 - Present' },
 ];
 

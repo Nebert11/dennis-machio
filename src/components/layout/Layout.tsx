@@ -8,8 +8,11 @@ import WorkPage from '../../pages/WorkPage';
 import ProjectPage from '../../pages/ProjectPage';
 import ContactPage from '../../pages/ContactPage';
 import JournalPage from '../../pages/JournalPage';
+import ArticlePage from '../../pages/ArticlePage';
+import ServicesPage from '../../pages/ServicesPage';
+import GalleryPage from '../../pages/GalleryPage';
 import { routeToPath, pathToRoute, type PageKey, type Route } from '../../types/navigation';
-import { projects } from '../../data/siteContent';
+import { journalArticles, projects } from '../../data/siteContent';
 
 export default function Layout() {
   const [route, setRouteState] = useState<Route>(() => pathToRoute(window.location.pathname));
@@ -19,6 +22,7 @@ export default function Layout() {
     setRouteState((previous) => {
       if (previous.page !== next.page || routeToPath(previous) !== routeToPath(next)) {
         window.history.pushState(next, '', routeToPath(next));
+        window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
       }
       return next;
     });
@@ -34,8 +38,16 @@ export default function Layout() {
     [navigateToRoute],
   );
 
+  const goToArticle = useCallback(
+    (articleId: string) => navigateToRoute({ page: 'article', articleId }),
+    [navigateToRoute],
+  );
+
   useEffect(() => {
-    const onPopState = () => setRouteState(pathToRoute(window.location.pathname));
+    const onPopState = () => {
+      setRouteState(pathToRoute(window.location.pathname));
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    };
     window.addEventListener('popstate', onPopState);
     return () => window.removeEventListener('popstate', onPopState);
   }, []);
@@ -46,8 +58,22 @@ export default function Layout() {
         return <StoryPage onGoContact={() => setCurrentPage('contact')} />;
       case 'work':
         return <WorkPage onGoContact={() => setCurrentPage('contact')} onViewProject={goToProject} />;
+      case 'services':
+        return <ServicesPage onGoContact={() => setCurrentPage('contact')} />;
       case 'journal':
-        return <JournalPage onGoContact={() => setCurrentPage('contact')} />;
+        return <JournalPage onGoContact={() => setCurrentPage('contact')} onGoArticle={goToArticle} />;
+      case 'gallery':
+        return <GalleryPage onGoContact={() => setCurrentPage('contact')} />;
+      case 'article': {
+        const article = journalArticles.find((item) => item.id === route.articleId);
+        return (
+          <ArticlePage
+            article={article}
+            onBackToInsights={() => setCurrentPage('journal')}
+            onGoContact={() => setCurrentPage('contact')}
+          />
+        );
+      }
       case 'project': {
         const project = projects.find((item) => item.slug === route.projectSlug);
         return (
@@ -64,13 +90,13 @@ export default function Layout() {
         return (
           <HomePage
             onNavigate={setCurrentPage}
-            onOpenShowreel={() => setShowreelOpen(true)}
+            onGoArticle={goToArticle}
           />
         );
     }
-  }, [route, setCurrentPage, goToProject]);
+  }, [route, setCurrentPage, goToProject, goToArticle]);
 
-  const currentPage = route.page;
+  const currentPage = route.page === 'article' ? 'journal' : route.page;
 
   return (
     <div className="site-shell">

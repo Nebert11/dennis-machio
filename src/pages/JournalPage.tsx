@@ -3,9 +3,10 @@ import PageHero from '../components/sections/PageHero';
 
 type JournalPageProps = {
   onGoContact: () => void;
+  onGoArticle: (articleId: string) => void;
 };
 
-function JournalPage({ onGoContact }: JournalPageProps) {
+function JournalPage({ onGoContact, onGoArticle }: JournalPageProps) {
   return (
     <>
       <PageHero
@@ -20,7 +21,7 @@ function JournalPage({ onGoContact }: JournalPageProps) {
           </>
         }
       />
-      <JournalSection page />
+      <JournalSection page onGoArticle={onGoArticle} />
       <section className="journal-contact-prompt section-pad">
         <p>Have a story, idea or production challenge to explore?</p>
         <button className="text-link" onClick={onGoContact}>
