@@ -15,7 +15,7 @@ function JournalSection({ onGoJournal, onGoArticle, page = false }: JournalSecti
       <div className="section-heading journal-heading">
         <div>
           <div className="section-kicker">
-            My Insights <span>{page ? 'Insights' : 'Latest 3'}</span>
+            My Insights <span>{page ? 'Insights' : ''}</span>
           </div>
           <h2>
             Ideas from <em>the work.</em>
@@ -53,3 +53,4 @@ function JournalSection({ onGoJournal, onGoArticle, page = false }: JournalSecti
 }
 
 export default JournalSection;
+

@@ -1,11 +1,11 @@
-export type PageKey = 'home' | 'story' | 'work' | 'services' | 'journal' | 'gallery' | 'project' | 'contact';
+export type PageKey = 'home' | 'story' | 'work' | 'services' | 'journal' | 'gallery' | 'project' | 'contact' | 'awards' | 'music' | 'festival';
 
 export type Route =
-  | { page: 'home' | 'story' | 'work' | 'services' | 'journal' | 'gallery' | 'contact' }
+  | { page: 'home' | 'story' | 'work' | 'services' | 'journal' | 'gallery' | 'contact' | 'awards' | 'music' | 'festival' }
   | { page: 'project'; projectSlug: string }
   | { page: 'article'; articleId: string };
 
-const pathByPage: Record<'home' | 'story' | 'work' | 'services' | 'journal' | 'gallery' | 'contact', string> = {
+const pathByPage: Record<'home' | 'story' | 'work' | 'services' | 'journal' | 'gallery' | 'contact' | 'awards' | 'music' | 'festival', string> = {
   home: '/',
   story: '/story',
   work: '/work',
@@ -13,6 +13,9 @@ const pathByPage: Record<'home' | 'story' | 'work' | 'services' | 'journal' | 'g
   journal: '/insights',
   gallery: '/gallery',
   contact: '/contact',
+  awards: '/initiatives/magharibi-michezo-awards',
+  music: '/initiatives/music-and-talent-development',
+  festival: '/initiatives/magharibi-festival',
 };
 
 export function routeToPath(route: Route): string {
@@ -40,6 +43,12 @@ export function pathToRoute(pathname: string): Route {
       return { page: 'gallery' };
     case '/contact':
       return { page: 'contact' };
+    case '/initiatives/magharibi-michezo-awards':
+      return { page: 'awards' };
+    case '/initiatives/music-and-talent-development':
+      return { page: 'music' };
+    case '/initiatives/magharibi-festival':
+      return { page: 'festival' };
     default:
       return { page: 'home' };
   }

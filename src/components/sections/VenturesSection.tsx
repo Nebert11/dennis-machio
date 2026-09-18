@@ -1,7 +1,12 @@
 import { ArrowUpRight, Globe } from 'lucide-react';
 import { ventures } from '../../data/siteContent';
 
-function VenturesSection() {
+type VenturesSectionProps = {
+  onGoContact?: () => void;
+  onViewVenture?: (ventureId: string) => void;
+};
+
+function VenturesSection({ onGoContact, onViewVenture }: VenturesSectionProps) {
   return (
     <section className="ventures section-pad">
       <div className="section-kicker">
@@ -20,13 +25,18 @@ function VenturesSection() {
       <div className="ventures-grid">
         {ventures.map((venture) => (
           <article key={venture.id} className="venture-card">
+            {venture.image && (
+              <div className="venture-image">
+                <img src={venture.image} alt={venture.title} />
+              </div>
+            )}
             <div className="venture-top">
               <span className="venture-badge">{venture.badge}</span>
               {venture.role && <span className="venture-role">{venture.role}</span>}
             </div>
             <h3>{venture.title}</h3>
             <p className="venture-description">{venture.description}</p>
-            {venture.url && (
+            {venture.url ? (
               <div className="venture-footer">
                 <a
                   href={venture.url}
@@ -38,6 +48,30 @@ function VenturesSection() {
                   Visit {venture.title} <Globe size={14} /> <ArrowUpRight size={15} />
                 </a>
               </div>
+            ) : (venture.id === 'magharibi-michezo-awards' || venture.id === 'music-talent-development' || venture.id === 'magharibi-festival') && onViewVenture ? (
+              <div className="venture-footer">
+                <button
+                  type="button"
+                  className="venture-link"
+                  onClick={() => onViewVenture(venture.id)}
+                  aria-label={`Learn more about ${venture.title}`}
+                >
+                  Click for more <ArrowUpRight size={15} />
+                </button>
+              </div>
+            ) : (
+              onGoContact && (
+                <div className="venture-footer">
+                  <button
+                    type="button"
+                    className="venture-link"
+                    onClick={onGoContact}
+                    aria-label={`Learn more about ${venture.title}`}
+                  >
+                    Click for more <ArrowUpRight size={15} />
+                  </button>
+                </div>
+              )
             )}
           </article>
         ))}

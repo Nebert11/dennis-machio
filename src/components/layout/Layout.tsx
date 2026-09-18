@@ -11,6 +11,9 @@ import JournalPage from '../../pages/JournalPage';
 import ArticlePage from '../../pages/ArticlePage';
 import ServicesPage from '../../pages/ServicesPage';
 import GalleryPage from '../../pages/GalleryPage';
+import AwardsPage from '../../pages/AwardsPage';
+import MusicPage from '../../pages/MusicPage';
+import FestivalPage from '../../pages/FestivalPage';
 import { routeToPath, pathToRoute, type PageKey, type Route } from '../../types/navigation';
 import { journalArticles, projects } from '../../data/siteContent';
 
@@ -43,6 +46,19 @@ export default function Layout() {
     [navigateToRoute],
   );
 
+  const goToVenture = useCallback(
+    (ventureId: string) => {
+      if (ventureId === 'magharibi-michezo-awards') {
+        navigateToRoute({ page: 'awards' });
+      } else if (ventureId === 'music-talent-development') {
+        navigateToRoute({ page: 'music' });
+      } else if (ventureId === 'magharibi-festival') {
+        navigateToRoute({ page: 'festival' });
+      }
+    },
+    [navigateToRoute],
+  );
+
   useEffect(() => {
     const onPopState = () => {
       setRouteState(pathToRoute(window.location.pathname));
@@ -57,7 +73,13 @@ export default function Layout() {
       case 'story':
         return <StoryPage onGoContact={() => setCurrentPage('contact')} />;
       case 'work':
-        return <WorkPage onGoContact={() => setCurrentPage('contact')} onViewProject={goToProject} />;
+        return (
+          <WorkPage
+            onGoContact={() => setCurrentPage('contact')}
+            onViewProject={goToProject}
+            onViewVenture={goToVenture}
+          />
+        );
       case 'services':
         return <ServicesPage onGoContact={() => setCurrentPage('contact')} />;
       case 'journal':
@@ -86,15 +108,22 @@ export default function Layout() {
       }
       case 'contact':
         return <ContactPage />;
+      case 'awards':
+        return <AwardsPage onGoContact={() => setCurrentPage('contact')} />;
+      case 'music':
+        return <MusicPage onGoContact={() => setCurrentPage('contact')} />;
+      case 'festival':
+        return <FestivalPage onGoContact={() => setCurrentPage('contact')} />;
       default:
         return (
           <HomePage
             onNavigate={setCurrentPage}
             onGoArticle={goToArticle}
+            onViewVenture={goToVenture}
           />
         );
     }
-  }, [route, setCurrentPage, goToProject, goToArticle]);
+  }, [route, setCurrentPage, goToProject, goToArticle, goToVenture]);
 
   const currentPage = route.page === 'article' ? 'journal' : route.page;
 

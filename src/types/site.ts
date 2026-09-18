@@ -27,6 +27,7 @@ export type Venture = {
   title: string;
   role?: string;
   url?: string;
+  image?: string;
   description: string;
   badge: string;
 };

@@ -60,6 +60,7 @@ export const ventures: Venture[] = [
     id: 'dencast-global',
     title: 'Dencast Global',
     url: 'https://www.dencastglobal.co.ke/',
+    image: '/images/Work%20that%20extends/Dencast%20Global.jpg',
     badge: 'Creative Production & Communications',
     description: 'Your creative production and communications company.',
   },
@@ -67,34 +68,41 @@ export const ventures: Venture[] = [
     id: 'michezo-afrika',
     title: 'Michezo Afrika',
     url: 'https://www.michezoafrika.com/',
+    image: '/images/Work%20that%20extends/Michezo%20Afrika.jpg',
     badge: 'Sports Media Platform',
     description: 'Your sports media platform focused on telling authentic African sports stories.',
   },
   {
     id: 'magharibi-michezo-awards',
     title: 'Magharibi Michezo Awards',
+    image: '/images/Work%20that%20extends/Magharibi%20Michezo%20Awards.jpg',
     badge: 'Sports Recognition',
-    description: 'Celebrating the people and stories shaping African sport.',
+    description:
+      'Over the past 10 years I have partnered with stakeholders to celebrate and spotlight outstanding sporting talent through the Magharibi Michezo Awards, recognizing athletes, teams, and individuals who continue to inspire and shape the future of sports.',
   },
   {
     id: 'magharibi-festival',
     title: 'Magharibi Festival',
+    image: '/images/Work%20that%20extends/Magharibi%20Festival.jpg',
     badge: 'Mentorship & Creative Development',
-    description: 'Mentorship and creative development through culture, media and storytelling.',
+    description:
+      'The Magharibi Festival is a platform for celebrating culture, creativity, music, talent, and community. It brings people together through experiences that showcase the richness of our heritage and the power of creative expression.',
   },
   {
     id: 'music-talent-development',
     title: 'Music & Talent Development',
+    image: '/images/MUSIC%20DEVELOPMENT/051A3860.jpg',
     badge: 'Creative Development',
     description:
-      'I support emerging creatives and artists in discovering their voice, developing their talent and turning creativity into meaningful opportunities. Through music, creative direction and practical industry guidance, I help nurture talent from potential to purpose.',
+      'Music has always been part of my creative journey. I support and nurture emerging talent by creating opportunities for artists to develop their craft, tell authentic stories, and build sustainable creative careers.',
   },
   {
     id: 'mentorship',
     title: 'Mentorship',
+    image: '/images/Work%20that%20extends/Mentorship%20and%20training.jpg',
     badge: 'Creative Mentorship',
     description:
-      'I mentor young creatives and aspiring professionals through practical knowledge, experience and honest guidance. My focus is on helping people build confidence, develop their craft, understand the creative industry and turn their ideas into purposeful careers.',
+      'I believe in giving back by sharing my experience, knowledge, and lessons with the next generation. Through mentorship, I support young creatives and aspiring media professionals as they develop their skills, confidence, and careers.',
   },
 ];
 
@@ -106,7 +114,7 @@ export const productionEvents: ProductionEvent[] = [
     type: 'Corporate Storytelling',
     description:
       'Helping Sasini translate its legacy, people, operations and sustainability work into compelling visual stories that strengthen its corporate identity and connect its impact with wider audiences.',
-    image: images.sasiniConference,
+    image: '/images/PrODUCTION%20AND%20EVENTS/Sasini.jpg',
   },
   {
     id: 'elf-africa-impact-storytelling',
@@ -124,7 +132,7 @@ export const productionEvents: ProductionEvent[] = [
     type: 'Conference Production & Management',
     description:
       'Providing end-to-end production and conference management support, from planning and technical coordination to multi-camera coverage, livestreaming, photography and post-production—ensuring the conference runs smoothly and its key moments and conversations are captured professionally.',
-    image: images.euKenya,
+    image: '/images/PrODUCTION%20AND%20EVENTS/RHNK.jpeg',
   },
   {
     id: 'eu-kenya-forum',
@@ -134,7 +142,7 @@ export const productionEvents: ProductionEvent[] = [
     description:
       'On-the-ground media coverage for the EU–Kenya Business Forum 2025, a two-day international conference on digitalising trade',
     year: '2025',
-    image: images.euKenya,
+    image: '/images/PrODUCTION%20AND%20EVENTS/European%20Union.jpeg',
   },
   {
     id: 'corporate-live-broadcasts',

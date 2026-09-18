@@ -18,14 +18,23 @@ function Footer({ onNavigate }: FooterProps) {
         <button onClick={() => onNavigate('home')}>Home</button>
         <button onClick={() => onNavigate('story')}>About</button>
         <button onClick={() => onNavigate('work')}>Work</button>
-        <button onClick={() => onNavigate('journal')}>Insights</button>
+        <button onClick={() => onNavigate('services')}>Initiatives</button>
+        <button onClick={() => onNavigate('journal')}>My Insights</button>
         <button onClick={() => onNavigate('gallery')}>Gallery</button>
         <button onClick={() => onNavigate('contact')}>Contact</button>
       </nav>
 
       <div className="footer-profile">
-        <strong>Film Producer · Creative Director · Media Strategist</strong>
+        {/* <strong>Film Producer · Creative Director · Media Strategist</strong> */}
         {/* <span>{bioSummary.location}</span> */}
+        <a
+          className="footer-dencast-link"
+          href="https://www.dencastglobal.co.ke/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit <img className="footer-dencast-logo" src="/logos/dencast-logo.png" alt="Dencast Global" />
+        </a>
       </div>
     </footer>
   );

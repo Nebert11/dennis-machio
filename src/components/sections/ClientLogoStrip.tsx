@@ -24,7 +24,7 @@ function ClientLogoStrip() {
   return (
     <section className="client-logo-section section-pad" aria-label="Selected clients and partners">
       <div className="section-kicker">
-        Selected Clients &amp; Partners <span>Across Africa</span>
+        Clients &amp; Partners <span>Across Africa</span>
       </div>
       <div className="client-logo-window">
         <div className="client-logo-track">

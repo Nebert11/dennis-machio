@@ -13,13 +13,19 @@ function StoryPreviewSection({ onGoStory }: StoryPreviewSectionProps) {
       </div>
 
       <div className="story-preview-grid">
-        <div className="story-preview-photo">
+        <a
+          className="story-preview-photo"
+          href="https://www.dencastglobal.co.ke/portfolio"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="View the Dencast Global portfolio"
+        >
           <img src={images.portrait} alt="Dennis Machio" />
           <div className="story-preview-badge">
             <span>Dennis Machio</span>
             <small>Founder · Dencast Global</small>
           </div>
-        </div>
+        </a>
 
         <div className="story-preview-copy">
           <h2>
