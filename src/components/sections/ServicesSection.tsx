@@ -7,7 +7,43 @@ type ServicesSectionProps = {
 };
 
 function ServicesSection({ onGoContact, preview = false }: ServicesSectionProps) {
-  const visibleServices = preview ? services.slice(0, 2) : services;
+  const visibleServices = services;
+
+  if (preview) {
+    return (
+      <section className="services services-home section-pad">
+        <div className="services-home-heading">
+          <div className="section-kicker">
+            <span>Why Us</span>
+          </div>
+          <h2>
+            Where Creativity <em>Meets</em>
+            <br />
+            <em>Excellence</em>
+          </h2>
+          <p>
+            The reasons why Africa&apos;s leading brands, global organisations, and visionary creators choose Dencast
+            Global for their most important stories.
+          </p>
+        </div>
+
+        <div className="services-home-grid">
+          {visibleServices.map((service) => {
+            const Icon = service.icon;
+            return (
+              <article className="services-home-card" key={service.id}>
+                <div className="services-home-icon">
+                  <Icon size={18} strokeWidth={1.8} />
+                </div>
+                <h3>{service.title}</h3>
+                <p>{service.text}</p>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="services section-pad">
