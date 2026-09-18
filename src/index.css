@@ -542,23 +542,6 @@ h2 { font-size: clamp(36px, 5vw, 72px); letter-spacing: -.07em; line-height: 1.0
 
 /* Services Detailed Section */
 .services { background: #080a0d; padding-bottom: 110px; padding-top: 100px; }
-.services-home { background: var(--deep-blue); background-image: linear-gradient(135deg, var(--deep-blue) 0%, var(--deep-blue-soft) 48%, var(--deep-blue) 100%); padding-bottom: 118px; padding-top: 104px; position: relative; }
-.services-home:before { background-image: linear-gradient(rgba(174,184,197,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(174,184,197,.045) 1px, transparent 1px); background-size: 74px 74px; content: ''; inset: 0; opacity: .6; pointer-events: none; position: absolute; }
-.services-home-heading, .services-home-grid { margin-left: auto; margin-right: auto; max-width: 728px; position: relative; }
-.services-home-heading { text-align: center; }
-.services-home-heading .section-kicker { color: var(--red); display: inline-flex; font-size: 10px; gap: 10px; justify-content: center; letter-spacing: .2em; }
-.services-home-heading .section-kicker:before { background: var(--red); content: ''; height: 1px; width: 21px; }
-.services-home-heading .section-kicker span { color: var(--red); margin-left: 0; }
-.services-home-heading h2 { color: var(--white); font-size: clamp(34px, 4vw, 48px); letter-spacing: -.055em; line-height: .98; margin: 16px 0 14px; }
-.services-home-heading h2 em { color: var(--red); font-family: inherit; font-style: normal; font-weight: 800; }
-.services-home-heading p { color: rgba(247,248,246,.62); font-size: 12px; line-height: 1.55; margin: 0 auto; max-width: 480px; }
-.services-home-grid { display: grid; gap: 15px; grid-template-columns: repeat(3, 1fr); margin-top: 38px; }
-.services-home-card { background: rgba(247,248,246,.075); border: 1px solid rgba(174,184,197,.16); border-radius: 10px; min-height: 144px; padding: 16px; }
-.services-home-icon { align-items: center; background: var(--red); border-radius: 50%; color: var(--white); display: flex; height: 32px; justify-content: center; margin-bottom: 11px; width: 32px; }
-.services-home-card h3 { color: var(--white); font-size: 12px; letter-spacing: -.02em; line-height: 1.25; margin: 0 0 10px; }
-.services-home-card p { color: rgba(247,248,246,.62); font-size: 10px; line-height: 1.5; margin: 0; }
-.services-home-card:nth-child(4) { grid-column: 1; }
-.services-home-card:nth-child(5) { grid-column: 2; }
 .services-intro { align-items: end; display: flex; justify-content: space-between; margin: 25px 0 50px; }
 .services-list { display: grid; gap: 24px; grid-template-columns: repeat(2, 1fr); min-width: 0; }
 .service-detail-card { background: #0d1219; border: 1px solid #212c3b; display: flex; flex-direction: column; min-width: 0; padding: 36px; }
@@ -709,8 +692,6 @@ blockquote { color: #111923; font-size: clamp(24px, 3.2vw, 40px); font-weight: 6
   .gallery-rail-track { grid-template-columns: repeat(2, 1fr); }
   .process-grid { grid-template-columns: repeat(2, 1fr); }
   .services-list { grid-template-columns: 1fr; }
-  .services-home-grid { grid-template-columns: repeat(2, 1fr); max-width: 620px; }
-  .services-home-card:nth-child(4), .services-home-card:nth-child(5) { grid-column: auto; }
   .productions-grid { grid-template-columns: 1fr; }
 }
 
@@ -734,7 +715,6 @@ blockquote { color: #111923; font-size: clamp(24px, 3.2vw, 40px); font-weight: 6
   .site-footer { align-items: flex-start; flex-direction: column; gap: 24px; padding-bottom: 15px; padding-top: 15px; }
   .footer-nav { gap: 16px; justify-content: flex-start; }
   .footer-profile { align-items: flex-start; text-align: left; }
-  .services-home-grid { grid-template-columns: 1fr; }
   .hero { align-items: flex-start; background-position: 74% center; background-size: auto 100%; min-height: 0; padding-bottom: 72px; padding-top: 130px; }
   .hero-copy { max-width: 100%; }
   .hero h1 { font-size: clamp(44px, 12vw, 78px); max-width: 100%; }
