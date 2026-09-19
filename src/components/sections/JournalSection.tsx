@@ -15,7 +15,7 @@ function JournalSection({ onGoJournal, onGoArticle, page = false }: JournalSecti
       <div className="section-heading journal-heading">
         <div>
           <div className="section-kicker">
-            My Insights <span>{page ? 'Insights' : ''}</span>
+            My Insights {!page && <span />}
           </div>
           <h2>
             Ideas from <em>the work.</em>

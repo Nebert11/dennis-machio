@@ -11,7 +11,7 @@ function JournalPage({ onGoContact, onGoArticle }: JournalPageProps) {
     <>
       <PageHero
         kicker="My Insights"
-        kickerTag="Insights"
+        kickerTag=""
         variant="insights-hero"
         title={
           <>
@@ -20,6 +20,7 @@ function JournalPage({ onGoContact, onGoArticle }: JournalPageProps) {
             <em>Insights</em>
           </>
         }
+        description="Reflections, lessons and ideas from a life in storytelling, creative production and visual communication across Africa."
       />
       <JournalSection page onGoArticle={onGoArticle} />
       <section className="journal-contact-prompt section-pad">

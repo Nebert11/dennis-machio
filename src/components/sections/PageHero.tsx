@@ -11,6 +11,7 @@ type PageHeroProps = {
 function PageHero({ kicker, kickerTag, title, description, variant }: PageHeroProps) {
   return (
     <section className={`page-hero section-pad${variant ? ` ${variant}` : ''}`}>
+      {variant === 'insights-hero' && <div className="insights-hero-visual" aria-hidden="true" />}
       <div className="section-kicker">
         {kicker} <span>{kickerTag}</span>
       </div>

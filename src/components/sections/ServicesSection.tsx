@@ -14,7 +14,7 @@ function ServicesSection({ onGoContact, preview = false }: ServicesSectionProps)
       <section className="services services-home section-pad">
         <div className="services-home-heading">
           <div className="section-kicker">
-            <span>Why Us</span>
+            {/* <span>Why Us</span> */}
           </div>
           <h2>
             Where Creativity <em>Meets</em>
