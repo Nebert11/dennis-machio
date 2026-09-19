@@ -90,6 +90,7 @@ button { color: inherit; }
 .page-hero + .journal-page-section,
 .page-hero + .services,
 .page-hero + .gallery-section { background: #ffffff; border-top: 1px solid #e7e7e4; color: #14181d; }
+.page-hero + .gallery-section { background: #0a111a; border-top-color: #1c2635; color: #f7f8f6; }
 .page-hero + .journal-page-section .journal-heading .section-kicker { display: none; }
 .page-hero + .ventures .section-kicker,
 .page-hero + .journal-page-section .section-kicker,
@@ -102,6 +103,7 @@ button { color: inherit; }
 .page-hero + .journal-page-section h2,
 .page-hero + .services h2,
 .page-hero + .gallery-section h2 { color: #14181d; }
+.page-hero + .gallery-section h2 { color: #f7f8f6; }
 .page-hero + .ventures .ventures-heading p,
 .page-hero + .journal-page-section .journal-card-body p,
 .page-hero + .services .services-intro > p,
@@ -124,6 +126,7 @@ button { color: inherit; }
 .page-hero + .gallery-section .section-kicker { color: #526d91; }
 .page-hero + .services .services-intro > p,
 .page-hero + .gallery-section .gallery-feature-copy p { color: #53657a; }
+.page-hero + .gallery-section .gallery-feature-copy p { color: #aebdce; }
 .page-hero + .services .service-detail-card { color: #f7f8f6; }
 .page-hero + .services .service-detail-card h3 { color: #f7f8f6; }
 .page-hero + .contact .contact-detail-card { background: #0e141d; border-color: #1f2b3b; }

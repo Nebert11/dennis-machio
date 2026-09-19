@@ -47,7 +47,7 @@ function GallerySection({ onGoContact }: GallerySectionProps) {
     <section className="gallery-section section-pad">
       <div className="gallery-feature">
         <div className="gallery-feature-copy">
-          <span className="section-kicker">Featured Screen <span>Gallery</span></span>
+          <span className="section-kicker">Featured Screen</span>
           <h2>Stories in <em>motion.</em></h2>
           <p>Explore a selection of films, broadcasts and visual stories from across Dennis Machio&apos;s production work.</p>
           <button className="button button-primary" onClick={onGoContact}>Share a production brief</button>
