@@ -18,7 +18,7 @@ function WorkPage({ onGoContact, onViewVenture }: WorkPageProps) {
     <>
       <PageHero
         kicker="Selected Work"
-        kickerTag="Portfolio"
+        kickerTag=""
         variant="work-hero"
         title={
           <>

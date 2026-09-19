@@ -26,7 +26,7 @@ function StoryPage({ onGoContact }: StoryPageProps) {
     <>
       <PageHero
         kicker="The Storyteller"
-        kickerTag="My Story"
+        kickerTag=""
         variant="story-hero"
         title={
           <>
