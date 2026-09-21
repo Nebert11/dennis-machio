@@ -7,7 +7,7 @@ type StoryPreviewSectionProps = {
 
 function StoryPreviewSection({ onGoStory }: StoryPreviewSectionProps) {
   return (
-    <section className="story-preview-section section-pad">
+    <section className={`story-preview-section section-pad${onGoStory ? ' story-preview-home' : ''}`}>
       <div className="section-kicker">
         About Me
       </div>
@@ -66,7 +66,7 @@ function StoryPreviewSection({ onGoStory }: StoryPreviewSectionProps) {
               <button className="button button-primary" onClick={onGoStory}>
                 Read My Full Story &amp; Journey <ArrowUpRight size={16} />
               </button>
-              <span className="preview-hint">Includes career timeline &amp; endorsements</span>
+              {/* <span className="preview-hint">Includes career timeline &amp; endorsements</span> */}
             </div>
           )}
         </div>
