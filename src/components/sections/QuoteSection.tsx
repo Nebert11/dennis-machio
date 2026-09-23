@@ -5,7 +5,6 @@ function QuoteSection() {
     <section className="quote-section testimonials-section section-pad">
       <div className="testimonial-heading">
         <span className="section-kicker">Testimonials</span>
-        <span>Client Perspective</span>
       </div>
       <Quote size={28} className="quote-mark" aria-hidden="true" />
       <blockquote>

@@ -11,7 +11,7 @@ function GalleryPage({ onGoContact }: GalleryPageProps) {
     <>
       <PageHero
         kicker="Gallery"
-        kickerTag="Films & Photography"
+        kickerTag=""
         title={
           <>
             Stories you can <em>see.</em>

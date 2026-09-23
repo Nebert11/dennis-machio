@@ -186,8 +186,10 @@ h2 { font-size: clamp(36px, 5vw, 72px); letter-spacing: -.07em; line-height: 1.0
 
 /* Story Preview Section (Home) */
 .story-preview-section { background: #0c121a; border-top: 1px solid #1c2635; padding-bottom: 110px; padding-top: 100px; }
-.story-preview-home { background: #ffffff; border-top-color: #e7e7e4; color: #14181d; }
-.story-preview-home .section-kicker { color: #697789; }
+.story-preview-home { background: linear-gradient(90deg, rgba(238,241,245,.01) 5%, rgba(238,241,245,.16) 48%, rgba(238,241,245,.3) 100%), url('/images/about me photo scrolls/about-bg.png') center / cover no-repeat; border-top-color: #e7e7e4; color: #14181d; }
+.story-preview-home .story-preview-grid { grid-template-columns: minmax(0, 1fr); }
+.story-preview-home .story-preview-copy { margin-left: auto; max-width: 760px; }
+.story-preview-home .section-kicker { color: #697789; justify-content: flex-end; }
 .story-preview-home .story-preview-copy h2 { color: #14181d; }
 .story-preview-home .story-preview-copy h2 em { color: #526d91; }
 .story-preview-home .story-preview-copy p:not(.lead) { color: #53606d; }
@@ -204,8 +206,10 @@ h2 { font-size: clamp(36px, 5vw, 72px); letter-spacing: -.07em; line-height: 1.0
 .story-photo-scroll-section { background: #ffffff; border-top: 1px solid #e7e7e4; padding-bottom: 90px; padding-top: 10px; }
 .story-photo-scroll-window { margin-top: 30px; overflow: hidden; }
 .story-photo-scroll-track { animation: story-photo-scroll 32s linear infinite; display: flex; gap: 18px; width: max-content; }
-.story-photo-scroll-item { border-radius: 10px; flex-shrink: 0; height: 300px; overflow: hidden; width: 230px; }
+.story-photo-scroll-window:hover .story-photo-scroll-track, .story-photo-scroll-window:focus-within .story-photo-scroll-track { animation-play-state: paused; }
+.story-photo-scroll-item { background: none; border: 0; border-radius: 10px; cursor: pointer; flex-shrink: 0; height: 300px; overflow: hidden; padding: 0; width: 230px; }
 .story-photo-scroll-item img { display: block; height: 100%; object-fit: cover; width: 100%; }
+.story-photo-scroll-item:focus-visible { outline: 3px solid #d70c2f; outline-offset: 3px; }
 @keyframes story-photo-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .story-preview-copy { align-self: center; }
 .story-preview-copy h2 { margin: 0 0 20px; }
@@ -353,8 +357,8 @@ h2 { font-size: clamp(36px, 5vw, 72px); letter-spacing: -.07em; line-height: 1.0
 /* Collaborate CTA */
 .collaborate-cta { background: #07090c; padding-bottom: 110px; padding-top: 110px; }
 .collaborate-inner { background: linear-gradient(135deg, #0b111b, #2b111f); border: 1px solid #232f3f; min-height: 620px; overflow: hidden; padding: clamp(35px, 6vw, 70px); position: relative; }
-.collaborate-inner:before { background: radial-gradient(circle at top right, rgba(215, 12, 47, 0.25), transparent 60%); content: ''; inset: 0; pointer-events: none; position: absolute; }
-.collaborate-inner:after { background: url('/images/new_images/lets-create.png') right center / auto 100% no-repeat; content: ''; inset: 0 0 0 48%; opacity: .72; pointer-events: none; position: absolute; }
+.collaborate-inner:before { background: radial-gradient(circle at top right, rgba(215, 12, 47, 0.05), transparent 60%); content: ''; inset: 0; pointer-events: none; position: absolute; }
+.collaborate-inner:after { background: url('/images/portfolio/lets-create.jpg') right bottom / auto 100% no-repeat; content: ''; inset: 0 0 0 48%; mix-blend-mode: screen; opacity: .9; pointer-events: none; position: absolute; }
 .collaborate-inner > * { position: relative; z-index: 1; }
 .collaborate-inner h2 { margin: 25px 0 16px; max-width: min(500px, 48%); overflow-wrap: anywhere; }
 .collaborate-subtitle { color: #9aa5b3; font-size: 20px; line-height: 1.8; margin-bottom: 35px; max-width: min(500px, 48%); }
@@ -781,6 +785,8 @@ blockquote { color: #111923; font-size: clamp(24px, 3.2vw, 40px); font-weight: 6
   .story-photo { min-height: 440px; }
   .story-photo img { height: 440px; min-height: 440px; }
   .story-preview-photo img { height: 360px; }
+  .story-preview-home .section-kicker { justify-content: flex-start; }
+  .story-preview-home .story-preview-copy { margin-left: 0; max-width: 100%; }
   .journal-preview-section, .journal-page-section { padding-bottom: 85px; padding-top: 85px; }
   .journal-grid, .journal-preview-section .journal-grid, .journal-page-section .journal-grid { grid-template-columns: 1fr; }
   .gallery-feature { grid-template-columns: 1fr; }

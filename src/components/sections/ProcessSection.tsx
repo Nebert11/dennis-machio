@@ -4,7 +4,7 @@ function ProcessSection() {
   return (
     <section className="process-section section-pad">
       <div className="section-kicker">
-        How we work <span>Workflow</span>
+        How we work
       </div>
       <div className="process-heading">
         <h2>

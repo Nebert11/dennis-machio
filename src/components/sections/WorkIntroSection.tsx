@@ -3,7 +3,7 @@ function WorkIntroSection() {
     <section className="work-intro-section section-pad">
       <div className="work-intro-inner">
         <div className="section-kicker">
-          The Work <span>Context</span>
+          The Work
         </div>
         <h2>
           Stories built with <em>purpose.</em>

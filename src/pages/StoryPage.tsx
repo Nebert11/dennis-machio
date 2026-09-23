@@ -1,9 +1,11 @@
 import CollaborateCTA from '../components/sections/CollaborateCTA';
 import JourneySection from '../components/sections/JourneySection';
+import { X } from 'lucide-react';
 import PageHero from '../components/sections/PageHero';
 import QuoteSection from '../components/sections/QuoteSection';
 import StorySection from '../components/sections/StorySection';
 import StoryPreviewSection from '../components/sections/StoryPreviewSection';
+import { useState } from 'react';
 import { images } from '../data/siteContent';
 
 type StoryPageProps = {
@@ -22,6 +24,8 @@ const storyScrollPhotos = [
 ];
 
 function StoryPage({ onGoContact }: StoryPageProps) {
+  const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
+
   return (
     <>
       <PageHero
@@ -41,13 +45,29 @@ function StoryPage({ onGoContact }: StoryPageProps) {
         <div className="story-photo-scroll-window">
           <div className="story-photo-scroll-track">
             {[...storyScrollPhotos, ...storyScrollPhotos].map((photo, index) => (
-              <div className="story-photo-scroll-item" key={`${photo}-${index}`}>
+              <button
+                className="story-photo-scroll-item"
+                key={`${photo}-${index}`}
+                type="button"
+                onClick={() => setSelectedPhoto(photo)}
+                aria-label="View behind-the-scenes photo"
+              >
                 <img src={photo} alt="Dennis Machio behind the scenes" />
-              </div>
+              </button>
             ))}
           </div>
         </div>
       </section>
+      {selectedPhoto && (
+        <div className="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Behind-the-scenes photo" onClick={() => setSelectedPhoto(null)}>
+          <button className="gallery-lightbox-close" type="button" onClick={() => setSelectedPhoto(null)} aria-label="Close photo viewer">
+            <X size={22} />
+          </button>
+          <div className="gallery-lightbox-content" onClick={(event) => event.stopPropagation()}>
+            <img src={selectedPhoto} alt="Dennis Machio behind the scenes" />
+          </div>
+        </div>
+      )}
       <StorySection onGoContact={onGoContact} />
       <JourneySection />
       <QuoteSection />

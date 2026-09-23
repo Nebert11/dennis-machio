@@ -10,7 +10,7 @@ function VenturesSection({ onGoContact, onViewVenture }: VenturesSectionProps) {
   return (
     <section className="ventures section-pad">
       <div className="section-kicker">
-        Initiatives <span>Platforms &amp; Programmes</span>
+        Initiatives 
       </div>
       <div className="ventures-heading">
         <h2>

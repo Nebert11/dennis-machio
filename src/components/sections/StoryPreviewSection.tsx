@@ -13,19 +13,21 @@ function StoryPreviewSection({ onGoStory }: StoryPreviewSectionProps) {
       </div>
 
       <div className="story-preview-grid">
-        <a
-          className="story-preview-photo"
-          href="https://www.dencastglobal.co.ke/portfolio"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="View the Dencast Global portfolio"
-        >
-          <img src={images.portrait} alt="Dennis Machio" />
-          <div className="story-preview-badge">
-            <span>Dennis Machio</span>
-            <small>Founder · Dencast Global</small>
-          </div>
-        </a>
+        {!onGoStory && (
+          <a
+            className="story-preview-photo"
+            href="https://www.dencastglobal.co.ke/portfolio"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View the Dencast Global portfolio"
+          >
+            <img src={images.portrait} alt="Dennis Machio" />
+            <div className="story-preview-badge">
+              <span>Dennis Machio</span>
+              <small>Founder · Dencast Global</small>
+            </div>
+          </a>
+        )}
 
         <div className="story-preview-copy">
           <h2>
@@ -66,7 +68,6 @@ function StoryPreviewSection({ onGoStory }: StoryPreviewSectionProps) {
               <button className="button button-primary" onClick={onGoStory}>
                 Read My Full Story &amp; Journey <ArrowUpRight size={16} />
               </button>
-              {/* <span className="preview-hint">Includes career timeline &amp; endorsements</span> */}
             </div>
           )}
         </div>

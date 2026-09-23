@@ -11,7 +11,7 @@ function ServicesPage({ onGoContact }: ServicesPageProps) {
     <>
       <PageHero
         kicker="What I Do"
-        kickerTag="Capabilities"
+        kickerTag=""
         title={
           <>
             Ideas into <em>impact.</em>

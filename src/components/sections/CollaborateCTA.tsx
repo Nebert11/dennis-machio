@@ -16,7 +16,7 @@ function CollaborateCTA({
     <section className="collaborate-cta section-pad">
       <div className="collaborate-inner">
         <div className="section-kicker">
-          Talk to Me <span>Contact</span>
+          Talk to Me
         </div>
         <h2>
           {title}

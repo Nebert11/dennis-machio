@@ -20,7 +20,7 @@ function ProductionsSection({ onGoContact }: ProductionsSectionProps) {
   return (
     <section className="productions section-pad">
       <div className="section-kicker">
-        Productions &amp; Events <span>Selected Work</span>
+        Productions &amp; Events
       </div>
       <div className="productions-intro">
         <h2>

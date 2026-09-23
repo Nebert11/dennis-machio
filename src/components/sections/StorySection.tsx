@@ -14,7 +14,7 @@ function StorySection({ onGoContact }: StorySectionProps) {
       </div>
       <div className="story-copy">
         <div className="section-kicker">
-          My Story <span>Biography</span>
+          My Story
         </div>
         <h2>
           From behind the camera

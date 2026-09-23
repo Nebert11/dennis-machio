@@ -6,7 +6,7 @@ function JourneySection() {
       <div className="journey-frame">
         <div className="journey-content">
           <div className="section-kicker">
-            The Journey <span>Timeline</span>
+            The Journey
           </div>
           <div className="journey-heading">
             <h2>

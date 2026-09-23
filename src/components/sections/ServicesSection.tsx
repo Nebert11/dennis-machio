@@ -48,7 +48,7 @@ function ServicesSection({ onGoContact, preview = false }: ServicesSectionProps)
   return (
     <section className="services section-pad">
       <div className="section-kicker">
-        What I Do <span>{preview ? 'Two Featured Disciplines' : 'Capabilities'}</span>
+        What I Do <span>{preview ? 'Two Featured Disciplines' : ''}</span>
       </div>
       <div className="services-intro">
         <h2>
