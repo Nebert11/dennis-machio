@@ -436,8 +436,7 @@ h2 { font-size: clamp(36px, 5vw, 72px); letter-spacing: -.07em; line-height: 1.0
 .awards-subheading { color: #f7f8f6; font-size: 18px; font-weight: 600; margin: 0 0 18px; max-width: 680px; }
 .awards-video-section + .awards-video-section { border-top: 1px solid #1f2b3b; margin-top: 82px; padding-top: 72px; }
 .awards-video-grid { display: grid; gap: 22px; grid-template-columns: repeat(3, 1fr); margin-top: 26px; }
-.awards-video-grid-featured { grid-template-columns: repeat(2, 1fr); }
-.awards-video-grid-two { grid-template-columns: repeat(2, 1fr); }
+.awards-video-grid-featured, .awards-video-grid-two { grid-template-columns: minmax(0, 1fr); }
 .awards-video-grid-single { grid-template-columns: minmax(0, 1fr); }
 .awards-video-card { background: #0f1d2f; border: 1px solid #29435f; min-width: 0; padding-bottom: 22px; }
 .awards-video-poster { aspect-ratio: 16 / 9; background: #050a11; border: 0; cursor: pointer; display: block; overflow: hidden; padding: 0; position: relative; text-align: left; width: 100%; }

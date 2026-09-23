@@ -45,6 +45,16 @@ function TalentDetailPage({ profile, onBack }: TalentDetailPageProps) {
             </div>
           </div>
         ) : null}
+        <div className="awards-video-section talent-detail-section">
+          <div className="section-kicker">Gallery <span>{profile.name}</span></div>
+          <div className="awards-image-grid">
+            {profile.galleryImages.map((image) => (
+              <div className="awards-image-card" key={image}>
+                <img src={image} alt={profile.name} loading="lazy" />
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
       {selectedVideo && (
         <div className="awards-video-lightbox" role="dialog" aria-modal="true" aria-label={selectedVideo.title}>

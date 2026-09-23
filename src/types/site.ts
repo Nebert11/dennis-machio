@@ -38,6 +38,7 @@ export type TalentProfile = {
   category: string;
   description: string;
   image: string;
+  galleryImages: string[];
   details: string[];
   videos?: { id: string; title: string }[];
 };
