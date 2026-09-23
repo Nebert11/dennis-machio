@@ -3,15 +3,16 @@ import PageHero from '../components/sections/PageHero';
 import ProcessSection from '../components/sections/ProcessSection';
 import ProductionsSection from '../components/sections/ProductionsSection';
 import ServicesSection from '../components/sections/ServicesSection';
-// import WorkSection from '../components/sections/WorkSection';
+import VenturesSection from '../components/sections/VenturesSection';
 import WorkIntroSection from '../components/sections/WorkIntroSection';
 
 type WorkPageProps = {
   onGoContact: () => void;
   onViewProject: (slug: string) => void;
+  onViewVenture: (ventureId: string) => void;
 };
 
-function WorkPage({ onGoContact }: WorkPageProps) {
+function WorkPage({ onGoContact, onViewVenture }: WorkPageProps) {
   return (
     <>
       <PageHero
@@ -29,7 +30,7 @@ function WorkPage({ onGoContact }: WorkPageProps) {
       />
       <WorkIntroSection />
       <ProductionsSection onGoContact={onGoContact} />
-      {/* <WorkSection onGoContact={onGoContact} onViewProject={onViewProject} /> */}
+      <VenturesSection onGoContact={onGoContact} onViewVenture={onViewVenture} />
       <ServicesSection onGoContact={onGoContact} />
       <ProcessSection />
       <CollaborateCTA onGoContact={onGoContact} />

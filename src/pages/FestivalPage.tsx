@@ -1,8 +1,6 @@
 import { Play, X } from 'lucide-react';
 import { useState } from 'react';
 
-type FestivalPageProps = { onGoContact: () => void };
-
 const videos = [
   {
     id: 'kSDbt78t32Y',
@@ -25,14 +23,12 @@ const galleryImages = [
 
 type FestivalVideo = (typeof videos)[number];
 
-function FestivalPage({ onGoContact }: FestivalPageProps) {
+function FestivalPage() {
   const [selectedVideo, setSelectedVideo] = useState<FestivalVideo | null>(null);
 
   return (
     <>
       <section className="awards-page section-pad">
-        <button type="button" onClick={onGoContact}>Get in touch</button>
-        <div className="section-kicker">Initiatives <span>Magharibi Festival</span></div>
         <div className="awards-intro">
           <p className="awards-eyebrow">Celebrating Western Kenya&apos;s Talent, Culture, and Creative Expression</p>
           <h1>Magharibi <em>Festival.</em></h1>

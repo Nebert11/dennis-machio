@@ -32,6 +32,16 @@ export type Venture = {
   badge: string;
 };
 
+export type TalentProfile = {
+  id: string;
+  name: string;
+  category: string;
+  description: string;
+  image: string;
+  details: string[];
+  videos?: { id: string; title: string }[];
+};
+
 export type ProductionEvent = {
   id: string;
   title: string;

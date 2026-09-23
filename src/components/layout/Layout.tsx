@@ -16,8 +16,9 @@ import MusicPage from '../../pages/MusicPage';
 import FestivalPage from '../../pages/FestivalPage';
 import MentorshipPage from '../../pages/MentorshipPage';
 import LiveRecordingsPage from '../../pages/LiveRecordingsPage';
+import TalentDetailPage from '../../pages/TalentDetailPage';
 import { routeToPath, pathToRoute, type PageKey, type Route } from '../../types/navigation';
-import { journalArticles, projects } from '../../data/siteContent';
+import { journalArticles, musicDevelopmentProfiles, projects } from '../../data/siteContent';
 
 export default function Layout() {
   const [route, setRouteState] = useState<Route>(() => pathToRoute(window.location.pathname));
@@ -45,6 +46,11 @@ export default function Layout() {
 
   const goToArticle = useCallback(
     (articleId: string) => navigateToRoute({ page: 'article', articleId }),
+    [navigateToRoute],
+  );
+
+  const goToTalentProfile = useCallback(
+    (talentId: string) => navigateToRoute({ page: 'talent', talentId }),
     [navigateToRoute],
   );
 
@@ -83,10 +89,11 @@ export default function Layout() {
           <WorkPage
             onGoContact={() => setCurrentPage('contact')}
             onViewProject={goToProject}
+            onViewVenture={goToVenture}
           />
         );
       case 'services':
-        return <ServicesPage onGoContact={() => setCurrentPage('contact')} onViewVenture={goToVenture} />;
+        return <ServicesPage onGoContact={() => setCurrentPage('contact')} onViewProfile={goToTalentProfile} />;
       case 'journal':
         return <JournalPage onGoContact={() => setCurrentPage('contact')} onGoArticle={goToArticle} />;
       case 'gallery':
@@ -101,6 +108,10 @@ export default function Layout() {
           />
         );
       }
+      case 'talent': {
+        const profile = musicDevelopmentProfiles.find((item) => item.id === route.talentId);
+        return <TalentDetailPage profile={profile} onBack={() => setCurrentPage('services')} />;
+      }
       case 'project': {
         const project = projects.find((item) => item.slug === route.projectSlug);
         return (
@@ -114,15 +125,15 @@ export default function Layout() {
       case 'contact':
         return <ContactPage />;
       case 'awards':
-        return <AwardsPage onGoContact={() => setCurrentPage('contact')} />;
+        return <AwardsPage />;
       case 'music':
-        return <MusicPage onGoContact={() => setCurrentPage('contact')} />;
+        return <MusicPage />;
       case 'festival':
-        return <FestivalPage onGoContact={() => setCurrentPage('contact')} />;
+        return <FestivalPage />;
       case 'mentorship':
-        return <MentorshipPage onGoContact={() => setCurrentPage('contact')} />;
+        return <MentorshipPage />;
       case 'live-recordings':
-        return <LiveRecordingsPage onGoContact={() => setCurrentPage('contact')} />;
+        return <LiveRecordingsPage />;
       default:
         return (
           <HomePage
@@ -132,9 +143,9 @@ export default function Layout() {
           />
         );
     }
-  }, [route, setCurrentPage, goToProject, goToArticle, goToVenture]);
+  }, [route, setCurrentPage, goToProject, goToArticle, goToTalentProfile, goToVenture]);
 
-  const currentPage = route.page === 'article' ? 'journal' : route.page;
+  const currentPage = route.page === 'article' || route.page === 'talent' ? (route.page === 'article' ? 'journal' : 'services') : route.page;
 
   return (
     <div className="site-shell">

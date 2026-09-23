@@ -1,7 +1,6 @@
 import { Play, X } from 'lucide-react';
 import { useState } from 'react';
 
-type MusicPageProps = { onGoContact: () => void };
 type MusicVideo = { id: string; title: string };
 
 const topVideos: MusicVideo[] = [
@@ -26,14 +25,12 @@ function MusicVideoCard({ video, onSelect }: { video: MusicVideo; onSelect: (vid
   );
 }
 
-function MusicPage({ onGoContact }: MusicPageProps) {
+function MusicPage() {
   const [selectedVideo, setSelectedVideo] = useState<MusicVideo | null>(null);
 
   return (
     <>
       <section className="awards-page section-pad">
-        <button type="button" onClick={onGoContact}>Get in touch</button>
-        <div className="section-kicker">Initiatives <span>Music &amp; Talent Development</span></div>
         <div className="awards-intro">
           <p className="awards-eyebrow">Creative Development</p>
           <h1>Music &amp; Talent <em>Development.</em></h1>

@@ -3,7 +3,8 @@ export type PageKey = 'home' | 'story' | 'work' | 'services' | 'journal' | 'gall
 export type Route =
   | { page: 'home' | 'story' | 'work' | 'services' | 'journal' | 'gallery' | 'contact' | 'awards' | 'music' | 'festival' | 'mentorship' | 'live-recordings' }
   | { page: 'project'; projectSlug: string }
-  | { page: 'article'; articleId: string };
+  | { page: 'article'; articleId: string }
+  | { page: 'talent'; talentId: string };
 
 const pathByPage: Record<'home' | 'story' | 'work' | 'services' | 'journal' | 'gallery' | 'contact' | 'awards' | 'music' | 'festival' | 'mentorship' | 'live-recordings', string> = {
   home: '/',
@@ -23,6 +24,7 @@ const pathByPage: Record<'home' | 'story' | 'work' | 'services' | 'journal' | 'g
 export function routeToPath(route: Route): string {
   if (route.page === 'project') return `/work/${route.projectSlug}`;
   if (route.page === 'article') return `/insights/${route.articleId}`;
+  if (route.page === 'talent') return `/initiatives/music-and-talent-development/${route.talentId}`;
   return pathByPage[route.page];
 }
 
@@ -31,6 +33,8 @@ export function pathToRoute(pathname: string): Route {
   if (projectMatch) return { page: 'project', projectSlug: projectMatch[1] };
   const articleMatch = pathname.match(/^\/insights\/([^/]+)\/?$/);
   if (articleMatch) return { page: 'article', articleId: articleMatch[1] };
+  const talentMatch = pathname.match(/^\/initiatives\/music-and-talent-development\/([^/]+)\/?$/);
+  if (talentMatch) return { page: 'talent', talentId: talentMatch[1] };
 
   switch (pathname) {
     case '/story':

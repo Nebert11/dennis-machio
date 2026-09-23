@@ -1,8 +1,6 @@
 import { Play, X } from 'lucide-react';
 import { useState } from 'react';
 
-type MentorshipPageProps = { onGoContact: () => void };
-
 const video = {
   id: 'Bi2l99gd-S8',
   title: 'Inspiring story of Magharibi Community Coach Luanda Okinyi',
@@ -13,14 +11,12 @@ const galleryImages = [
   '/images/MENTORSHIP%20AND%20TRAINING/519363326_10237569193671910_2484539785284979947_n.jpg',
 ];
 
-function MentorshipPage({ onGoContact }: MentorshipPageProps) {
+function MentorshipPage() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
     <>
       <section className="awards-page section-pad">
-        <button type="button" onClick={onGoContact}>Get in touch</button>
-        <div className="section-kicker">Initiatives <span>Mentorship</span></div>
         <div className="awards-intro">
           <p className="awards-eyebrow">Nurturing Talent. Mentoring Creatives. Building Dreams.</p>
           <h1>Mentorship &amp; <em>support.</em></h1>

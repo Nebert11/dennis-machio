@@ -16,6 +16,7 @@ import type {
   StatItem,
   TimelineItem,
   Venture,
+  TalentProfile,
 } from '../types/site';
 
 export const images: ImageSet = {
@@ -111,6 +112,95 @@ export const ventures: Venture[] = [
     badge: 'Live Worship Recordings',
     description:
       "Partnered with the Bungoma-based Holygate Worship team to produce their first live recording, Rehoboth. Filmed and produced at Holygate Church in Bungoma, the project captured the team's worship, musical expression, and passion for sharing inspiring songs through a professionally produced live recording.",
+  },
+];
+
+export const musicDevelopmentProfiles: TalentProfile[] = [
+  {
+    id: 'steve-kay',
+    name: 'Steve Kay',
+    category: 'Traditional Bukusu Music',
+    description:
+      'A Bungoma musician specializing in traditional Bukusu music. Together we developed the Luhya Pop sound and produced Mbe Omukhasi, which has more than 6 million YouTube views, alongside Bayudaa and Khalinjola through the Wambumuli Dynamic team.',
+    image: '/images/MUSIC%20DEVELOPMENT/music1.jpg',
+    details: [
+      'Steve Kay has established himself as a distinctive voice in Luhya music. Originally from Bungoma County, he began his musical journey nearly a decade ago, specializing in traditional Bukusu music while exploring new creative expressions.',
+      'Together, we pioneered a new musical style known as Luhya Pop, combining the rich heritage of Luhya music with contemporary sounds. This creative journey led to the release of his hit single, Mbe Omukhasi, which has garnered over 6 million views on YouTube to date and continues to attract audiences in Kenya and across the region.',
+      'Through the Wambumuli Dynamic team, our work focused on composing, producing, and performing music that addresses social issues, promotes positive values, and celebrates the cultural identity of our communities.',
+      'Working with Steve Kay has been a meaningful part of my journey in developing original music and creating opportunities for local artists to showcase their talent.',
+      'Other songs that I supported him to produce included Bayudaa and Khalinjola – a luhya rhumba tune',
+    ],
+    videos: [
+      { id: 'Hv3QzOLrXgw', title: 'Steve Kay - Khalinjola' },
+      { id: 'i_2aC6QyQuM', title: 'Steve Kay - Bayudah' },
+      { id: 'PJ4HC7318h4', title: 'Steve Kay - Mbe Omukhasi (Official Video)' },
+    ],
+  },
+  {
+    id: 'harry-richie',
+    name: 'Harry Richie',
+    category: 'Artist Development',
+    description:
+      'One of the artists I have had the privilege of working with, supporting the creative process and the development of music that connects with a wider audience.',
+    image: '/images/MUSIC%20DEVELOPMENT/music2.jpg',
+    details: [
+      'Throughout my creative journey, I have also had the honour of working with talented artists, including Harry Richie, Ash Mulongo, and Micah Wanyenje. Each collaboration has offered an opportunity to support artistic expression, music development, and the growth of the region\'s creative industry.',
+    ],
+    videos: [{ id: 'Rloz0hZFd-o', title: 'HARRY RICHIE OFFICIAL - CONFIRM OFFICIAL VIDEO' }],
+  },
+  {
+    id: 'ash-mulongo',
+    name: 'Ash Mulongo',
+    category: 'Artist Development',
+    description:
+      'A fast-rising female artist with a distinctive sound. I supported her musical identity, song production, audience growth, and album campaign launch.',
+    image: '/images/MUSIC%20DEVELOPMENT/music3.jpg',
+    details: [
+      'Ash Mulongo is a fast-rising female artist with a unique musical sound and a distinctive voice. She is passionate about developing her music and has embarked on producing new songs while recently launching an album campaign.',
+      'My engagement with Ash reflects my commitment to supporting emerging artists as they develop their musical identity, expand their audiences, and pursue new opportunities within the industry.',
+    ],
+    videos: [{ id: 'LfTl4hTlj4s', title: 'Ash Mulongo song' }],
+  },
+  {
+    id: 'micah-wanyenje',
+    name: 'Micah Wanyenje',
+    category: 'Luhya Music',
+    description:
+      'A Western Kenya musician and Ambassador of Luhya Music, known for Matakwei, Wabomba, and Alimo Sindu.',
+    image: '/images/MUSIC%20DEVELOPMENT/051A3860.jpg',
+    details: [
+      'I have also had the privilege and honour of working with Micah Wanyenje, a talented musician whose sound has established a presence within the Western Kenya music scene.',
+      'Micah has produced several popular singles, including Matakwei, Wabomba, and Alimo Sindu. His distinctive sound and catchy musical style have earned him recognition as an Ambassador of Luhya Music.',
+      'Working with artists such as Micah reinforces my belief in the importance of investing in local talent, preserving cultural identity, and creating platforms where music can thrive.',
+    ],
+  },
+  {
+    id: 'cedars',
+    name: 'Cedars',
+    category: 'The Bliss Project',
+    description:
+      'A Bungoma-based local band partnered with for The Bliss Project and the recording of a gospel mini-album.',
+    image: '/images/MUSIC%20DEVELOPMENT/card_image.jpg',
+    details: [
+      'The Bliss Project was a work of art that brought together gospel music artists for a concert celebrating the love, beauty, and transformative power of gospel music.',
+      'As part of this initiative, I partnered with a Bungoma-based local band – Cedars -  to support the artists in recording a mini-album, which was later launched at a beautiful live concert in Bungoma Town.',
+      'The project was more than a music production initiative. It was a celebration of faith, collaboration, and the creative talent within our community, creating a platform where gospel artists could come together, share their gifts, and reach a wider audience through the power of music.',
+    ],
+    videos: [{ id: 'aqsvyL6FAK0', title: 'Baba Ni Wewe single release' }],
+  },
+  {
+    id: 'ageless-music',
+    name: 'Ageless Music',
+    category: 'The Bliss Project',
+    description:
+      'A creative collaborator on The Bliss Project, helping produce high-quality gospel songs for the concert and mini-album launch.',
+    image: '/images/MUSIC%20DEVELOPMENT/music2.jpg',
+    details: [
+      'The Bliss Project was a work of art that brought together gospel music artists for a concert celebrating the love, beauty, and transformative power of gospel music.',
+      'Working alongside Ageless Music, we set out to produce high-quality gospel songs that could resonate with audiences worldwide while preserving the authentic local touch and cultural identity of our music.',
+      'The project was more than a music production initiative. It was a celebration of faith, collaboration, and the creative talent within our community, creating a platform where gospel artists could come together, share their gifts, and reach a wider audience through the power of music.',
+    ],
+    videos: [{ id: 'aqsvyL6FAK0', title: 'Baba Ni Wewe single release' }],
   },
 ];
 

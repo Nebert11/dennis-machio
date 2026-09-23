@@ -407,6 +407,26 @@ h2 { font-size: clamp(36px, 5vw, 72px); letter-spacing: -.07em; line-height: 1.0
 .venture-link { align-items: center; background: #fff; border: 0; border-radius: 20px; color: #14181d; cursor: pointer; display: inline-flex; font-family: inherit; font-size: 12px; font-weight: 800; gap: 8px; letter-spacing: .06em; padding: 8px 16px; text-transform: uppercase; }
 .venture-link:hover { background: #d70c2f; color: #fff; }
 
+/* Music & talent development */
+.music-development { background: #0a111a; padding-bottom: 110px; padding-top: 72px; }
+.music-development-intro { align-items: end; display: flex; gap: 48px; justify-content: space-between; margin: 20px 0 48px; }
+.music-development-intro h2 { color: #f7f8f6; font-size: clamp(40px, 5vw, 64px); letter-spacing: -.06em; line-height: .98; margin: 0; }
+.music-development-intro h2 em { color: #d70c2f; font-family: 'Playfair Display', Georgia, serif; font-weight: 600; }
+.music-development-intro > p { color: #9ba4af; font-size: 14px; line-height: 1.8; margin: 0; max-width: 440px; }
+.music-development-grid { display: grid; gap: 18px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.music-development-card { background: #0f1d2f; border: 1px solid #29435f; display: flex; flex-direction: column; min-width: 0; }
+.music-development-image { aspect-ratio: 16 / 10; background: #050a11; overflow: hidden; }
+.music-development-image img { display: block; height: 100%; object-fit: cover; transition: transform .5s; width: 100%; }
+.music-development-card:hover .music-development-image img { transform: scale(1.04); }
+.music-development-card-body { display: flex; flex: 1; flex-direction: column; padding: 25px 28px 30px; }
+.music-development-card-body h3 { color: #f7f8f6; font-size: 25px; letter-spacing: -.03em; margin: 0 0 13px; }
+.music-development-card-body p:last-child { color: #b9c7d6; font-size: 13px; line-height: 1.75; margin: 0; }
+.music-development-card-link { align-items: center; color: #f7f8f6; display: inline-flex; gap: 8px; margin-top: auto; padding-top: 24px; }
+.music-development-feature { align-items: center; border-top: 1px solid #29435f; display: grid; gap: 28px; grid-template-columns: 1fr 1.1fr auto; margin-top: 72px; padding-top: 42px; }
+.music-development-feature h3 { color: #f7f8f6; font-size: 27px; letter-spacing: -.04em; line-height: 1.1; margin: 8px 0 0; max-width: 340px; }
+.music-development-feature > p { color: #9ba4af; font-size: 14px; line-height: 1.8; margin: 0; max-width: 440px; }
+.music-development-feature .text-link { align-items: center; color: #f7f8f6; display: inline-flex; gap: 8px; white-space: nowrap; }
+
 /* Initiative detail page */
 .awards-page { background: #0a111a; padding-bottom: 110px; padding-top: 140px; }
 .awards-intro { margin: 42px 0 82px; max-width: 760px; }
@@ -434,6 +454,15 @@ h2 { font-size: clamp(36px, 5vw, 72px); letter-spacing: -.07em; line-height: 1.0
 .awards-image-card { aspect-ratio: 4 / 5; background: #0f1d2f; border: 1px solid #29435f; overflow: hidden; }
 .awards-image-card img { display: block; height: 100%; object-fit: cover; transition: transform .5s; width: 100%; }
 .awards-image-card:hover img { transform: scale(1.05); }
+.talent-detail-actions { align-items: center; display: flex; justify-content: space-between; margin-bottom: 34px; }
+.talent-detail-actions button { align-items: center; background: none; border: 0; color: #f7f8f6; cursor: pointer; display: inline-flex; font-size: 12px; gap: 8px; padding: 0; }
+.talent-detail-actions button:hover { color: #d70c2f; }
+.talent-detail-hero { align-items: start; display: grid; gap: clamp(32px, 6vw, 92px); grid-template-columns: minmax(0, 1fr) minmax(280px, 420px); margin-top: 42px; }
+.talent-detail-copy h1 { font-size: clamp(44px, 6vw, 78px); letter-spacing: -.06em; line-height: 1; margin: 0 0 28px; }
+.talent-detail-copy > p:not(.awards-eyebrow) { color: #aeb8c5; font-size: 16px; line-height: 1.85; margin: 0 0 22px; max-width: 720px; }
+.talent-detail-image { aspect-ratio: 4 / 5; background: #0f1d2f; border: 1px solid #29435f; overflow: hidden; }
+.talent-detail-image img { display: block; height: 100%; object-fit: cover; width: 100%; }
+.talent-detail-section { margin-top: 84px; }
 
 /* Productions Section */
 .productions { background: #0c121a; padding-bottom: 110px; padding-top: 100px; }
@@ -736,6 +765,9 @@ blockquote { color: #111923; font-size: clamp(24px, 3.2vw, 40px); font-weight: 6
 @media (max-width: 960px) {
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .ventures-grid { grid-template-columns: repeat(2, 1fr); }
+  .music-development-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .music-development-feature { grid-template-columns: 1fr 1fr; }
+  .music-development-feature .text-link { grid-column: 2; }
   .journal-grid, .journal-preview-section .journal-grid { grid-template-columns: repeat(2, 1fr); }
   .gallery-rail-track { grid-template-columns: repeat(2, 1fr); }
   .process-grid { grid-template-columns: repeat(2, 1fr); }
@@ -776,8 +808,8 @@ blockquote { color: #111923; font-size: clamp(24px, 3.2vw, 40px); font-weight: 6
   .hero-intro { max-width: 100%; }
   .hero-actions { margin-top: 26px; }
   .scroll-cue { display: none; }
-  .statement, .services, .story, .work, .contact, .ventures, .productions, .process-section, .journey-section, .story-preview-section, .work-preview-section, .contact-preview-section { padding-bottom: 85px; padding-top: 85px; }
-  .statement-grid, .contact, .ventures-grid, .story-preview-grid, .work-preview-grid, .contact-preview-container { grid-template-columns: 1fr; }
+  .statement, .services, .story, .work, .contact, .ventures, .music-development, .productions, .process-section, .journey-section, .story-preview-section, .work-preview-section, .contact-preview-section { padding-bottom: 85px; padding-top: 85px; }
+  .statement-grid, .contact, .ventures-grid, .music-development-grid, .story-preview-grid, .work-preview-grid, .contact-preview-container { grid-template-columns: 1fr; }
   .statement-grid { gap: 35px; }
   .services-home { padding-bottom: 85px; padding-top: 85px; }
   .services-home-heading { margin-bottom: 38px; }
@@ -791,8 +823,12 @@ blockquote { color: #111923; font-size: clamp(24px, 3.2vw, 40px); font-weight: 6
   .work-reel-info h3 { font-size: 26px; }
   .work-reel-detail { max-width: none; }
   .work-reel-progress { left: 24px; }
-  .services-intro, .ventures-heading, .productions-intro, .process-heading, .journey-heading { align-items: start; flex-direction: column; gap: 20px; }
+  .services-intro, .ventures-heading, .music-development-intro, .productions-intro, .process-heading, .journey-heading { align-items: start; flex-direction: column; gap: 20px; }
   .ventures-heading-copy { align-items: flex-start; }
+  .music-development-feature { align-items: start; display: flex; flex-direction: column; }
+  .music-development-feature .text-link { grid-column: auto; }
+  .talent-detail-hero { grid-template-columns: 1fr; }
+  .talent-detail-image { max-height: 520px; max-width: 520px; }
   .story { gap: 56px; grid-template-columns: 1fr; }
   .story-photo { margin: 0 17px; }
   .story-photo { min-height: 440px; }

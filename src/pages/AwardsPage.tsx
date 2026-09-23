@@ -1,10 +1,6 @@
 import { Play, X } from 'lucide-react';
 import { useState } from 'react';
 
-type AwardsPageProps = {
-  onGoContact: () => void;
-};
-
 const topVideos = [
   { id: 'Q7xIIqA1Pfc', title: 'Magharibi Michezo Awards 2019 Promo Video' },
   { id: 'SwCPD7KRX0M', title: 'Uzani Band performing at the 2018 Magharibi Michezo Awards' },
@@ -45,7 +41,7 @@ function AwardsVideoCard({ video, onSelect }: { video: AwardsVideo; onSelect: (v
   );
 }
 
-function AwardsPage({ onGoContact }: AwardsPageProps) {
+function AwardsPage() {
   const [selectedVideo, setSelectedVideo] = useState<AwardsVideo | null>(null);
 
   const renderVideoCard = (video: AwardsVideo) => (
@@ -55,8 +51,6 @@ function AwardsPage({ onGoContact }: AwardsPageProps) {
   return (
     <>
       <section className="awards-page section-pad">
-        <button type="button" onClick={onGoContact}>Get in touch</button>
-        <div className="section-kicker">Initiatives <span>Magharibi Michezo Awards</span></div>
         <div className="awards-intro">
           <p className="awards-eyebrow">Sports Recognition</p>
           <h1>Magharibi Michezo <em>Awards.</em></h1>

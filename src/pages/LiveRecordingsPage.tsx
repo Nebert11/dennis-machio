@@ -1,7 +1,6 @@
 import { Play, X } from 'lucide-react';
 import { useState } from 'react';
 
-type LiveRecordingsPageProps = { onGoContact: () => void };
 type LiveRecordingVideo = { id: string; title: string };
 
 const videos: LiveRecordingVideo[] = [
@@ -31,14 +30,12 @@ function LiveRecordingVideoCard({ video, onSelect }: { video: LiveRecordingVideo
   );
 }
 
-function LiveRecordingsPage({ onGoContact }: LiveRecordingsPageProps) {
+function LiveRecordingsPage() {
   const [selectedVideo, setSelectedVideo] = useState<LiveRecordingVideo | null>(null);
 
   return (
     <>
       <section className="awards-page section-pad">
-        <button type="button" onClick={onGoContact}>Get in touch</button>
-        <div className="section-kicker">Initiatives <span>My Live Recordings</span></div>
         <div className="awards-intro">
           <p className="awards-eyebrow">Live Worship Recordings</p>
           <h1>My Live <em>Recordings.</em></h1>
