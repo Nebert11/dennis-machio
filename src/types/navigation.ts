@@ -1,11 +1,11 @@
-export type PageKey = 'home' | 'story' | 'work' | 'services' | 'journal' | 'gallery' | 'project' | 'contact' | 'awards' | 'music' | 'festival';
+export type PageKey = 'home' | 'story' | 'work' | 'services' | 'journal' | 'gallery' | 'project' | 'contact' | 'awards' | 'music' | 'festival' | 'mentorship' | 'live-recordings';
 
 export type Route =
-  | { page: 'home' | 'story' | 'work' | 'services' | 'journal' | 'gallery' | 'contact' | 'awards' | 'music' | 'festival' }
+  | { page: 'home' | 'story' | 'work' | 'services' | 'journal' | 'gallery' | 'contact' | 'awards' | 'music' | 'festival' | 'mentorship' | 'live-recordings' }
   | { page: 'project'; projectSlug: string }
   | { page: 'article'; articleId: string };
 
-const pathByPage: Record<'home' | 'story' | 'work' | 'services' | 'journal' | 'gallery' | 'contact' | 'awards' | 'music' | 'festival', string> = {
+const pathByPage: Record<'home' | 'story' | 'work' | 'services' | 'journal' | 'gallery' | 'contact' | 'awards' | 'music' | 'festival' | 'mentorship' | 'live-recordings', string> = {
   home: '/',
   story: '/story',
   work: '/work',
@@ -16,6 +16,8 @@ const pathByPage: Record<'home' | 'story' | 'work' | 'services' | 'journal' | 'g
   awards: '/initiatives/magharibi-michezo-awards',
   music: '/initiatives/music-and-talent-development',
   festival: '/initiatives/magharibi-festival',
+  mentorship: '/initiatives/mentorship',
+  'live-recordings': '/initiatives/live-recordings',
 };
 
 export function routeToPath(route: Route): string {
@@ -49,6 +51,10 @@ export function pathToRoute(pathname: string): Route {
       return { page: 'music' };
     case '/initiatives/magharibi-festival':
       return { page: 'festival' };
+    case '/initiatives/mentorship':
+      return { page: 'mentorship' };
+    case '/initiatives/live-recordings':
+      return { page: 'live-recordings' };
     default:
       return { page: 'home' };
   }

@@ -48,7 +48,7 @@ function VenturesSection({ onGoContact, onViewVenture }: VenturesSectionProps) {
                   Visit {venture.title} <Globe size={14} /> <ArrowUpRight size={15} />
                 </a>
               </div>
-            ) : (venture.id === 'magharibi-michezo-awards' || venture.id === 'music-talent-development' || venture.id === 'magharibi-festival') && onViewVenture ? (
+            ) : onViewVenture ? (
               <div className="venture-footer">
                 <button
                   type="button"

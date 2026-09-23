@@ -1,6 +1,5 @@
 import { Play, X } from 'lucide-react';
 import { useState } from 'react';
-import CollaborateCTA from '../components/sections/CollaborateCTA';
 
 type MusicPageProps = { onGoContact: () => void };
 type MusicVideo = { id: string; title: string };
@@ -33,6 +32,7 @@ function MusicPage({ onGoContact }: MusicPageProps) {
   return (
     <>
       <section className="awards-page section-pad">
+        <button type="button" onClick={onGoContact}>Get in touch</button>
         <div className="section-kicker">Initiatives <span>Music &amp; Talent Development</span></div>
         <div className="awards-intro">
           <p className="awards-eyebrow">Creative Development</p>
@@ -57,7 +57,6 @@ function MusicPage({ onGoContact }: MusicPageProps) {
           </div>
         </div>
       </section>
-      <CollaborateCTA onGoContact={onGoContact} />
       {selectedVideo && (
         <div className="awards-video-lightbox" role="dialog" aria-modal="true" aria-label={selectedVideo.title}>
           <button className="awards-video-lightbox-close" type="button" onClick={() => setSelectedVideo(null)} aria-label="Close video">

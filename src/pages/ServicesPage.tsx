@@ -1,25 +1,28 @@
 import CollaborateCTA from '../components/sections/CollaborateCTA';
 import PageHero from '../components/sections/PageHero';
-import ServicesSection from '../components/sections/ServicesSection';
+import VenturesSection from '../components/sections/VenturesSection';
 
 type ServicesPageProps = {
   onGoContact: () => void;
+  onViewVenture: (ventureId: string) => void;
 };
 
-function ServicesPage({ onGoContact }: ServicesPageProps) {
+function ServicesPage({ onGoContact, onViewVenture }: ServicesPageProps) {
   return (
     <>
       <PageHero
-        kicker="What I Do"
+        kicker="Initiatives"
         kickerTag=""
         title={
           <>
-            Ideas into <em>impact.</em>
+            Building platforms
+            <br />
+            &amp; <em>opportunity.</em>
           </>
         }
-        description="Five disciplines for turning important ideas, experiences and stories into purposeful visual work."
+        description="Creative platforms and initiatives built around storytelling, sport, culture and the next generation of creative voices."
       />
-      <ServicesSection onGoContact={onGoContact} />
+      <VenturesSection onGoContact={onGoContact} onViewVenture={onViewVenture} />
       <CollaborateCTA onGoContact={onGoContact} />
     </>
   );

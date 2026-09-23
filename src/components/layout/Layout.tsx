@@ -14,6 +14,8 @@ import GalleryPage from '../../pages/GalleryPage';
 import AwardsPage from '../../pages/AwardsPage';
 import MusicPage from '../../pages/MusicPage';
 import FestivalPage from '../../pages/FestivalPage';
+import MentorshipPage from '../../pages/MentorshipPage';
+import LiveRecordingsPage from '../../pages/LiveRecordingsPage';
 import { routeToPath, pathToRoute, type PageKey, type Route } from '../../types/navigation';
 import { journalArticles, projects } from '../../data/siteContent';
 
@@ -54,6 +56,10 @@ export default function Layout() {
         navigateToRoute({ page: 'music' });
       } else if (ventureId === 'magharibi-festival') {
         navigateToRoute({ page: 'festival' });
+      } else if (ventureId === 'mentorship') {
+        navigateToRoute({ page: 'mentorship' });
+      } else if (ventureId === 'live-recordings') {
+        navigateToRoute({ page: 'live-recordings' });
       }
     },
     [navigateToRoute],
@@ -77,11 +83,10 @@ export default function Layout() {
           <WorkPage
             onGoContact={() => setCurrentPage('contact')}
             onViewProject={goToProject}
-            onViewVenture={goToVenture}
           />
         );
       case 'services':
-        return <ServicesPage onGoContact={() => setCurrentPage('contact')} />;
+        return <ServicesPage onGoContact={() => setCurrentPage('contact')} onViewVenture={goToVenture} />;
       case 'journal':
         return <JournalPage onGoContact={() => setCurrentPage('contact')} onGoArticle={goToArticle} />;
       case 'gallery':
@@ -114,6 +119,10 @@ export default function Layout() {
         return <MusicPage onGoContact={() => setCurrentPage('contact')} />;
       case 'festival':
         return <FestivalPage onGoContact={() => setCurrentPage('contact')} />;
+      case 'mentorship':
+        return <MentorshipPage onGoContact={() => setCurrentPage('contact')} />;
+      case 'live-recordings':
+        return <LiveRecordingsPage onGoContact={() => setCurrentPage('contact')} />;
       default:
         return (
           <HomePage

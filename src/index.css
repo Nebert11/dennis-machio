@@ -411,6 +411,7 @@ h2 { font-size: clamp(36px, 5vw, 72px); letter-spacing: -.07em; line-height: 1.0
 .awards-eyebrow { color: #d70c2f; font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: .1em; margin: 0 0 18px; text-transform: uppercase; }
 .awards-intro h1 { font-size: clamp(44px, 6vw, 78px); letter-spacing: -.06em; line-height: 1; margin: 0 0 24px; }
 .awards-intro > p:last-child { color: #aeb8c5; font-size: 16px; line-height: 1.85; margin: 0; max-width: 680px; }
+.awards-subheading { color: #f7f8f6; font-size: 18px; font-weight: 600; margin: 0 0 18px; max-width: 680px; }
 .awards-video-section + .awards-video-section { border-top: 1px solid #1f2b3b; margin-top: 82px; padding-top: 72px; }
 .awards-video-grid { display: grid; gap: 22px; grid-template-columns: repeat(3, 1fr); margin-top: 26px; }
 .awards-video-grid-featured { grid-template-columns: repeat(2, 1fr); }
@@ -427,6 +428,10 @@ h2 { font-size: clamp(36px, 5vw, 72px); letter-spacing: -.07em; line-height: 1.0
 .awards-video-lightbox-content { max-width: 1200px; text-align: center; width: 100%; }
 .awards-video-lightbox-content iframe { aspect-ratio: 16 / 9; border: 0; display: block; width: 100%; }
 .awards-video-lightbox-content h3 { color: #f7f8f6; font-size: 20px; margin: 18px 0 0; }
+.awards-image-grid { display: grid; gap: 18px; grid-template-columns: repeat(4, 1fr); margin-top: 26px; }
+.awards-image-card { aspect-ratio: 4 / 5; background: #0f1d2f; border: 1px solid #29435f; overflow: hidden; }
+.awards-image-card img { display: block; height: 100%; object-fit: cover; transition: transform .5s; width: 100%; }
+.awards-image-card:hover img { transform: scale(1.05); }
 
 /* Productions Section */
 .productions { background: #0c121a; padding-bottom: 110px; padding-top: 100px; }
@@ -732,6 +737,7 @@ blockquote { color: #111923; font-size: clamp(24px, 3.2vw, 40px); font-weight: 6
   .services-home-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 680px; }
   .services-list { grid-template-columns: 1fr; }
   .productions-grid { grid-template-columns: 1fr; }
+  .awards-image-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 800px) {

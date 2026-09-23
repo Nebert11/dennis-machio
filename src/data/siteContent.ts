@@ -78,7 +78,7 @@ export const ventures: Venture[] = [
     image: '/images/Work%20that%20extends/Magharibi%20Michezo%20Awards.jpg',
     badge: 'Sports Recognition',
     description:
-      'Over the past 10 years I have partnered with stakeholders to celebrate and spotlight outstanding sporting talent through the Magharibi Michezo Awards, recognizing athletes, teams, and individuals who continue to inspire and shape the future of sports.',
+      'The Magharibi Michezo Awards (MMA) is a premier sporting recognition initiative celebrating the talent, achievements, and enduring contributions of athletes, coaches, officials, and sports stakeholders across Western Kenya.',
   },
   {
     id: 'magharibi-festival',
@@ -86,7 +86,7 @@ export const ventures: Venture[] = [
     image: '/images/Work%20that%20extends/Magharibi%20Festival.jpg',
     badge: 'Mentorship & Creative Development',
     description:
-      'The Magharibi Festival is a platform for celebrating culture, creativity, music, talent, and community. It brings people together through experiences that showcase the richness of our heritage and the power of creative expression.',
+      "The Magharibi Festival is a celebration of the rich talent, culture, and creative identity of Western Kenya. The festival brings together music, sports, and cultural experiences from Bungoma, Busia, Kakamega, Vihiga, Trans-Nzoia, parts of Uganda, and the Nyanza region.",
   },
   {
     id: 'music-talent-development',
@@ -102,7 +102,15 @@ export const ventures: Venture[] = [
     image: '/images/Work%20that%20extends/Mentorship%20and%20training.jpg',
     badge: 'Creative Mentorship',
     description:
-      'I believe in giving back by sharing my experience, knowledge, and lessons with the next generation. Through mentorship, I support young creatives and aspiring media professionals as they develop their skills, confidence, and careers.',
+      'For over 15 years, I have dedicated my journey to supporting, mentoring, and creating opportunities for emerging talent across the creative and sporting industries. From writers and music artists to dancers, sports journalists, creative technical crews, and production teams, I have believed in the power of young people and their ability to transform their passion into purpose.',
+  },
+  {
+    id: 'live-recordings',
+    title: 'My Live Recordings',
+    image: '/images/MUSIC%20DEVELOPMENT/card_image.jpg',
+    badge: 'Live Worship Recordings',
+    description:
+      "Partnered with the Bungoma-based Holygate Worship team to produce their first live recording, Rehoboth. Filmed and produced at Holygate Church in Bungoma, the project captured the team's worship, musical expression, and passion for sharing inspiring songs through a professionally produced live recording.",
   },
 ];
 
