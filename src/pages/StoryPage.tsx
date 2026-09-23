@@ -6,7 +6,6 @@ import QuoteSection from '../components/sections/QuoteSection';
 import StorySection from '../components/sections/StorySection';
 import StoryPreviewSection from '../components/sections/StoryPreviewSection';
 import { useState } from 'react';
-import { images } from '../data/siteContent';
 
 type StoryPageProps = {
   onGoContact: () => void;

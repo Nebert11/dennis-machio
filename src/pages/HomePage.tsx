@@ -39,7 +39,12 @@ function HomePage({ onNavigate, onGoArticle, onViewVenture }: HomePageProps) {
           </div>
         </div>
       </section>
-      <VenturesSection onGoContact={() => onNavigate('contact')} onViewVenture={onViewVenture} />
+      <VenturesSection
+        onGoContact={() => onNavigate('contact')}
+        onViewVenture={onViewVenture}
+        onViewAll={() => onNavigate('services')}
+        preview
+      />
       <JournalSection onGoJournal={() => onNavigate('journal')} onGoArticle={onGoArticle} />
       <CollaborateCTA onGoContact={() => onNavigate('contact')} />
     </>

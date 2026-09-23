@@ -1,12 +1,22 @@
 // import { bioSummary } from '../../data/siteContent';
-import type { PageKey } from '../../types/navigation';
+import { Facebook, Linkedin } from 'lucide-react';
 // import Brand from './Brand';
 
-type FooterProps = {
-  onNavigate: (page: PageKey) => void;
-};
+function XIcon(props: { size?: number }) {
+  return (
+    <svg width={props.size ?? 18} height={props.size ?? 18} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+  );
+}
 
-function Footer({ onNavigate }: FooterProps) {
+const socialLinks = [
+  { label: 'Facebook', href: 'https://web.facebook.com/dennis.machio', icon: Facebook },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/dennis-machio-21536b1a/', icon: Linkedin },
+  { label: 'X', href: 'https://x.com/dmachio', icon: XIcon },
+];
+
+function Footer() {
   return (
     <footer className="site-footer section-pad">
       <div className="footer-brand-column">
@@ -14,14 +24,12 @@ function Footer({ onNavigate }: FooterProps) {
         <span className="footer-nav">Dennis Machio &copy; 2026</span>
       </div>
 
-      <nav className="footer-nav" aria-label="Footer navigation">
-        <button onClick={() => onNavigate('home')}>Home</button>
-        <button onClick={() => onNavigate('story')}>About</button>
-        <button onClick={() => onNavigate('work')}>Work</button>
-        <button onClick={() => onNavigate('services')}>Initiatives</button>
-        <button onClick={() => onNavigate('journal')}>My Insights</button>
-        <button onClick={() => onNavigate('gallery')}>Gallery</button>
-        <button onClick={() => onNavigate('contact')}>Contact</button>
+      <nav className="footer-social" aria-label="Social media">
+        {socialLinks.map(({ label, href, icon: Icon }) => (
+          <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}>
+            <Icon size={18} />
+          </a>
+        ))}
       </nav>
 
       <div className="footer-profile">

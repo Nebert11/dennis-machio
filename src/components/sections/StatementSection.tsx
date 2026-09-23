@@ -1,5 +1,4 @@
 import { ArrowUpRight } from 'lucide-react';
-import type { PageKey } from '../../types/navigation';
 
 type StatementSectionProps = {
   onGoStory?: () => void;

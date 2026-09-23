@@ -140,7 +140,7 @@ export default function Layout() {
     <div className="site-shell">
       <Header currentPage={currentPage} onNavigate={setCurrentPage} />
       <main id="top">{activePage}</main>
-      <Footer onNavigate={setCurrentPage} />
+      <Footer />
 
       {showreelOpen && (
         <ShowreelModal

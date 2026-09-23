@@ -4,9 +4,13 @@ import { ventures } from '../../data/siteContent';
 type VenturesSectionProps = {
   onGoContact?: () => void;
   onViewVenture?: (ventureId: string) => void;
+  onViewAll?: () => void;
+  preview?: boolean;
 };
 
-function VenturesSection({ onGoContact, onViewVenture }: VenturesSectionProps) {
+function VenturesSection({ onGoContact, onViewVenture, onViewAll, preview = false }: VenturesSectionProps) {
+  const visibleVentures = preview ? ventures.slice(0, 2) : ventures;
+
   return (
     <section className="ventures section-pad">
       <div className="section-kicker">
@@ -17,13 +21,20 @@ function VenturesSection({ onGoContact, onViewVenture }: VenturesSectionProps) {
           Work that <em>extends</em>
           <br />beyond production.
         </h2>
-        <p>
-          Creative platforms and initiatives built around storytelling, sport, culture and the next generation
-          of creative voices.
-        </p>
+        <div className="ventures-heading-copy">
+          <p>
+            Creative platforms and initiatives built around storytelling, sport, culture and the next generation
+            of creative voices.
+          </p>
+          {preview && onViewAll && (
+            <button type="button" className="text-link" onClick={onViewAll}>
+              View all initiatives <ArrowUpRight size={16} />
+            </button>
+          )}
+        </div>
       </div>
-      <div className="ventures-grid">
-        {ventures.map((venture) => (
+      <div className={`ventures-grid${preview ? ' ventures-grid-preview' : ''}`}>
+        {visibleVentures.map((venture) => (
           <article key={venture.id} className="venture-card">
             {venture.image && (
               <div className="venture-image">

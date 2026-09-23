@@ -391,7 +391,9 @@ h2 { font-size: clamp(36px, 5vw, 72px); letter-spacing: -.07em; line-height: 1.0
 .ventures { background: #080a0d; padding-bottom: 110px; padding-top: 110px; }
 .ventures-heading { align-items: end; display: flex; justify-content: space-between; margin-bottom: 48px; margin-top: 20px; }
 .ventures-heading p { color: #9ba4af; font-size: 14px; line-height: 1.8; max-width: 440px; }
+.ventures-heading-copy { align-items: flex-end; display: flex; flex-direction: column; gap: 18px; }
 .ventures-grid { display: grid; gap: 18px; grid-template-columns: repeat(3, 1fr); }
+.ventures-grid-preview { grid-template-columns: repeat(2, 1fr); }
 .venture-card { background: #0f1d2f; border: 1px solid #29435f; border-radius: 8px; display: flex; flex-direction: column; overflow: hidden; padding: 0 36px 36px; }
 .venture-image { height: 250px; margin: 0 -36px 30px; overflow: hidden; }
 .venture-image img { display: block; height: 100%; object-fit: cover; object-position: center 6%; width: 100%; }
@@ -712,6 +714,9 @@ blockquote { color: #111923; font-size: clamp(24px, 3.2vw, 40px); font-weight: 6
 .footer-nav { align-items: center; display: flex; flex-wrap: wrap; gap: 22px; justify-content: center; }
 .footer-nav button { background: none; border: 0; color: #8692a3; cursor: pointer; font-size: 10px; font-weight: 700; letter-spacing: .08em; padding: 5px 0; text-transform: uppercase; transition: color .2s; }
 .footer-nav button:hover { color: #d70c2f; }
+.footer-social { align-items: center; display: flex; gap: 16px; justify-content: center; }
+.footer-social a { align-items: center; border: 1px solid #1c232f; border-radius: 50%; color: #8692a3; display: flex; height: 36px; justify-content: center; transition: border-color .2s, color .2s; width: 36px; }
+.footer-social a:hover { border-color: #d70c2f; color: #d70c2f; }
 .footer-profile { align-items: flex-end; display: flex; flex-direction: column; gap: 6px; text-align: right; }
 .footer-profile strong { color: #dce1e8; font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: .05em; }
 .footer-profile span { color: #69778a; font-family: 'DM Mono', monospace; font-size: 9px; }
@@ -762,6 +767,7 @@ blockquote { color: #111923; font-size: clamp(24px, 3.2vw, 40px); font-weight: 6
   .menu-toggle { display: block; }
   .site-footer { align-items: flex-start; flex-direction: column; gap: 24px; padding-bottom: 15px; padding-top: 15px; }
   .footer-nav { gap: 16px; justify-content: flex-start; }
+  .footer-social { justify-content: flex-start; }
   .footer-profile { align-items: flex-start; text-align: left; }
   .hero { align-items: flex-start; background-position: 74% center; background-size: auto 100%; min-height: 0; padding-bottom: 72px; padding-top: 130px; }
   .hero-copy { max-width: 100%; }
@@ -786,6 +792,7 @@ blockquote { color: #111923; font-size: clamp(24px, 3.2vw, 40px); font-weight: 6
   .work-reel-detail { max-width: none; }
   .work-reel-progress { left: 24px; }
   .services-intro, .ventures-heading, .productions-intro, .process-heading, .journey-heading { align-items: start; flex-direction: column; gap: 20px; }
+  .ventures-heading-copy { align-items: flex-start; }
   .story { gap: 56px; grid-template-columns: 1fr; }
   .story-photo { margin: 0 17px; }
   .story-photo { min-height: 440px; }
