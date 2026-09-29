@@ -28,15 +28,15 @@ function StoryPage({ onGoContact }: StoryPageProps) {
   return (
     <>
       <PageHero
-        kicker="The Storyteller"
+        kicker="About Me"
         kickerTag=""
         variant="story-hero"
         title={
           <>
-            Explore <em>My Story.</em>
+            The work behind <em>the stories.</em>
           </>
         }
-        description="From behind the camera to supporting brands and building stories that matter."
+        description="Filmmaker, producer, director and creative strategist. Explore the craft, experience and capabilities behind my work."
       />
       <StoryPreviewSection />
       <section className="story-photo-scroll-section section-pad">

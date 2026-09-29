@@ -21,7 +21,7 @@ function MusicDevelopmentSection({ onViewProfile }: { onViewProfile: (profileId:
       <div className="music-development-grid">
         {musicDevelopmentProfiles.map((profile) => (
           <article className="music-development-card" key={profile.id}>
-            <div className="music-development-image">
+            <div className={`music-development-image${profile.id === 'steve-kay' ? ' music-development-image-steve-kay' : ''}${profile.id === 'cedars' ? ' music-development-image-cedars' : ''}${profile.id === 'micah-wanyenje' ? ' music-development-image-micah' : ''}`}>
               <img src={profile.image} alt={profile.name} loading="lazy" />
             </div>
             <div className="music-development-card-body">

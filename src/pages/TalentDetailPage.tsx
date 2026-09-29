@@ -14,13 +14,19 @@ function TalentDetailPage({ profile, onBack }: TalentDetailPageProps) {
     return <section className="awards-page section-pad"><button type="button" onClick={onBack}>Back to initiatives</button></section>;
   }
 
+  const isSplitHero = profile.id === 'cedars' || profile.id === 'vanissy-uwase';
+
   return (
     <>
       <section className="awards-page section-pad talent-detail-page">
-        <div className="talent-detail-actions">
-          <button type="button" onClick={onBack}><ArrowLeft size={16} /> Back to initiatives</button>
-        </div>
-        <div className="talent-detail-hero">
+        <div
+          className={`talent-detail-hero talent-detail-hero-profile${isSplitHero ? ' talent-detail-hero-split' : ''}`}
+          style={{ backgroundImage: isSplitHero || profile.id === 'micah-wanyenje' ? 'none' : `linear-gradient(90deg, rgba(5,10,17,.96) 0%, rgba(5,10,17,.76) 42%, rgba(5,10,17,0) 72%), url("${profile.image}")` }}
+        >
+          {profile.id === 'micah-wanyenje' && <img className="talent-detail-hero-direct-image" src={profile.image} alt="" aria-hidden="true" />}
+          <div className="talent-detail-actions">
+            <button type="button" onClick={onBack}><ArrowLeft size={16} /> Back to initiatives</button>
+          </div>
           <div className="talent-detail-copy">
             <p className="awards-eyebrow">{profile.category}</p>
             <h1>{profile.name}</h1>

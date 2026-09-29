@@ -122,7 +122,7 @@ export const musicDevelopmentProfiles: TalentProfile[] = [
     category: 'Traditional Bukusu Music',
     description:
       'A Bungoma musician specializing in traditional Bukusu music. Together we developed the Luhya Pop sound and produced Mbe Omukhasi, which has more than 6 million YouTube views, alongside Bayudaa and Khalinjola through the Wambumuli Dynamic team.',
-    image: '/images/MUSIC%20DEVELOPMENT/Steve%20Kay%20/650134021_10241029463416491_1775298687823705079_n.jpg',
+    image: '/images/MUSIC%20DEVELOPMENT/Steve%20Kay%20/Steve%20Kay.png',
     galleryImages: [
       '/images/MUSIC%20DEVELOPMENT/Steve%20Kay%20/650134021_10241029463416491_1775298687823705079_n.jpg',
       '/images/MUSIC%20DEVELOPMENT/Steve%20Kay%20/34102761_10216393102682870_7630612573666148352_n.jpg',
@@ -154,7 +154,7 @@ export const musicDevelopmentProfiles: TalentProfile[] = [
     category: 'Artist Development',
     description:
       'One of the artists I have had the privilege of working with, supporting the creative process and the development of music that connects with a wider audience.',
-    image: '/images/MUSIC%20DEVELOPMENT/Harry%20Richie%20-%20Confirm%20Music%20video/Harry%20Richie.jpg',
+    image: '/images/Harry%20Richie%20Photos%20/Harry%20Richie.png',
     galleryImages: [
       '/images/MUSIC%20DEVELOPMENT/Harry%20Richie%20-%20Confirm%20Music%20video/Harry%20Richie.jpg',
       '/images/MUSIC%20DEVELOPMENT/Harry%20Richie%20-%20Confirm%20Music%20video/491915454_10236201811768217_2783059308966645627_n.jpg',
@@ -193,7 +193,7 @@ export const musicDevelopmentProfiles: TalentProfile[] = [
     category: 'Luhya Music',
     description:
       'A Western Kenya musician and Ambassador of Luhya Music, known for Matakwei, Wabomba, and Alimo Sindu.',
-    image: '/images/MUSIC%20DEVELOPMENT/Micah%20Wanyenje%20/506858158_10236910532285787_231458782400034558_n.jpg',
+    image: '/images/MUSIC%20DEVELOPMENT/Micah%20Wanyenje%20/Micah%20WAnyenje.png',
     galleryImages: [
       '/images/MUSIC%20DEVELOPMENT/Micah%20Wanyenje%20/506858158_10236910532285787_231458782400034558_n.jpg',
     ],
@@ -209,7 +209,7 @@ export const musicDevelopmentProfiles: TalentProfile[] = [
     category: 'The Bliss Project',
     description:
       'A Bungoma-based local band partnered with for The Bliss Project and the recording of a gospel mini-album.',
-    image: '/images/MUSIC%20DEVELOPMENT/Bliss%20and%20Cedars%20Band/505077526_10236842505665164_6800406249130680627_n.jpg',
+    image: '/images/MUSIC%20DEVELOPMENT/Bliss%20and%20Cedars%20Band/Cedars%20Band%20Bliss%20Project.png',
     galleryImages: [
       '/images/MUSIC%20DEVELOPMENT/Bliss%20and%20Cedars%20Band/505077526_10236842505665164_6800406249130680627_n.jpg',
       '/images/MUSIC%20DEVELOPMENT/Bliss%20and%20Cedars%20Band/503652783_10236791179982054_3489412923795130342_n.jpg',
@@ -227,6 +227,33 @@ export const musicDevelopmentProfiles: TalentProfile[] = [
     ],
     videos: [{ id: 'aqsvyL6FAK0', title: 'Baba Ni Wewe single release' }],
   },
+  {
+    id: 'vanissy-uwase',
+    name: 'Vanissy Uwase',
+    category: 'Music & Talent Development',
+    description: 'From street worship to her first original single, Gharama Ya Wokovu, with creative direction and production support from Dencast Global, Dominic Khaemba and Ageless Music.',
+    image: '/images/Vanissy%20Uwase/051A3851.jpg',
+    galleryImages: [
+      '/images/Vanissy%20Uwase/051A3851.jpg',
+      '/images/Vanissy%20Uwase/051A3869.jpg',
+      '/images/Vanissy%20Uwase/051A3872.jpg',
+      '/images/Vanissy%20Uwase/051A3882.jpg',
+      '/images/Vanissy%20Uwase/051A4017.jpg',
+      '/images/Vanissy%20Uwase/051A4057.jpg',
+      '/images/Vanissy%20Uwase/051A4104-2.jpg',
+      '/images/Vanissy%20Uwase/051A4106.jpg',
+      '/images/Vanissy%20Uwase/051A4122.jpg',
+      '/images/Vanissy%20Uwase/495928694_10236797314375410_1449926330255759588_n.jpg',
+      '/images/Vanissy%20Uwase/503108818_10236797314975425_5341028410555226217_n.jpg',
+      '/images/Vanissy%20Uwase/504060414_10236797322255607_6351004098953703429_n.jpg',
+    ],
+    details: [
+      'Vanissy Uwase has reached audiences through powerful street worship and a deeply personal expression of faith. Dencast Global, together with Dominic Khaemba and Ageless Music, supported her move toward releasing her first original single, Gharama Ya Wokovu.',
+      'Through creative direction, music development and production, the team helped shape a recorded work that remained true to her voice and artistic identity. The song is a heartfelt prayer about the cost and meaning of salvation.',
+      'This collaboration reflects the heart of Music & Talent Development: supporting gifted artists and helping their original voices reach wider audiences.',
+    ],
+    videos: [{ id: 'LOL6DHHFLmE', title: 'Vanissy Uwase - Gharama Ya Wokovu (Official Music Video)' }],
+  },
 ];
 
 export const productionEvents: ProductionEvent[] = [
@@ -237,7 +264,7 @@ export const productionEvents: ProductionEvent[] = [
     type: 'Corporate Storytelling',
     description:
       'Helping Sasini translate its legacy, people, operations and sustainability work into compelling visual stories that strengthen its corporate identity and connect its impact with wider audiences.',
-    image: '/images/PrODUCTION%20AND%20EVENTS/Sasini.jpg',
+    image: '/images/PRODUCTION%20AND%20EVENTS/Sasini.jpg',
   },
   {
     id: 'elf-africa-impact-storytelling',
@@ -255,7 +282,7 @@ export const productionEvents: ProductionEvent[] = [
     type: 'Conference Production & Management',
     description:
       'Providing end-to-end production and conference management support, from planning and technical coordination to multi-camera coverage, livestreaming, photography and post-production—ensuring the conference runs smoothly and its key moments and conversations are captured professionally.',
-    image: '/images/PrODUCTION%20AND%20EVENTS/RHNK.jpeg',
+    image: '/images/PRODUCTION%20AND%20EVENTS/RHNK.jpeg',
   },
   {
     id: 'eu-kenya-forum',
@@ -265,7 +292,7 @@ export const productionEvents: ProductionEvent[] = [
     description:
       'On-the-ground media coverage for the EU–Kenya Business Forum 2025, a two-day international conference on digitalising trade',
     year: '2025',
-    image: '/images/PrODUCTION%20AND%20EVENTS/European%20Union.jpeg',
+    image: '/images/PRODUCTION%20AND%20EVENTS/European%20Union.jpeg',
   },
   {
     id: 'corporate-live-broadcasts',

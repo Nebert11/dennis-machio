@@ -10,7 +10,8 @@ type HeaderProps = {
 
 const navLinks: Array<{ key: PageKey; label: string }> = [
   { key: 'home', label: 'Home' },
-  { key: 'story', label: 'About' },
+  { key: 'story', label: 'About Me' },
+  { key: 'my-story', label: 'My Story' },
   { key: 'work', label: 'Work' },
   { key: 'services', label: 'Initiatives' },
   { key: 'journal', label: 'My Insights' },

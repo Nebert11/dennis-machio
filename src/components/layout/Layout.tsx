@@ -4,6 +4,7 @@ import Footer from './Footer';
 import ShowreelModal from '../sections/ShowreelModal';
 import HomePage from '../../pages/HomePage';
 import StoryPage from '../../pages/StoryPage';
+import MyStoryPage from '../../pages/MyStoryPage';
 import WorkPage from '../../pages/WorkPage';
 import ProjectPage from '../../pages/ProjectPage';
 import ContactPage from '../../pages/ContactPage';
@@ -84,6 +85,8 @@ export default function Layout() {
     switch (route.page) {
       case 'story':
         return <StoryPage onGoContact={() => setCurrentPage('contact')} />;
+      case 'my-story':
+        return <MyStoryPage />;
       case 'work':
         return (
           <WorkPage

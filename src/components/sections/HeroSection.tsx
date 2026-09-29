@@ -8,6 +8,10 @@ type HeroSectionProps = {
 function HeroSection({ onGoWhatIDo }: HeroSectionProps) {
   return (
     <section className="hero">
+      <video className="hero-video" autoPlay muted loop playsInline preload="metadata" aria-hidden="true">
+        <source src="/images/Homepage%20Video/Dennis%20Machio.mp4" type="video/mp4" />
+      </video>
+      {/* <img className="hero-portrait" src="/images/new_images/den4.png" alt="" aria-hidden="true" /> */}
       <div className="hero-copy">
         <p className="eyebrow">
           <span /> Film Producer. Creative Director. Media Strategist. Storyteller.
@@ -16,14 +20,14 @@ function HeroSection({ onGoWhatIDo }: HeroSectionProps) {
         <h1>I Tell Stories That Matter.</h1>
 
         <p className="hero-intro">
-          Based in Nairobi, Kenya, Dennis Machio brings more than a decade of experience creating films,
-          documentaries, live productions, branding experiences, digital campaigns, and visual strategies for
-          organizations across Africa.
+          I am a Nairobi-based film producer, creative director, and storyteller dedicated to
+          transforming ideas into powerful visual experiences. Through film, documentaries,
+          live broadcasting experiences, branding and creative media,
         </p>
 
         <p className="hero-intro hero-intro-secondary">
-          From the first idea to the final frame, my work is driven by one belief: great stories should not
-          only be seen, but they should also be felt, understood, and remembered.
+          Every story matters. Every frame has a purpose. Every legacy begins with a
+          story.
         </p>
 
         <div className="hero-actions">

@@ -3,6 +3,7 @@ import { productionEvents } from '../../data/siteContent';
 
 type ProductionsSectionProps = {
   onGoContact: () => void;
+  onViewProject: (slug: string) => void;
 };
 
 const getEventIcon = (id: string) => {
@@ -16,7 +17,7 @@ const getEventIcon = (id: string) => {
   }
 };
 
-function ProductionsSection({ onGoContact }: ProductionsSectionProps) {
+function ProductionsSection({ onGoContact, onViewProject }: ProductionsSectionProps) {
   return (
     <section className="productions section-pad">
       <div className="section-kicker">
@@ -54,8 +55,8 @@ function ProductionsSection({ onGoContact }: ProductionsSectionProps) {
             <h3>{item.title}</h3>
             <p className="production-role">Role: {item.role}</p>
             <p className="production-desc">{item.description}</p>
-            <button className="text-link" onClick={onGoContact}>
-              Discuss similar project <ArrowUpRight size={15} />
+            <button className="text-link" onClick={item.id === 'amakovewala' ? () => onViewProject('the-amakovewala-show') : onGoContact}>
+              {item.id === 'amakovewala' ? 'View project' : 'Discuss similar project'} <ArrowUpRight size={15} />
             </button>
           </article>
         ))}

@@ -2,11 +2,10 @@ import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import { services } from '../../data/siteContent';
 
 type ServicesSectionProps = {
-  onGoContact: () => void;
   preview?: boolean;
 };
 
-function ServicesSection({ onGoContact, preview = false }: ServicesSectionProps) {
+function ServicesSection({ preview = false }: ServicesSectionProps) {
   const visibleServices = services;
 
   if (preview) {
@@ -61,6 +60,9 @@ function ServicesSection({ onGoContact, preview = false }: ServicesSectionProps)
           ideas to life.
         </p>
       </div>
+      <a className="text-link services-portfolio-link" href="https://dencastglobal.co.ke/portfolio" target="_blank" rel="noopener noreferrer">
+        View Dencast Global Portfolio <ArrowUpRight size={16} />
+      </a>
       <div className="services-list">
         {visibleServices.map((service, index) => {
           const Icon = service.icon;
@@ -90,13 +92,6 @@ function ServicesSection({ onGoContact, preview = false }: ServicesSectionProps)
                 </ul>
               </div>
 
-              <button
-                className="service-action-btn"
-                onClick={onGoContact}
-                aria-label={`Inquire about ${service.title}`}
-              >
-                Inquire for this discipline <ArrowUpRight size={16} />
-              </button>
             </article>
           );
         })}

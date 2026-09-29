@@ -12,7 +12,7 @@ type WorkPageProps = {
   onViewVenture: (ventureId: string) => void;
 };
 
-function WorkPage({ onGoContact, onViewVenture }: WorkPageProps) {
+function WorkPage({ onGoContact, onViewProject, onViewVenture }: WorkPageProps) {
   return (
     <>
       <PageHero
@@ -29,9 +29,9 @@ function WorkPage({ onGoContact, onViewVenture }: WorkPageProps) {
         description="A selection of productions, brand films and live experiences created across Africa."
       />
       <WorkIntroSection />
-      <ProductionsSection onGoContact={onGoContact} />
+      <ProductionsSection onGoContact={onGoContact} onViewProject={onViewProject} />
       <VenturesSection onGoContact={onGoContact} onViewVenture={onViewVenture} />
-      <ServicesSection onGoContact={onGoContact} />
+      <ServicesSection />
       <ProcessSection />
       <CollaborateCTA onGoContact={onGoContact} />
     </>

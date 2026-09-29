@@ -1,14 +1,15 @@
-export type PageKey = 'home' | 'story' | 'work' | 'services' | 'journal' | 'gallery' | 'project' | 'contact' | 'awards' | 'music' | 'festival' | 'mentorship' | 'live-recordings';
+export type PageKey = 'home' | 'story' | 'my-story' | 'work' | 'services' | 'journal' | 'gallery' | 'project' | 'contact' | 'awards' | 'music' | 'festival' | 'mentorship' | 'live-recordings';
 
 export type Route =
-  | { page: 'home' | 'story' | 'work' | 'services' | 'journal' | 'gallery' | 'contact' | 'awards' | 'music' | 'festival' | 'mentorship' | 'live-recordings' }
+  | { page: 'home' | 'story' | 'my-story' | 'work' | 'services' | 'journal' | 'gallery' | 'contact' | 'awards' | 'music' | 'festival' | 'mentorship' | 'live-recordings' }
   | { page: 'project'; projectSlug: string }
   | { page: 'article'; articleId: string }
   | { page: 'talent'; talentId: string };
 
-const pathByPage: Record<'home' | 'story' | 'work' | 'services' | 'journal' | 'gallery' | 'contact' | 'awards' | 'music' | 'festival' | 'mentorship' | 'live-recordings', string> = {
+const pathByPage: Record<Exclude<PageKey, 'project'>, string> = {
   home: '/',
   story: '/story',
+  'my-story': '/my-story',
   work: '/work',
   services: '/what-i-do',
   journal: '/insights',
@@ -39,6 +40,8 @@ export function pathToRoute(pathname: string): Route {
   switch (pathname) {
     case '/story':
       return { page: 'story' };
+    case '/my-story':
+      return { page: 'my-story' };
     case '/work':
       return { page: 'work' };
     case '/what-i-do':
