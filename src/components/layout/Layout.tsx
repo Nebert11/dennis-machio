@@ -25,6 +25,7 @@ import { journalArticles, musicDevelopmentProfiles, projects } from '../../data/
 export default function Layout() {
   const [route, setRouteState] = useState<Route>(() => pathToRoute(window.location.pathname));
   const [showreelOpen, setShowreelOpen] = useState(false);
+  const [talentOrigin, setTalentOrigin] = useState<PageKey>('services');
 
   const navigateToRoute = useCallback((next: Route) => {
     setRouteState((previous) => {
@@ -52,8 +53,11 @@ export default function Layout() {
   );
 
   const goToTalentProfile = useCallback(
-    (talentId: string) => navigateToRoute({ page: 'talent', talentId }),
-    [navigateToRoute],
+    (talentId: string) => {
+      setTalentOrigin(route.page === 'services' || route.page === 'music' ? route.page : 'services');
+      navigateToRoute({ page: 'talent', talentId });
+    },
+    [navigateToRoute, route.page],
   );
 
   const goToVenture = useCallback(
@@ -97,7 +101,7 @@ export default function Layout() {
           />
         );
       case 'services':
-        return <ServicesPage onGoContact={() => setCurrentPage('contact')} onViewProfile={goToTalentProfile} />;
+        return <ServicesPage onGoContact={() => setCurrentPage('contact')} onViewInitiative={goToVenture} />;
       case 'journal':
         return <JournalPage onGoContact={() => setCurrentPage('contact')} onGoArticle={goToArticle} />;
       case 'gallery-videos':
@@ -116,7 +120,7 @@ export default function Layout() {
       }
       case 'talent': {
         const profile = musicDevelopmentProfiles.find((item) => item.id === route.talentId);
-        return <TalentDetailPage profile={profile} onBack={() => setCurrentPage('services')} />;
+        return <TalentDetailPage profile={profile} onBack={() => setCurrentPage(talentOrigin)} />;
       }
       case 'project': {
         const project = projects.find((item) => item.slug === route.projectSlug);
@@ -133,7 +137,7 @@ export default function Layout() {
       case 'awards':
         return <AwardsPage />;
       case 'music':
-        return <MusicPage />;
+        return <MusicPage onViewProfile={goToTalentProfile} />;
       case 'festival':
         return <FestivalPage />;
       case 'mentorship':
@@ -149,9 +153,9 @@ export default function Layout() {
           />
         );
     }
-  }, [route, setCurrentPage, goToProject, goToArticle, goToTalentProfile, goToVenture]);
+  }, [route, setCurrentPage, goToProject, goToArticle, goToTalentProfile, goToVenture, talentOrigin]);
 
-  const currentPage = route.page === 'article' || route.page === 'talent' ? (route.page === 'article' ? 'journal' : 'services') : route.page;
+  const currentPage = route.page === 'article' || route.page === 'talent' ? (route.page === 'article' ? 'journal' : talentOrigin) : route.page;
 
   return (
     <div className="site-shell">

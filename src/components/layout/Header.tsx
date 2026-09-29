@@ -1,4 +1,4 @@
-import { ArrowUpRight, Menu, X } from 'lucide-react';
+import { ArrowUpRight, LayoutGrid, Menu, Mic2, Music, PartyPopper, Trophy, Users, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import type { PageKey } from '../../types/navigation';
 import Brand from './Brand';
@@ -15,7 +15,6 @@ const navLinks: NavLink[] = [
   { key: 'story', label: 'About Me' },
   { key: 'my-story', label: 'My Story' },
   { key: 'work', label: 'Work' },
-  { key: 'services', label: 'Initiatives' },
   { key: 'journal', label: 'My Insights' },
   {
     key: 'gallery-videos',
@@ -26,6 +25,25 @@ const navLinks: NavLink[] = [
     ],
   },
   { key: 'contact', label: 'Contact' },
+  { key: 'services', label: 'Initiatives' },
+];
+
+const initiativePageKeys: PageKey[] = ['awards', 'festival', 'music', 'mentorship', 'live-recordings'];
+
+const featuredInitiatives = [
+  { key: 'awards' as PageKey, label: 'Magharibi Michezo Awards', subtitle: 'Celebrating sporting excellence', icon: Trophy },
+  { key: 'festival' as PageKey, label: 'Magharibi Festival', subtitle: 'Music, sport & culture festival', icon: PartyPopper },
+  { key: 'music' as PageKey, label: 'Music & Talent Development', subtitle: 'Nurturing emerging artists', icon: Music },
+  { key: 'mentorship' as PageKey, label: 'Mentorship', subtitle: 'Guiding the next generation', icon: Users },
+];
+
+const allInitiatives = [
+  { key: 'awards' as PageKey, label: 'Magharibi Michezo Awards', icon: Trophy },
+  { key: 'festival' as PageKey, label: 'Magharibi Festival', icon: PartyPopper },
+  { key: 'music' as PageKey, label: 'Music & Talent Development', icon: Music },
+  { key: 'mentorship' as PageKey, label: 'Mentorship', icon: Users },
+  { key: 'live-recordings' as PageKey, label: 'My Live Recordings', icon: Mic2 },
+  { key: 'services' as PageKey, label: 'All Initiatives', icon: LayoutGrid },
 ];
 
 function Header({ currentPage, onNavigate }: HeaderProps) {
@@ -54,7 +72,79 @@ function Header({ currentPage, onNavigate }: HeaderProps) {
           const isActive =
             currentPage === link.key ||
             (link.key === 'work' && currentPage === 'project') ||
+            (link.key === 'services' && initiativePageKeys.includes(currentPage)) ||
             (link.children?.some((child) => child.key === currentPage) ?? false);
+
+          if (link.key === 'services') {
+            return (
+              <div
+                key={link.key}
+                className={`nav-dropdown nav-mega${openDropdown === link.key ? ' is-open' : ''}`}
+                onMouseEnter={() => setOpenDropdown(link.key)}
+                onMouseLeave={() => setOpenDropdown(null)}
+              >
+                <button
+                  className={isActive ? 'is-active' : ''}
+                  onClick={() => setOpenDropdown(openDropdown === link.key ? null : link.key)}
+                >
+                  {link.label}
+                </button>
+                <div className="nav-mega-panel">
+                  <div className="nav-mega-header">
+                    <span>Initiatives</span>
+                    <button type="button" className="nav-mega-viewall" onClick={() => navigate('services')}>
+                      View all <ArrowUpRight size={13} />
+                    </button>
+                  </div>
+                  <div className="nav-mega-body">
+                    <div className="nav-mega-featured">
+                      <span className="nav-mega-label">Featured</span>
+                      <div className="nav-mega-grid">
+                        {featuredInitiatives.map((item) => (
+                          <button
+                            key={item.key}
+                            type="button"
+                            className="nav-mega-item"
+                            onClick={() => navigate(item.key)}
+                          >
+                            <span className="nav-mega-icon">
+                              <item.icon size={18} />
+                            </span>
+                            <span className="nav-mega-item-copy">
+                              <strong>{item.label}</strong>
+                              <small>{item.subtitle}</small>
+                            </span>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="nav-mega-divider" />
+                    <div className="nav-mega-all">
+                      <span className="nav-mega-label">All initiatives</span>
+                      <div className="nav-mega-list">
+                        {allInitiatives.map((item) => (
+                          <button
+                            key={item.key}
+                            type="button"
+                            className="nav-mega-listitem"
+                            onClick={() => navigate(item.key)}
+                          >
+                            <item.icon size={14} /> {item.label}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="nav-mega-footer">
+                    <span>Not sure where to start?</span>
+                    <button type="button" className="nav-mega-cta" onClick={() => navigate('contact')}>
+                      Get in touch <ArrowUpRight size={14} />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            );
+          }
 
           if (link.children) {
             return (

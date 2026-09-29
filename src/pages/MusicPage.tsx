@@ -1,5 +1,6 @@
 import { Play, X } from 'lucide-react';
 import { useState } from 'react';
+import MusicDevelopmentSection from '../components/sections/MusicDevelopmentSection';
 
 type MusicVideo = { id: string; title: string };
 
@@ -25,7 +26,7 @@ function MusicVideoCard({ video, onSelect }: { video: MusicVideo; onSelect: (vid
   );
 }
 
-function MusicPage() {
+function MusicPage({ onViewProfile }: { onViewProfile: (profileId: string) => void }) {
   const [selectedVideo, setSelectedVideo] = useState<MusicVideo | null>(null);
 
   return (
@@ -54,6 +55,8 @@ function MusicPage() {
           </div>
         </div>
       </section>
+
+      <MusicDevelopmentSection onViewProfile={onViewProfile} showIntro={false} />
       {selectedVideo && (
         <div className="awards-video-lightbox" role="dialog" aria-modal="true" aria-label={selectedVideo.title}>
           <button className="awards-video-lightbox-close" type="button" onClick={() => setSelectedVideo(null)} aria-label="Close video">

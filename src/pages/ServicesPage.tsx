@@ -1,13 +1,13 @@
 import CollaborateCTA from '../components/sections/CollaborateCTA';
-import MusicDevelopmentSection from '../components/sections/MusicDevelopmentSection';
+import InitiativesOverviewSection from '../components/sections/InitiativesOverviewSection';
 import PageHero from '../components/sections/PageHero';
 
 type ServicesPageProps = {
   onGoContact: () => void;
-  onViewProfile: (profileId: string) => void;
+  onViewInitiative: (initiativeId: string) => void;
 };
 
-function ServicesPage({ onGoContact, onViewProfile }: ServicesPageProps) {
+function ServicesPage({ onGoContact, onViewInitiative }: ServicesPageProps) {
   return (
     <>
       <PageHero
@@ -15,14 +15,14 @@ function ServicesPage({ onGoContact, onViewProfile }: ServicesPageProps) {
         kickerTag=""
         title={
           <>
-            Music &amp; talent
+            Work that extends
             <br />
-            <em>development.</em>
+            <em>beyond production.</em>
           </>
         }
-        description="Nurturing music, celebrating talent, and building a lasting creative legacy across Western Kenya."
+        description="Creative platforms and initiatives built around storytelling, sport, culture and the next generation of creative voices."
       />
-      <MusicDevelopmentSection onViewProfile={onViewProfile} />
+      <InitiativesOverviewSection onViewInitiative={onViewInitiative} />
       <CollaborateCTA onGoContact={onGoContact} />
     </>
   );

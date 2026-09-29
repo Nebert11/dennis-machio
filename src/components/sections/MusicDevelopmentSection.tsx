@@ -1,22 +1,29 @@
 import { ArrowUpRight } from 'lucide-react';
 import { musicDevelopmentProfiles } from '../../data/siteContent';
 
-function MusicDevelopmentSection({ onViewProfile }: { onViewProfile: (profileId: string) => void }) {
+type MusicDevelopmentSectionProps = {
+  onViewProfile: (profileId: string) => void;
+  showIntro?: boolean;
+};
+
+function MusicDevelopmentSection({ onViewProfile, showIntro = true }: MusicDevelopmentSectionProps) {
   return (
     <section className="music-development section-pad">
       <div className="section-kicker">
         Music &amp; Talent Development <span>People &amp; Projects</span>
       </div>
-      <div className="music-development-intro">
-        <h2>
-          Nurturing music,<br />
-          celebrating <em>talent.</em>
-        </h2>
-        <p>
-          Music has always been part of my creative journey. I support local artists by helping them develop their
-          craft, preserve culture, tell authentic stories, connect with audiences, and build sustainable careers.
-        </p>
-      </div>
+      {showIntro && (
+        <div className="music-development-intro">
+          <h2>
+            Nurturing music,<br />
+            celebrating <em>talent.</em>
+          </h2>
+          <p>
+            Music has always been part of my creative journey. I support local artists by helping them develop their
+            craft, preserve culture, tell authentic stories, connect with audiences, and build sustainable careers.
+          </p>
+        </div>
+      )}
 
       <div className="music-development-grid">
         {musicDevelopmentProfiles.map((profile) => (
