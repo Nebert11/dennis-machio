@@ -51,49 +51,51 @@ function AwardsPage() {
   return (
     <>
       <section className="awards-page section-pad">
-        <div className="awards-intro">
-          <p className="awards-eyebrow">Sports Recognition</p>
-          <h1>Magharibi Michezo <em>Awards.</em></h1>
-          <p>
-            The Magharibi Michezo Awards (MMA) is a premier sporting recognition initiative celebrating the talent,
-            achievements, and enduring contributions of athletes, coaches, officials, and sports stakeholders across
-            Western Kenya.
-          </p>
-          <p>
-            Designed to shine a spotlight on sporting excellence at every level, the awards honour established
-            champions while creating opportunities for emerging talent across diverse sporting disciplines. From
-            elite competitors to grassroots athletes, MMA seeks to tell the stories of dedication, resilience, and
-            passion that continue to shape the region&apos;s sporting landscape.
-          </p>
-          <p>
-            Beyond recognition, the initiative is committed to nurturing the next generation through talent
-            development, life skills, sports equipment distribution, coaching programmes, and community-based
-            sporting infrastructure. Its vision extends to supporting basketball and tennis court development,
-            strengthening volleyball initiatives, equipping athletics training camps, and promoting inclusive
-            sporting opportunities for athletes of all abilities.
-          </p>
-          <p>
-            Through strategic partnerships and collaborative investment, the Magharibi Michezo Awards aims to build a
-            stronger, more inclusive sporting ecosystem in Western Kenya, one that celebrates achievement, honours
-            those who mentor and support athletes, and creates pathways for future champions.
-          </p>
-          <p>
-            Our role: Supporting the storytelling, creative production, and visual communication that bring the
-            spirit, impact, and ambition of the Magharibi Michezo Awards to life.
-          </p>
-        </div>
-
-        <div className="awards-video-section">
-          <div className="section-kicker">Top Videos <span>Featured</span></div>
-          <div className="awards-video-grid awards-video-grid-featured">
-            {topVideos.map(renderVideoCard)}
+        <div className="awards-hero">
+          <div className="awards-intro">
+            <p className="awards-eyebrow">Sports Recognition</p>
+            <h1>Magharibi Michezo <em>Awards.</em></h1>
+            <p>
+              The Magharibi Michezo Awards (MMA) is a premier sporting recognition initiative celebrating the talent,
+              achievements, and enduring contributions of athletes, coaches, officials, and sports stakeholders across
+              Western Kenya.
+            </p>
+            <p>
+              Designed to shine a spotlight on sporting excellence at every level, the awards honour established
+              champions while creating opportunities for emerging talent across diverse sporting disciplines. From
+              elite competitors to grassroots athletes, MMA seeks to tell the stories of dedication, resilience, and
+              passion that continue to shape the region&apos;s sporting landscape.
+            </p>
+            <p>
+              Beyond recognition, the initiative is committed to nurturing the next generation through talent
+              development, life skills, sports equipment distribution, coaching programmes, and community-based
+              sporting infrastructure. Its vision extends to supporting basketball and tennis court development,
+              strengthening volleyball initiatives, equipping athletics training camps, and promoting inclusive
+              sporting opportunities for athletes of all abilities.
+            </p>
+            <p>
+              Through strategic partnerships and collaborative investment, the Magharibi Michezo Awards aims to build a
+              stronger, more inclusive sporting ecosystem in Western Kenya, one that celebrates achievement, honours
+              those who mentor and support athletes, and creates pathways for future champions.
+            </p>
+            <p>
+              Our role: Supporting the storytelling, creative production, and visual communication that bring the
+              spirit, impact, and ambition of the Magharibi Michezo Awards to life.
+            </p>
+          </div>
+          <div className="awards-hero-image">
+            <img
+              src="/images/Magharibi%20Michezo%20Awards/48413395_2261562300751910_2189397078495461376_n.jpg"
+              alt="Magharibi Michezo Awards"
+              loading="lazy"
+            />
           </div>
         </div>
 
         <div className="awards-video-section">
-          <div className="section-kicker">Others <span>More From The Awards</span></div>
+          <div className="section-kicker">Videos <span>Magharibi Michezo Awards</span></div>
           <div className="awards-video-grid">
-            {otherVideos.map(renderVideoCard)}
+            {[...topVideos, ...otherVideos].map(renderVideoCard)}
           </div>
         </div>
 

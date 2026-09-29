@@ -29,38 +29,43 @@ function FestivalPage() {
   return (
     <>
       <section className="awards-page section-pad">
-        <div className="awards-intro">
-          <p className="awards-eyebrow">Celebrating Western Kenya&apos;s Talent, Culture, and Creative Expression</p>
-          <h1>Magharibi <em>Festival.</em></h1>
-          <p>
-            The Magharibi Festival is a celebration of the rich talent, culture, and creative identity of Western
-            Kenya. The festival brings together music, sports, and cultural experiences from Bungoma, Busia,
-            Kakamega, Vihiga, Trans-Nzoia, parts of Uganda, and the Nyanza region.
-          </p>
-          <p>
-            The inaugural Magharibi Festival was held in Bungoma Town on 31 December 2022, marking the beginning of an
-            initiative dedicated to promoting cultural expression, celebrating local talent, and creating meaningful
-            experiences for communities across the region.
-          </p>
-          <p>
-            Over the years, Western Kenya has produced some of the finest talents in sports, arts, film, and music.
-            Yet, many of these creatives continue to face limited opportunities for visibility, recognition, and
-            professional growth. This gap in showcase events and award platforms inspired the development of the
-            Magharibi Festival.
-          </p>
-          <p>
-            I seek to contribute to building platforms that celebrate local talent, promote cultural heritage, and
-            create opportunities for artists, athletes, and creatives to share their stories with a wider audience.
-          </p>
-          <p>
-            The Magharibi Festival is a celebration of identity, a platform for discovery, and a commitment to
-            nurturing the creative potential of Western Kenya.
-          </p>
+        <div className="awards-hero">
+          <div className="awards-intro">
+            <p className="awards-eyebrow">Celebrating Western Kenya&apos;s Talent, Culture, and Creative Expression</p>
+            <h1>Magharibi <em>Festival.</em></h1>
+            <p>
+              The Magharibi Festival is a celebration of the rich talent, culture, and creative identity of Western
+              Kenya. The festival brings together music, sports, and cultural experiences from Bungoma, Busia,
+              Kakamega, Vihiga, Trans-Nzoia, parts of Uganda, and the Nyanza region.
+            </p>
+            <p>
+              The inaugural Magharibi Festival was held in Bungoma Town on 31 December 2022, marking the beginning of an
+              initiative dedicated to promoting cultural expression, celebrating local talent, and creating meaningful
+              experiences for communities across the region.
+            </p>
+            <p>
+              Over the years, Western Kenya has produced some of the finest talents in sports, arts, film, and music.
+              Yet, many of these creatives continue to face limited opportunities for visibility, recognition, and
+              professional growth. This gap in showcase events and award platforms inspired the development of the
+              Magharibi Festival.
+            </p>
+            <p>
+              I seek to contribute to building platforms that celebrate local talent, promote cultural heritage, and
+              create opportunities for artists, athletes, and creatives to share their stories with a wider audience.
+            </p>
+            <p>
+              The Magharibi Festival is a celebration of identity, a platform for discovery, and a commitment to
+              nurturing the creative potential of Western Kenya.
+            </p>
+          </div>
+          <div className="awards-hero-image">
+            <img src="/images/Work%20that%20extends/Magharibi%20Festival.jpg" alt="Magharibi Festival" loading="lazy" />
+          </div>
         </div>
 
         <div className="awards-video-section">
           <div className="section-kicker">Festival Videos <span>Magharibi Festival</span></div>
-          <div className="awards-video-grid awards-video-grid-featured">
+          <div className="awards-video-grid awards-video-grid-two">
             {videos.map((item) => (
               <article className="awards-video-card" key={item.id}>
                 <button className="awards-video-poster" type="button" onClick={() => setSelectedVideo(item)} aria-label={`Play ${item.title}`}>

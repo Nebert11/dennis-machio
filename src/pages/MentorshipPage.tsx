@@ -17,27 +17,32 @@ function MentorshipPage() {
   return (
     <>
       <section className="awards-page section-pad">
-        <div className="awards-intro">
-          <p className="awards-eyebrow">Nurturing Talent. Mentoring Creatives. Building Dreams.</p>
-          <h1>Mentorship &amp; <em>support.</em></h1>
-          <p>
-            For over 15 years, I have dedicated my journey to supporting, mentoring, and creating opportunities for
-            emerging talent across the creative and sporting industries. From writers and music artists to dancers,
-            sports journalists, creative technical crews, and production teams, I have believed in the power of young
-            people and their ability to transform their passion into purpose.
-          </p>
-          <p>
-            Through mentorship, hands-on collaboration, and real-world production opportunities, I have encouraged
-            young creatives to discover their strengths, sharpen their skills, and develop the confidence to pursue
-            bigger dreams. My approach is rooted in recognising potential, opening doors, sharing knowledge, and
-            building platforms where talent can grow.
-          </p>
-          <p>
-            I believe that every great dream deserves an opportunity, and every young creative deserves someone who
-            believes in their potential. My greatest fulfilment lies not only in the stories we create and the
-            productions we deliver, but also in the people we inspire, the careers we help shape, and the future we
-            build together.
-          </p>
+        <div className="awards-hero">
+          <div className="awards-intro">
+            <p className="awards-eyebrow">Nurturing Talent. Mentoring Creatives. Building Dreams.</p>
+            <h1>Mentorship &amp; <em>support.</em></h1>
+            <p>
+              For over 15 years, I have dedicated my journey to supporting, mentoring, and creating opportunities for
+              emerging talent across the creative and sporting industries. From writers and music artists to dancers,
+              sports journalists, creative technical crews, and production teams, I have believed in the power of young
+              people and their ability to transform their passion into purpose.
+            </p>
+            <p>
+              Through mentorship, hands-on collaboration, and real-world production opportunities, I have encouraged
+              young creatives to discover their strengths, sharpen their skills, and develop the confidence to pursue
+              bigger dreams. My approach is rooted in recognising potential, opening doors, sharing knowledge, and
+              building platforms where talent can grow.
+            </p>
+            <p>
+              I believe that every great dream deserves an opportunity, and every young creative deserves someone who
+              believes in their potential. My greatest fulfilment lies not only in the stories we create and the
+              productions we deliver, but also in the people we inspire, the careers we help shape, and the future we
+              build together.
+            </p>
+          </div>
+          <div className="awards-hero-image">
+            <img src="/images/Work%20that%20extends/Mentorship%20and%20training.jpg" alt="Mentorship & Support" loading="lazy" />
+          </div>
         </div>
 
         <div className="awards-video-section">
@@ -55,7 +60,7 @@ function MentorshipPage() {
 
         <div className="awards-video-section">
           <div className="section-kicker">Gallery <span>Mentorship &amp; Training</span></div>
-          <div className="awards-image-grid">
+          <div className="awards-image-grid awards-image-grid-two">
             {galleryImages.map((image) => (
               <div className="awards-image-card" key={image}>
                 <img src={image} alt="Mentorship and training" loading="lazy" />

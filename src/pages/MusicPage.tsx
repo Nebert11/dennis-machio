@@ -32,26 +32,24 @@ function MusicPage({ onViewProfile }: { onViewProfile: (profileId: string) => vo
   return (
     <>
       <section className="awards-page section-pad">
-        <div className="awards-intro">
-          <p className="awards-eyebrow">Creative Development</p>
-          <h1>Music &amp; Talent <em>Development.</em></h1>
-          <p>
-            Music has always been part of my creative journey. I support and nurture emerging talent by creating
-            opportunities for artists to develop their craft, tell authentic stories, and build sustainable creative careers.
-          </p>
-        </div>
-
-        <div className="awards-video-section">
-          <div className="section-kicker">Top Videos <span>Featured</span></div>
-          <div className="awards-video-grid awards-video-grid-featured">
-            {topVideos.map((video) => <MusicVideoCard key={video.id} video={video} onSelect={setSelectedVideo} />)}
+        <div className="awards-hero">
+          <div className="awards-intro">
+            <p className="awards-eyebrow">Creative Development</p>
+            <h1>Music &amp; Talent <em>Development.</em></h1>
+            <p>
+              Music has always been part of my creative journey. I support and nurture emerging talent by creating
+              opportunities for artists to develop their craft, tell authentic stories, and build sustainable creative careers.
+            </p>
+          </div>
+          <div className="awards-hero-image">
+            <img src="/images/MUSIC%20DEVELOPMENT/051A3860.jpg" alt="Music & Talent Development" loading="lazy" />
           </div>
         </div>
 
         <div className="awards-video-section">
-          <div className="section-kicker">More Videos <span>More From Music &amp; Talent Development</span></div>
+          <div className="section-kicker">Videos <span>Music &amp; Talent Development</span></div>
           <div className="awards-video-grid awards-video-grid-two">
-            {otherVideos.map((video) => <MusicVideoCard key={video.id} video={video} onSelect={setSelectedVideo} />)}
+            {[...topVideos, ...otherVideos].map((video) => <MusicVideoCard key={video.id} video={video} onSelect={setSelectedVideo} />)}
           </div>
         </div>
       </section>

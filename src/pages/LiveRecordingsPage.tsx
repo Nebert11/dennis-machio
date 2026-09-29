@@ -36,19 +36,24 @@ function LiveRecordingsPage() {
   return (
     <>
       <section className="awards-page section-pad">
-        <div className="awards-intro">
-          <p className="awards-eyebrow">Live Worship Recordings</p>
-          <h1>My Live <em>Recordings.</em></h1>
-          <p className="awards-subheading">Rehoboth &ndash; Holygate Worship</p>
-          <p>
-            Partnered with the Bungoma-based Holygate Worship team to produce their first live recording, Rehoboth.
-            Filmed and produced at Holygate Church in Bungoma, the project captured the team&apos;s worship, musical
-            expression, and passion for sharing inspiring songs through a professionally produced live recording.
-          </p>
-          <p>
-            A meaningful collaboration that brought together music, faith, and creative storytelling, celebrating
-            local talent and creating a platform for the team&apos;s music to reach a wider audience.
-          </p>
+        <div className="awards-hero">
+          <div className="awards-intro">
+            <p className="awards-eyebrow">Live Worship Recordings</p>
+            <h1>My Live <em>Recordings.</em></h1>
+            <p className="awards-subheading">Rehoboth &ndash; Holygate Worship</p>
+            <p>
+              Partnered with the Bungoma-based Holygate Worship team to produce their first live recording, Rehoboth.
+              Filmed and produced at Holygate Church in Bungoma, the project captured the team&apos;s worship, musical
+              expression, and passion for sharing inspiring songs through a professionally produced live recording.
+            </p>
+            <p>
+              A meaningful collaboration that brought together music, faith, and creative storytelling, celebrating
+              local talent and creating a platform for the team&apos;s music to reach a wider audience.
+            </p>
+          </div>
+          <div className="awards-hero-image">
+            <img src="/images/MUSIC%20DEVELOPMENT/card_image.jpg" alt="My Live Recordings" loading="lazy" />
+          </div>
         </div>
 
         <div className="awards-video-section">
@@ -62,7 +67,7 @@ function LiveRecordingsPage() {
 
         <div className="awards-video-section">
           <div className="section-kicker">Gallery <span>From The Sessions</span></div>
-          <div className="awards-image-grid">
+          <div className="awards-image-grid awards-image-grid-three">
             {galleryImages.map((image) => (
               <div className="awards-image-card" key={image}>
                 <img src={image} alt="Live recording session" loading="lazy" />
