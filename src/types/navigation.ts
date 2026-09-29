@@ -1,7 +1,7 @@
-export type PageKey = 'home' | 'story' | 'my-story' | 'work' | 'services' | 'journal' | 'gallery' | 'project' | 'contact' | 'awards' | 'music' | 'festival' | 'mentorship' | 'live-recordings';
+export type PageKey = 'home' | 'story' | 'my-story' | 'work' | 'services' | 'journal' | 'gallery-photos' | 'gallery-videos' | 'project' | 'contact' | 'awards' | 'music' | 'festival' | 'mentorship' | 'live-recordings';
 
 export type Route =
-  | { page: 'home' | 'story' | 'my-story' | 'work' | 'services' | 'journal' | 'gallery' | 'contact' | 'awards' | 'music' | 'festival' | 'mentorship' | 'live-recordings' }
+  | { page: 'home' | 'story' | 'my-story' | 'work' | 'services' | 'journal' | 'gallery-photos' | 'gallery-videos' | 'contact' | 'awards' | 'music' | 'festival' | 'mentorship' | 'live-recordings' }
   | { page: 'project'; projectSlug: string }
   | { page: 'article'; articleId: string }
   | { page: 'talent'; talentId: string };
@@ -13,7 +13,8 @@ const pathByPage: Record<Exclude<PageKey, 'project'>, string> = {
   work: '/work',
   services: '/what-i-do',
   journal: '/insights',
-  gallery: '/gallery',
+  'gallery-videos': '/gallery',
+  'gallery-photos': '/gallery/photos',
   contact: '/contact',
   awards: '/initiatives/magharibi-michezo-awards',
   music: '/initiatives/music-and-talent-development',
@@ -49,7 +50,9 @@ export function pathToRoute(pathname: string): Route {
     case '/insights':
       return { page: 'journal' };
     case '/gallery':
-      return { page: 'gallery' };
+      return { page: 'gallery-videos' };
+    case '/gallery/photos':
+      return { page: 'gallery-photos' };
     case '/contact':
       return { page: 'contact' };
     case '/initiatives/magharibi-michezo-awards':

@@ -21,7 +21,7 @@ import type {
 
 export const images: ImageSet = {
   hero: '/images/portfolio/WhatsApp_Image_2026-09-11_at_23.05.23.jpeg',
-  portrait: '/images/portfolio/WhatsApp_Image_2026-09-11_at_23.05.24_(1).jpeg',
+  portrait: '/images/portfolio/WhatsApp_Image_2026-09-11_at_23.05.24.jpeg',
   portraitTwo: '/images/portfolio/WhatsApp_Image_2026-09-11_at_23.05.24_(2).jpeg',
   portraitThree: '/images/portfolio/WhatsApp_Image_2026-09-11_at_23.05.24.jpeg',
   euKenya: '/images/portfolio/eu-kenya.jpg',
@@ -686,5 +686,20 @@ export const galleryPhotos: GalleryPhoto[] = [
   { id: 'gallery-photo-4', title: 'Conference production', image: images.euKenya },
   { id: 'gallery-photo-5', title: 'Corporate storytelling', image: images.sasiniConference },
   { id: 'gallery-photo-6', title: 'Impact storytelling', image: images.elf },
+  { id: 'gallery-photo-7', title: 'On location coverage', image: '/images/Gallery%20photos%20/051A4608.jpg' },
+  { id: 'gallery-photo-8', title: 'Behind the scenes', image: '/images/Gallery%20photos%20/051A4741.jpg' },
+  { id: 'gallery-photo-9', title: 'Production day', image: '/images/Gallery%20photos%20/051A4986.jpg' },
+  { id: 'gallery-photo-10', title: 'Live event moment', image: '/images/Gallery%20photos%20/1.jpg' },
+  { id: 'gallery-photo-11', title: 'Festival highlights', image: '/images/Gallery%20photos%20/18.jpg' },
+  { id: 'gallery-photo-12', title: 'Community engagement', image: '/images/Gallery%20photos%20/467503277_10234556971488238_857703194244035831_n.jpg' },
+  { id: 'gallery-photo-13', title: 'Audience moments', image: '/images/Gallery%20photos%20/515486967_10237569191831864_3417129230838476754_n.jpg' },
+  { id: 'gallery-photo-14', title: 'Dencast crew on set', image: '/images/Gallery%20photos%20/Dencast%20Crew%20%20(13).jpg' },
+  { id: 'gallery-photo-15', title: 'Behind the camera', image: '/images/Gallery%20photos%20/Dencast%20Crew%20%20(25).jpg' },
+  { id: 'gallery-photo-16', title: 'Production set', image: '/images/Gallery%20photos%20/IMG_4176.jpg' },
+  { id: 'gallery-photo-17', title: 'Creative direction on set', image: '/images/Gallery%20photos%20/IMG_4301(1).jpg' },
+  { id: 'gallery-photo-18', title: 'Magharibi Festival', image: '/images/Gallery%20photos%20/Magharibi%20festival%202.png' },
+  { id: 'gallery-photo-19', title: 'On assignment', image: '/images/Gallery%20photos%20/denno%20picha.png' },
+  { id: 'gallery-photo-20', title: 'Dennis Machio in the field', image: '/images/Gallery%20photos%20/deno%2011%20copy.png' },
+  { id: 'gallery-photo-21', title: 'Dennis Machio at work', image: '/images/Gallery%20photos%20/deno%2011%20copy123.png' },
 ];
 

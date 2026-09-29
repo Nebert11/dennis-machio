@@ -12,6 +12,7 @@ import JournalPage from '../../pages/JournalPage';
 import ArticlePage from '../../pages/ArticlePage';
 import ServicesPage from '../../pages/ServicesPage';
 import GalleryPage from '../../pages/GalleryPage';
+import GalleryPhotosPage from '../../pages/GalleryPhotosPage';
 import AwardsPage from '../../pages/AwardsPage';
 import MusicPage from '../../pages/MusicPage';
 import FestivalPage from '../../pages/FestivalPage';
@@ -99,8 +100,10 @@ export default function Layout() {
         return <ServicesPage onGoContact={() => setCurrentPage('contact')} onViewProfile={goToTalentProfile} />;
       case 'journal':
         return <JournalPage onGoContact={() => setCurrentPage('contact')} onGoArticle={goToArticle} />;
-      case 'gallery':
+      case 'gallery-videos':
         return <GalleryPage onGoContact={() => setCurrentPage('contact')} />;
+      case 'gallery-photos':
+        return <GalleryPhotosPage />;
       case 'article': {
         const article = journalArticles.find((item) => item.id === route.articleId);
         return (

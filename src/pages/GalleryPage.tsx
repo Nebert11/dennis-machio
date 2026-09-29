@@ -14,10 +14,10 @@ function GalleryPage({ onGoContact }: GalleryPageProps) {
         kickerTag=""
         title={
           <>
-            Stories you can <em>see.</em>
+            Stories in <em>motion.</em>
           </>
         }
-        description="A growing collection of films, broadcasts, photographs and moments from the work."
+        description="A growing collection of films and broadcasts from the work."
       />
       <GallerySection onGoContact={onGoContact} />
       <CollaborateCTA onGoContact={onGoContact} />
