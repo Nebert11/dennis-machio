@@ -2,7 +2,7 @@ import CollaborateCTA from '../components/sections/CollaborateCTA';
 import JourneySection from '../components/sections/JourneySection';
 import { X } from 'lucide-react';
 import PageHero from '../components/sections/PageHero';
-import QuoteSection from '../components/sections/QuoteSection';
+// import QuoteSection from '../components/sections/QuoteSection';
 import StorySection from '../components/sections/StorySection';
 import StoryPreviewSection from '../components/sections/StoryPreviewSection';
 import { useState } from 'react';
@@ -69,7 +69,7 @@ function StoryPage({ onGoContact }: StoryPageProps) {
       )}
       <StorySection onGoContact={onGoContact} />
       <JourneySection />
-      <QuoteSection />
+      {/* <QuoteSection /> */}
       <CollaborateCTA onGoContact={onGoContact} />
     </>
   );
