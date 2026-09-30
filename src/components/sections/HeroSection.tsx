@@ -17,7 +17,7 @@ function HeroSection({ onGoWhatIDo }: HeroSectionProps) {
           <span /> Film Producer. Creative Director. Media Strategist. Storyteller.
         </p>
 
-        <h1>I Tell Stories That Matter.</h1>
+        <h1>I Tell Stories That Connect & Inspire.</h1>
 
         <p className="hero-intro">
           I am a Nairobi-based film producer, creative director, and storyteller dedicated to
