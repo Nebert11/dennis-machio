@@ -834,18 +834,18 @@ h2 { font-size: clamp(36px, 5vw, 72px); letter-spacing: -.07em; line-height: 1.0
 
 /* Story Section & Pillars */
 .story { background: #111923; display: grid; gap: clamp(45px, 9vw, 135px); grid-template-columns: minmax(280px, .8fr) minmax(300px, 1fr); padding-bottom: 130px; padding-top: 130px; }
-.story-photo { align-self: start; height: 760px; position: relative; }
+.story-photo { align-self: stretch; min-height: 760px; position: relative; }
 .story-photo:before { border: 1px solid #d70c2f; content: ''; inset: -17px 17px 17px -17px; position: absolute; }
 .story-photo img { display: block; height: 100%; object-fit: cover; object-position: center 60%; position: relative; width: 100%; }
 .photo-label { bottom: -31px; color: #707b8b; font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: .1em; position: absolute; right: 0; text-transform: uppercase; transform: rotate(-90deg); transform-origin: right top; }
-.story-copy { align-self: center; max-width: 560px; }
+.story-copy { align-self: center; max-width: 640px; }
 .story-copy h2 { margin: 25px 0 18px; }
 .story-pillars { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 22px; }
 .pillar-tag { align-items: center; background: rgba(215, 12, 47, 0.12); border: 1px solid rgba(215, 12, 47, 0.35); color: #f5f6f8; display: inline-flex; font-family: 'DM Mono', monospace; font-size: 10px; gap: 7px; padding: 6px 12px; }
 .story-copy .lead { color: #d70c2f; font-family: 'Playfair Display', Georgia, serif; font-size: 20px; font-style: italic; line-height: 1.6; margin-bottom: 20px; }
 .story-copy p:not(.lead) { color: #9ba4af; font-size: 13px; line-height: 1.9; margin: 16px 0; }
-.story-offerings { display: flex; flex-direction: column; gap: 18px; margin-top: 28px; }
-.story-offerings article { border-top: 1px solid #263546; padding-top: 16px; }
+.story-offerings { column-count: 2; column-gap: 32px; margin-top: 28px; }
+.story-offerings article { break-inside: avoid; border-top: 1px solid #263546; margin-bottom: 22px; padding-top: 16px; }
 .story-offerings h3 { color: #f2f1ed; font-size: 14px; letter-spacing: -.02em; line-height: 1.35; margin: 0 0 8px; }
 .story-offerings h3 span { color: #d70c2f; font-family: 'DM Mono', monospace; font-size: 11px; margin-right: 10px; }
 .story-offerings p { color: #9ba4af; font-size: 12px; line-height: 1.75; margin: 0; }
@@ -1063,6 +1063,7 @@ blockquote { color: #111923; font-size: clamp(24px, 3.2vw, 40px); font-weight: 6
   .story { gap: 56px; grid-template-columns: 1fr; }
   .story-photo { height: 440px; margin: 0 17px; }
   .story-photo img { height: 100%; }
+  .story-offerings { column-count: 1; }
   .story-preview-photo img { height: 360px; }
   .story-preview-home .section-kicker { justify-content: flex-start; }
   .story-preview-home .story-preview-copy { margin-left: 0; max-width: 100%; }
