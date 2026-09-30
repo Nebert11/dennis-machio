@@ -105,6 +105,13 @@ const chapters: {
   },
 ];
 
+// these photos are portrait/near-square crops that lose Dennis or his camera when force-cropped into the wide 16:9 rail slots
+const containPhotos = new Set([
+  'My First camera_.jpg',
+  '510524444_10237093903029941_7199984166105602043_n.jpg',
+  '650112637_10241010127413103_3941026414670921703_n.jpg',
+]);
+
 function StoryPhotos({ photos, alt }: { photos: string[]; alt: string }) {
   const railRef = useRef<HTMLDivElement>(null);
   const [isPaused, setIsPaused] = useState(false);
@@ -136,7 +143,7 @@ function StoryPhotos({ photos, alt }: { photos: string[]; alt: string }) {
       <div className="my-story-photo-rail" ref={railRef} aria-label={alt}>
         {photos.map((photo, index) => (
           <img
-            className={photo === 'My First camera_.jpg' ? 'my-story-camera-photo' : undefined}
+            className={containPhotos.has(photo) ? 'my-story-photo-contain' : undefined}
             key={photo}
             src={`${photoFolder}${encodeURIComponent(photo)}`}
             alt={`${alt}, photograph ${index + 1}`}
@@ -161,7 +168,6 @@ function MyStoryPage() {
           <h1>My <em>Story.</em></h1>
           <p>Before the cameras, there was a boy from Bungoma. Before the companies, there was football. Before the stories became my profession, I was simply fascinated by people and the lives they lived.</p>
         </div>
-        <img src={`${photoFolder}dennis%20machio%20option%203.png`} alt="Dennis Machio" />
       </section>
       <nav className="my-story-chapter-nav section-pad" aria-label="My Story chapters">
         {chapters.map((chapter, index) => (

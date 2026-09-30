@@ -114,7 +114,7 @@ export default function Layout() {
           <ArticlePage
             article={article}
             onBackToInsights={() => setCurrentPage('journal')}
-            onGoContact={() => setCurrentPage('contact')}
+            onGoArticle={goToArticle}
           />
         );
       }

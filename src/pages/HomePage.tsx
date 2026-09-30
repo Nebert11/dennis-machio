@@ -6,6 +6,8 @@ import ServicesSection from '../components/sections/ServicesSection';
 import StoryPreviewSection from '../components/sections/StoryPreviewSection';
 import VenturesSection from '../components/sections/VenturesSection';
 import type { PageKey } from '../types/navigation';
+import { X } from 'lucide-react';
+import { useState } from 'react';
 
 const homepagePhotos = [
   '051A4057.jpg',
@@ -29,6 +31,8 @@ type HomePageProps = {
 };
 
 function HomePage({ onNavigate, onGoArticle, onViewVenture }: HomePageProps) {
+  const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
+
   return (
     <>
       <HeroSection onGoWhatIDo={() => onNavigate('services')} />
@@ -68,20 +72,41 @@ function HomePage({ onNavigate, onGoArticle, onViewVenture }: HomePageProps) {
         <div className="home-photo-track">
           {[false, true].map((duplicate) => (
             <div className="home-photo-group" key={String(duplicate)} aria-hidden={duplicate}>
-              {homepagePhotos.map((photo) => (
-                <img
-                  key={photo}
-                  src={`/images/homepage-scroll/${encodeURIComponent(photo)}`}
-                  alt={duplicate ? '' : 'A moment captured by Dennis Machio'}
-                  loading="lazy"
-                />
-              ))}
+              {homepagePhotos.map((photo) => {
+                const src = `/images/homepage-scroll/${encodeURIComponent(photo)}`;
+                return (
+                  <button
+                    className="home-photo-item"
+                    key={photo}
+                    type="button"
+                    tabIndex={duplicate ? -1 : 0}
+                    onClick={() => setSelectedPhoto(src)}
+                    aria-label="View photo by Dennis Machio"
+                  >
+                    <img
+                      src={src}
+                      alt={duplicate ? '' : 'A moment captured by Dennis Machio'}
+                      loading="lazy"
+                    />
+                  </button>
+                );
+              })}
             </div>
           ))}
         </div>
       </section>
       
       <CollaborateCTA onGoContact={() => onNavigate('contact')} />
+      {selectedPhoto && (
+        <div className="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Photo by Dennis Machio" onClick={() => setSelectedPhoto(null)}>
+          <button className="gallery-lightbox-close" type="button" onClick={() => setSelectedPhoto(null)} aria-label="Close photo viewer">
+            <X size={22} />
+          </button>
+          <div className="gallery-lightbox-content" onClick={(event) => event.stopPropagation()}>
+            <img src={selectedPhoto} alt="A moment captured by Dennis Machio" />
+          </div>
+        </div>
+      )}
     </>
   );
 }

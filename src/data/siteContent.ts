@@ -30,7 +30,7 @@ export const images: ImageSet = {
   elf: '/images/portfolio/elf.png',
   storiesInsights: '/images/portfolio/9.jpg',
   projDencast: '/images/portfolio/proj-dencast.jpg',
-  storyDetail: '/images/portfolio/9.jpg',
+  storyDetail: '/images/portfolio/behind-the-camera.jpeg',
   creative: '/images/portfolio/creative.png',
 };
 
@@ -107,7 +107,7 @@ export const ventures: Venture[] = [
   },
   {
     id: 'live-recordings',
-    title: 'My Live Recordings',
+    title: 'Live Recordings',
     image: '/images/MUSIC%20DEVELOPMENT/card_image.jpg',
     badge: 'Live Worship Recordings',
     description:
@@ -403,7 +403,7 @@ export const journalArticles: JournalArticle[] = [
     id: 'why-strong-visual-stories-begin-with-listening',
     title: 'Why Strong Visual Stories Begin With Listening',
     byline: 'By Dennis Machio',
-    image: images.portraitThree,
+    image: '/images/Gallery%20photos%20/Dencast%20Crew%20%20(13).jpg',
     content: [
       'The strongest visual work does not begin when the camera starts rolling. It begins with listening, understanding context and finding the human truth behind the story.',
       'A brief may ask for a corporate film, documentary or campaign video. But beneath that request is often something deeper,  a story of resilience, ambition, transformation, struggle or hope.',

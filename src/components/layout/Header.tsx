@@ -42,7 +42,7 @@ const allInitiatives = [
   { key: 'festival' as PageKey, label: 'Magharibi Festival', icon: PartyPopper },
   { key: 'music' as PageKey, label: 'Music & Talent Development', icon: Music },
   { key: 'mentorship' as PageKey, label: 'Mentorship', icon: Users },
-  { key: 'live-recordings' as PageKey, label: 'My Live Recordings', icon: Mic2 },
+  { key: 'live-recordings' as PageKey, label: 'Live Recordings', icon: Mic2 },
   { key: 'services' as PageKey, label: 'All Initiatives', icon: LayoutGrid },
 ];
 

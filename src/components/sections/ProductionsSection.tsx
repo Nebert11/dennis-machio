@@ -17,7 +17,7 @@ const getEventIcon = (id: string) => {
   }
 };
 
-function ProductionsSection({ onGoContact, onViewProject }: ProductionsSectionProps) {
+function ProductionsSection({ onViewProject }: ProductionsSectionProps) {
   return (
     <section className="productions section-pad">
       <div className="section-kicker">
@@ -55,9 +55,15 @@ function ProductionsSection({ onGoContact, onViewProject }: ProductionsSectionPr
             <h3>{item.title}</h3>
             <p className="production-role">Role: {item.role}</p>
             <p className="production-desc">{item.description}</p>
-            <button className="text-link" onClick={item.id === 'amakovewala' ? () => onViewProject('the-amakovewala-show') : onGoContact}>
-              {item.id === 'amakovewala' ? 'View project' : 'Discuss similar project'} <ArrowUpRight size={15} />
-            </button>
+            {item.id === 'amakovewala' ? (
+              <button className="text-link" onClick={() => onViewProject('the-amakovewala-show')}>
+                View project <ArrowUpRight size={15} />
+              </button>
+            ) : (
+              <a className="text-link" href="https://www.dencastglobal.co.ke/" target="_blank" rel="noopener noreferrer">
+                Visit Dencast Global <ArrowUpRight size={15} />
+              </a>
+            )}
           </article>
         ))}
       </div>

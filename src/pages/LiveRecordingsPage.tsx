@@ -39,7 +39,7 @@ function LiveRecordingsPage() {
         <div className="awards-hero">
           <div className="awards-intro">
             <p className="awards-eyebrow">Live Worship Recordings</p>
-            <h1>My Live <em>Recordings.</em></h1>
+            <h1>Live <em>Recordings.</em></h1>
             <p className="awards-subheading">Rehoboth &ndash; Holygate Worship</p>
             <p>
               Partnered with the Bungoma-based Holygate Worship team to produce their first live recording, Rehoboth.
@@ -52,7 +52,7 @@ function LiveRecordingsPage() {
             </p>
           </div>
           <div className="awards-hero-image">
-            <img src="/images/MUSIC%20DEVELOPMENT/card_image.jpg" alt="My Live Recordings" loading="lazy" />
+            <img src="/images/MUSIC%20DEVELOPMENT/card_image.jpg" alt="Live Recordings" loading="lazy" />
           </div>
         </div>
 
