@@ -1,4 +1,5 @@
 import { ArrowUpRight } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 type HeroSectionProps = {
   onGoWhatIDo: () => void;
@@ -6,11 +7,31 @@ type HeroSectionProps = {
 };
 
 function HeroSection({ onGoWhatIDo }: HeroSectionProps) {
+  const [showSplash, setShowSplash] = useState(true);
+  const [splashMounted, setSplashMounted] = useState(true);
+
+  useEffect(() => {
+    const hideTimer = setTimeout(() => setShowSplash(false), 4000);
+    const unmountTimer = setTimeout(() => setSplashMounted(false), 5000);
+    return () => {
+      clearTimeout(hideTimer);
+      clearTimeout(unmountTimer);
+    };
+  }, []);
+
   return (
     <section className="hero">
       <video className="hero-video" autoPlay muted loop playsInline preload="metadata" aria-hidden="true">
         <source src="/images/Homepage%20Video/Dennis%20Machio.mp4" type="video/mp4" />
       </video>
+      {splashMounted && (
+        <img
+          className={`hero-splash${showSplash ? '' : ' hero-splash-hidden'}`}
+          src="/images/Black%20Backgrounds/hero-bg.png"
+          alt=""
+          aria-hidden="true"
+        />
+      )}
       {/* <img className="hero-portrait" src="/images/new_images/den4.png" alt="" aria-hidden="true" /> */}
       <div className="hero-copy">
         <p className="eyebrow">

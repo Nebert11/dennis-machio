@@ -180,6 +180,8 @@ button { color: inherit; }
 
 .hero { background: #050608; display: flex; align-items: center; min-height: 100vh; overflow: hidden; padding: 150px clamp(24px, 6vw, 96px) 88px; position: relative; }
 .hero-video { height: 100%; inset: 0; object-fit: cover; pointer-events: none; position: absolute; width: 100%; z-index: 0; }
+.hero-splash { height: 100vh; inset: 0; object-fit: cover; opacity: 1; pointer-events: none; position: fixed; transition: opacity 1s ease; width: 100vw; z-index: 5; }
+.hero-splash-hidden { opacity: 0; }
 .hero-portrait { bottom: 0; height: 85%; max-width: 48%; object-fit: contain; object-position: right bottom; pointer-events: none; position: absolute; right: clamp(0px, 3vw, 48px); z-index: 1; }
 @media (prefers-reduced-motion: reduce) {
   .hero-video { display: none; }
@@ -1039,6 +1041,7 @@ blockquote { color: #111923; font-size: clamp(24px, 3.2vw, 40px); font-weight: 6
   .footer-social { justify-content: flex-start; }
   .footer-profile { align-items: flex-start; text-align: left; }
   .hero { align-items: flex-start; background-position: 74% center; background-size: auto 100%; min-height: 0; padding-bottom: 72px; padding-top: 130px; }
+  .hero-splash { background-color: #050608; box-sizing: border-box; object-position: 80% top; padding-top: 64px; }
   .hero-copy { max-width: 100%; }
   .hero h1 { font-size: clamp(44px, 12vw, 78px); max-width: 100%; }
   .hero-role { font-size: clamp(17px, 5vw, 28px); max-width: 100%; }
