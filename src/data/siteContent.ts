@@ -49,6 +49,34 @@ export const bioSummary = {
     'The most powerful stories do more than document what happened — they reveal why it matters, connect people to purpose, and leave something lasting behind.',
 };
 
+export const aboutMeFullStory: string[] = [
+  'I have grown to learn and appreciate that most powerful stories are not the ones we manufacture. They are the ones we notice.',
+  'You know, when I walk into a new environment, the best way to understand it is not to rush to speak, but to observe and listen.',
+  'Listen to the stories people tell when no one is asking them to perform. Watch how they interact with one another. See how brands treat their communities, how they care for their people, and how organisations quietly change lives in places far beyond their offices.',
+  'That is where my fascination begins.',
+  'In those unscripted moments, between people, places and purpose, there are stories waiting to be told.',
+  'And therein lies my gist: bringing those stories to life, giving them a voice, and telling them to the world.',
+  'That is probably why I have spent much of my life behind the camera.',
+  'My name is Dennis Machio. I am a storyteller, filmmaker, creative director and, occasionally, a man who still finds himself wondering how a camera, a good piece of music and the right moment can make people feel something they did not expect to feel.',
+  'I grew up in Bungoma, where stories were never in short supply. They lived in our homes, our villages, our football pitches, our churches, our schools and in the people who had spent decades building communities without ever expecting a camera to point in their direction, including my father Machio senior.',
+  'Perhaps that is where my fascination with people began.',
+  'Before I became obsessed with cameras, lenses, sound and editing timelines, I was a footballer. I played in the Kenyan Premier League for Nzoia Sugar FC. Football taught me something that production later confirmed: every person has a role, every moment has a rhythm, and sometimes the most important thing you can do is know when to move, and when to stay still.',
+  'I eventually traded the football pitch for the production floor.',
+  'I studied Creative Arts at Moi University and Television and Film Production at the Mohammed Amin Foundation.',
+  'But education gave me the tools. Experience gave me the eyes.',
+  'For more than fifteen years, I have worked in multimedia production, documentary filmmaking, live events, sports media, photography, editing and creative direction. I have filmed boardrooms and football pitches, factories and farms, conferences and community projects. I have watched executives speak about strategy, athletes speak about dreams and ordinary people tell extraordinary stories without even knowing that they are extraordinary.',
+  'Through Dencast Global, the production and creative media agency I lead, we capture moments, tell stories and build brands.',
+  "But I don't think storytelling is really about cameras. Cameras are just witnesses. The real work is deciding what deserves to be remembered.",
+  'I love the chaos around production days. The organised chaos of cables, cameras, lights, sound checks and people asking, “Are we ready?” I love the moment when everyone finally goes quiet because the interview is about to begin.',
+  'I love music too. Perhaps too much. Music, for me, is another camera. It captures emotion differently. It reaches places where a documentary sometimes cannot, so weaving some nice piece of music into a great story sums it up with emotions.',
+  'I love sports, because sport is never really just about sport. It is about ambition, failure, resilience, identity and the strange human need to believe that tomorrow can be better than today.',
+  'I love stories about people who build things. Businesses. Families. Communities. Careers. Schools. Brands. Dreams.',
+  'Maybe that is why some of the projects closest to me have involved looking beyond the obvious, the people behind organisations, the communities behind brands, the journeys behind success.',
+  'I have learned that every polished corporate film has a human story hiding somewhere behind it.',
+  'I am Dennis Machio. Director. Producer. Editor. Filmmaker. Creative.',
+  'Welcome to my world. The cameras are rolling. The story is waiting. And there is always another moment worth capturing.',
+];
+
 export const stats: StatItem[] = [
   { value: '10+', label: 'Years in film & production', subtext: 'Deep industry experience' },
   { value: '2', label: 'Companies founded / led', subtext: 'Dencast Global & Michezo Afrika' },

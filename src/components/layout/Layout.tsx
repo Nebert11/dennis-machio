@@ -4,6 +4,7 @@ import Footer from './Footer';
 import ShowreelModal from '../sections/ShowreelModal';
 import HomePage from '../../pages/HomePage';
 import StoryPage from '../../pages/StoryPage';
+import MoreAboutMePage from '../../pages/MoreAboutMePage';
 import MyStoryPage from '../../pages/MyStoryPage';
 import WorkPage from '../../pages/WorkPage';
 import ProjectPage from '../../pages/ProjectPage';
@@ -89,7 +90,9 @@ export default function Layout() {
   const activePage = useMemo(() => {
     switch (route.page) {
       case 'story':
-        return <StoryPage onGoContact={() => setCurrentPage('contact')} />;
+        return <StoryPage onGoContact={() => setCurrentPage('contact')} onReadMore={() => setCurrentPage('about-more')} />;
+      case 'about-more':
+        return <MoreAboutMePage onBack={() => setCurrentPage('story')} />;
       case 'my-story':
         return <MyStoryPage />;
       case 'work':

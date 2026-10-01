@@ -3,9 +3,10 @@ import { bioSummary, images } from '../../data/siteContent';
 
 type StoryPreviewSectionProps = {
   onGoStory?: () => void;
+  onReadMore?: () => void;
 };
 
-function StoryPreviewSection({ onGoStory }: StoryPreviewSectionProps) {
+function StoryPreviewSection({ onGoStory, onReadMore }: StoryPreviewSectionProps) {
   return (
     <section className={`story-preview-section section-pad${onGoStory ? ' story-preview-home' : ''}`}>
       <div className="section-kicker">
@@ -62,6 +63,12 @@ function StoryPreviewSection({ onGoStory }: StoryPreviewSectionProps) {
             For more than a decade I have worked with organizations across Africa to create documentaries, corporate films, 
             live productions, digital campaigns and strategic visual content that communicates clearly and connects deeply.
           </p>
+
+          {!onGoStory && onReadMore && (
+            <button type="button" className="story-preview-readmore text-link" onClick={onReadMore}>
+              Read More <ArrowUpRight size={16} />
+            </button>
+          )}
 
           {onGoStory && (
             <div className="preview-action-row">

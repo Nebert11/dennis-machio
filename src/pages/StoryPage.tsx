@@ -9,6 +9,7 @@ import { useState } from 'react';
 
 type StoryPageProps = {
   onGoContact: () => void;
+  onReadMore: () => void;
 };
 
 const storyScrollPhotos = [
@@ -22,7 +23,7 @@ const storyScrollPhotos = [
   '/images/about%20me%20photo%20scrolls/RHNK%20horizontal.jpg',
 ];
 
-function StoryPage({ onGoContact }: StoryPageProps) {
+function StoryPage({ onGoContact, onReadMore }: StoryPageProps) {
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
 
   return (
@@ -38,7 +39,7 @@ function StoryPage({ onGoContact }: StoryPageProps) {
         }
         description="Filmmaker, producer, director and creative strategist. Explore the craft, experience and capabilities behind my work."
       />
-      <StoryPreviewSection />
+      <StoryPreviewSection onReadMore={onReadMore} />
       <section className="story-photo-scroll-section section-pad">
         <div className="section-kicker">Behind The Scenes <span>In Photos</span></div>
         <div className="story-photo-scroll-window">
